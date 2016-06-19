@@ -44,6 +44,7 @@
                 android:src="@mipmap/ic_search_black_24dp"
                 android:layout_height="24dp" />
             <TextView
+                android:id="@+id/start_text_view"
                 android:layout_marginLeft="8dp"
                 android:layout_width="wrap_content"
                 android:text="출발지 검색"
@@ -68,6 +69,7 @@
                 android:src="@mipmap/ic_search_black_24dp"
                 android:layout_height="24dp" />
             <TextView
+                android:id="@+id/end_text_view"
                 android:layout_marginLeft="8dp"
                 android:layout_width="wrap_content"
                 android:text="도착지 검색"
