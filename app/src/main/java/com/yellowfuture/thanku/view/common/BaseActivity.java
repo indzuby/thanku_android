@@ -11,6 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.tsengvn.typekit.TypekitContextWrapper;
+import com.yellowfuture.thanku.R;
 
 /**
  * Created by user on 2016-01-07.
@@ -35,7 +36,8 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-
+        if(v.getId()== R.id.back)
+            finish();
     }
 
     @Override

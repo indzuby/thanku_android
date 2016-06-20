@@ -48,8 +48,9 @@ public class PointSearchActivity extends BaseActivity implements TextWatcher,Ada
     }
 
     public void initActionbar() {
-        ContextUtils.getActionBar(this, getSupportActionBar(), R.layout.actionbar_search_point);
+        ContextUtils.getActionBar(this, getSupportActionBar(), R.layout.actionbar_default);
         findViewById(R.id.back).setOnClickListener(this);
+        ((TextView)findViewById(R.id.title)).setText("검색");
     }
 
     @Override
@@ -114,13 +115,21 @@ public class PointSearchActivity extends BaseActivity implements TextWatcher,Ada
     @Override
     public void onClick(View v) {
         super.onClick(v);
-        if(v.getId() == R.id.back)
-            finish();
-        else if(v.getId() == R.id.point_by_current) {
+        if(v.getId() == R.id.point_by_current) {
             mMapData.convertGpsToAddress(lat, lon, new TMapData.ConvertGPSToAddressListenerCallback() {
                 @Override
-                public void onConvertToGPSToAddress(String s) {
-                    mSearchEditText.setText(s);
+                public void onConvertToGPSToAddress(final String s) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    mSearchEditText.setText(s);
+                                }
+                            });
+                        }
+                    }).start();
                 }
             });
         }

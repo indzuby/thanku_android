@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:paddingBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/start_point_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="출발지"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/start_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/start_point_text"
+                    android:gravity="right"
+                    android:lines="1"
+                    android:text="즉시"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:layout_height="1dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/end_point_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="도착지"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/end_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/end_point_text"
+                    android:gravity="right"
+                    android:lines="1"
+                    android:text="즉시"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:layout_height="1dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="거리"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/distance_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="17.5km"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:layout_height="1dp"/>
+            <TextView
+                android:textColor="@color/black"
+                android:padding="16dp"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:text="거리로 측정한 비용이기 때문에 무게,배송 난이도에 따라 추가 비용이 발생 할 수 있습니다. 기사님과 협의해서 결정하세요."
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:layout_height="1dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="기본 비용"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/default_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:text="8,000"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:layout_height="1dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="장거리 할인"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/far_discount_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:text="- 0"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/total_cost"
+                android:textColor="@color/black"
+                android:padding="16dp"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:layout_width="match_parent"
+                android:text="8,000원"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/request_text"
+                android:lines="5"
+                android:padding="16dp"
+                android:textSize="14sp"
+                android:gravity="top"
+                android:textColor="@color/black"
+                android:hint="기사님께 요청사항을 입력해주세요."
+                android:layout_width="match_parent"
+                android:background="@drawable/border_layout"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:id="@+id/request_button"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:text="배송 요청하기"
+                android:background="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

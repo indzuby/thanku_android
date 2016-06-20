@@ -30,6 +30,8 @@
         <activity android:name=".view.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".view.quick.PointSearchActivity" />
+        <activity android:name=".view.quick.QuickRequestActivity"
+            android:windowSoftInputMode="stateHidden"/>
 
     </application>
 

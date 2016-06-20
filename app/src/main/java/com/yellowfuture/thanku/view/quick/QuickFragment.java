@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.skp.Tmap.TMapData;
 import com.skp.Tmap.TMapGpsManager;
@@ -28,8 +29,6 @@ import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.view.common.BaseFragment;
 
-import org.w3c.dom.Text;
-
 
 /**
  * Created by zuby on 2016. 6. 15..
@@ -40,10 +39,10 @@ public class QuickFragment extends BaseFragment implements LocationListener{
     Location location;
     TMapGpsManager mMapGps;
     TMapData mMapData;
-    TMapPoint startPoint,endPoint;
-
-    TextView startTextView,endTextView;
-    TMapMarkerItem startItem,endItem;
+    TMapPoint mStartPoint, mEndPoint;
+    TMapPolyLine mPolyLine;
+    TextView mStartTextView, mEndTextView;
+    TMapMarkerItem mStartItem, mEndItem;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -73,8 +72,10 @@ public class QuickFragment extends BaseFragment implements LocationListener{
         mView.findViewById(R.id.start_point_text).setOnClickListener(this);
         mView.findViewById(R.id.end_point_text).setOnClickListener(this);
 
-        startTextView = (TextView) mView.findViewById(R.id.start_text_view);
-        endTextView = (TextView) mView.findViewById(R.id.end_text_view);
+        mView.findViewById(R.id.request_button).setOnClickListener(this);
+
+        mStartTextView = (TextView) mView.findViewById(R.id.start_text_view);
+        mEndTextView = (TextView) mView.findViewById(R.id.end_text_view);
     }
 
     public void initMap() {
@@ -89,8 +90,8 @@ public class QuickFragment extends BaseFragment implements LocationListener{
 
     public void initCurrentLocation() {
         setCurrentLocation();
-//        startPoint = mMapView.getLocationPoint();
-//        endPoint = new TMapPoint(37.5838699,127.0565884);
+//        mStartPoint = mMapView.getLocationPoint();
+//        mEndPoint = new TMapPoint(37.5838699,127.0565884);
 //        findPathByLatLon();
 
     }
@@ -100,13 +101,13 @@ public class QuickFragment extends BaseFragment implements LocationListener{
         mMapView.setCenterPoint(location.getLongitude(), location.getLatitude(), true);
         mMapView.setLocationPoint(location.getLongitude(), location.getLatitude());
         mMapView.setZoomLevel(17);
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.my_location_on);
-        mMapView.setIcon(bitmap);
-        mMapView.setIconVisibility(true);
+//        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.my_location_on);
+//        mMapView.setIcon(bitmap);
+//        mMapView.setIconVisibility(true);
     }
 
     public void findPathByLatLon() {
-        mMapData.findPathDataWithType(TMapData.TMapPathType.CAR_PATH, startPoint, endPoint,
+        mMapData.findPathDataWithType(TMapData.TMapPathType.CAR_PATH, mStartPoint, mEndPoint,
                 new TMapData.FindPathDataListenerCallback() {
                     @Override
                     public void onFindPathData(TMapPolyLine polyLine) {
@@ -116,6 +117,7 @@ public class QuickFragment extends BaseFragment implements LocationListener{
                         mMapView.setZoomLevel(12);
                         Log.e("DISTANCE",polyLine.getDistance()+"");
                         mMapView.refreshMap();
+                        mPolyLine = polyLine;
                     }
                 });
     }
@@ -154,6 +156,9 @@ public class QuickFragment extends BaseFragment implements LocationListener{
             case R.id.end_point_text:
                 startPointSearch(1);
                 break;
+            case R.id.request_button:
+                requestQuickService();
+                break;
         }
     }
     public void startPointSearch(int type) {
@@ -162,6 +167,21 @@ public class QuickFragment extends BaseFragment implements LocationListener{
         intent.putExtra(CodeDefinition.PARAM_LONGITUDE,location.getLongitude());
         intent.putExtra(CodeDefinition.PARAM_LATITUDE,location.getLatitude());
         startActivityForResult(intent, CodeDefinition.REQUEST_SEARCH_POINT);
+    }
+    public void requestQuickService() {
+        if(mPolyLine == null) {
+            Toast.makeText(getActivity(),"출발지와 도착지를 입력해주세요.",Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(getActivity(),QuickRequestActivity.class);
+        intent.putExtra(CodeDefinition.PARAM_START_LATITUDE, mStartPoint.getLatitude());
+        intent.putExtra(CodeDefinition.PARAM_START_LONGITUDE, mStartPoint.getLongitude());
+        intent.putExtra(CodeDefinition.PARAM_START_NAME, mStartTextView.getText().toString());
+        intent.putExtra(CodeDefinition.PARAM_END_LATITUDE, mEndPoint.getLatitude());
+        intent.putExtra(CodeDefinition.PARAM_END_LONGITUDE, mEndPoint.getLongitude());
+        intent.putExtra(CodeDefinition.PARAM_END_NAME, mEndTextView.getText().toString());
+        intent.putExtra(CodeDefinition.PARAM_DISTANCE,mPolyLine.getDistance());
+        startActivityForResult(intent, CodeDefinition.REQUEST_QUICK_REQUEST);
     }
     @Override
     public void onResume() {
@@ -186,22 +206,23 @@ public class QuickFragment extends BaseFragment implements LocationListener{
             Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_location_on_black_24dp);
             mMapView.removeAllTMapPolyLine();
             if(type == 0) {
-                startPoint = new TMapPoint(lat,lon);
-                if(startItem != null) mMapView.removeMarkerItem(startItem.getID());
-                startItem = new TMapMarkerItem();
-                startItem.setIcon(bitmap);
-                startItem.setTMapPoint(startPoint);
-                mMapView.addMarkerItem(name,startItem);
-                startTextView.setText(name);
+                mStartPoint = new TMapPoint(lat,lon);
+                if(mStartItem != null) mMapView.removeMarkerItem(mStartItem.getID());
+                mStartItem = new TMapMarkerItem();
+                mStartItem.setIcon(bitmap);
+                mStartItem.setTMapPoint(mStartPoint);
+                mMapView.addMarkerItem(name, mStartItem);
+                mStartTextView.setText(name);
+                if(mEndPoint !=null) findPathByLatLon();
             }
             else if(type==1) {
-                endPoint = new TMapPoint(lat,lon);
-                if(endItem != null) mMapView.removeMarkerItem(endItem.getID());
-                endItem = new TMapMarkerItem();
-                endItem.setIcon(bitmap);
-                endItem.setTMapPoint(endPoint);
-                mMapView.addMarkerItem(name,endItem);
-                endTextView.setText(name);
+                mEndPoint = new TMapPoint(lat,lon);
+                if(mEndItem != null) mMapView.removeMarkerItem(mEndItem.getID());
+                mEndItem = new TMapMarkerItem();
+                mEndItem.setIcon(bitmap);
+                mEndItem.setTMapPoint(mEndPoint);
+                mMapView.addMarkerItem(name, mEndItem);
+                mEndTextView.setText(name);
                 findPathByLatLon();
             }
 
