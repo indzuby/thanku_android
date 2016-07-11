@@ -98,9 +98,11 @@ public class QuickFragment extends BaseFragment implements LocationListener{
 
     public void setCurrentLocation() {
         location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-        mMapView.setCenterPoint(location.getLongitude(), location.getLatitude(), true);
-        mMapView.setLocationPoint(location.getLongitude(), location.getLatitude());
-        mMapView.setZoomLevel(17);
+        if(location!=null) {
+            mMapView.setCenterPoint(location.getLongitude(), location.getLatitude(), true);
+            mMapView.setLocationPoint(location.getLongitude(), location.getLatitude());
+            mMapView.setZoomLevel(17);
+        }
 //        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.my_location_on);
 //        mMapView.setIcon(bitmap);
 //        mMapView.setIconVisibility(true);

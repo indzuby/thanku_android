@@ -2,11 +2,228 @@
 <items version="2" >
 
     <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_4bfb8a740f388bb3a399ba2f982f31629eb4871b.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/com.android.support-animated-vector-drawable-23.4.0_4bfb8a740f388bb3a399ba2f982f31629eb4871b.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_a34b79630c18e0cb9c73997173bc327022b76f79.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/internal_impl-23.4.0_a34b79630c18e0cb9c73997173bc327022b76f79.jar" />
+    </item>
+    <item
         jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.2"
-        sha1="0d18aaf7b35d1cea395b4cf1f0b7b6b8d5f286a9">
-        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9700826335e28498fed8db462fbdf71490d6a55e/classes.dex" />
+        sha1="9e4cd64f57f327ca88b00ca4392793561271e22c">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_9700826335e28498fed8db462fbdf71490d6a55e.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.tsengvn/Typekit/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="bbf90181fea46399a9e3d0f4326883a505f71952">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/com.tsengvn-Typekit-1.0.0_cda417b649418c497fb4e912761475ec31e01661.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.tsengvn/Typekit/1.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="bbf90181fea46399a9e3d0f4326883a505f71952">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/com.tsengvn-Typekit-1.0.0_cda417b649418c497fb4e912761475ec31e01661.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_c965e3605f07277dc6de1f6fe5683e8c758948bc.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/com.android.support-support-v4-23.4.0_c965e3605f07277dc6de1f6fe5683e8c758948bc.jar" />
+    </item>
+    <item
+        jar="/Users/user1/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.5/686c608d1805b6d4d425ec4459e88164ffc85870/gson-2.5.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/gson-2.5_09cbc3834d1977f6bcf8f4a97211bb868d2154a9.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/com.android.support-recyclerview-v7-23.4.0_f013888f42e8cc3a2218fe49f7bf8fc0fe4de944.jar" />
+    </item>
+    <item
+        jar="/Users/user1/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.5/686c608d1805b6d4d425ec4459e88164ffc85870/gson-2.5.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/gson-2.5_09cbc3834d1977f6bcf8f4a97211bb868d2154a9.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_f013888f42e8cc3a2218fe49f7bf8fc0fe4de944.jar" />
+    </item>
+    <item
+        jar="/Users/user1/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.9.1/c261495d1e01df849cdb3cbc941564018f0d3539/joda-time-2.9.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c261495d1e01df849cdb3cbc941564018f0d3539">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/joda-time-2.9.1_c07dff0ef2048cf2b4fab43db79a5057e889f63a.jar" />
+    </item>
+    <item
+        jar="/Users/user1/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.9.1/c261495d1e01df849cdb3cbc941564018f0d3539/joda-time-2.9.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c261495d1e01df849cdb3cbc941564018f0d3539">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/joda-time-2.9.1_c07dff0ef2048cf2b4fab43db79a5057e889f63a.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/com.android.support-support-vector-drawable-23.4.0_ad7efcab6b920c525458c28f7deb2755558c8526.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_ad7efcab6b920c525458c28f7deb2755558c8526.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="2b93690143e9df34c780e6de315ce3c3061a5efa">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/instant-run_d017d001bad78336525b81cae793d4d46643f32d.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/libs/com.skp.Tmap_1.0.37.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6b85dea7e38323c2b23534d75222c7506528e2ad">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/com.skp.Tmap_1.0.37_dfe7ef280425c3082f238b6a82cd3f411789dcff.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/support-annotations-23.4.0_59439a3813cff92738bcf9312f8d39f42c21499a.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/libs/com.skp.Tmap_1.0.37.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6b85dea7e38323c2b23534d75222c7506528e2ad">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/com.skp.Tmap_1.0.37_dfe7ef280425c3082f238b6a82cd3f411789dcff.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_59439a3813cff92738bcf9312f8d39f42c21499a.jar" />
+    </item>
+    <item
+        jar="/Users/user1/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.6.1/86b122e640af09b0723e1fa44083c354ba6d9089/glide-3.6.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="86b122e640af09b0723e1fa44083c354ba6d9089">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/glide-3.6.1_893f476a5a9890789539c5faca8fcda989f5bccc.jar" />
+    </item>
+    <item
+        jar="/Users/user1/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.6.1/86b122e640af09b0723e1fa44083c354ba6d9089/glide-3.6.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="86b122e640af09b0723e1fa44083c354ba6d9089">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/glide-3.6.1_893f476a5a9890789539c5faca8fcda989f5bccc.jar" />
+    </item>
+    <item
+        jar="/Users/user1/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-android/4.48/afa06f539a4026c10b247386312aa67404b80a16/ormlite-android-4.48.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="afa06f539a4026c10b247386312aa67404b80a16">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/ormlite-android-4.48_6a72f74a3b2bc6f071bd4e9b9a8616a35800e848.jar" />
+    </item>
+    <item
+        jar="/Users/user1/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-android/4.48/afa06f539a4026c10b247386312aa67404b80a16/ormlite-android-4.48.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="afa06f539a4026c10b247386312aa67404b80a16">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/ormlite-android-4.48_6a72f74a3b2bc6f071bd4e9b9a8616a35800e848.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_55bda88f6d84135af1f46c1ec304c381e832ff72.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/com.android.support-appcompat-v7-23.4.0_55bda88f6d84135af1f46c1ec304c381e832ff72.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_23f44472bb88a56622f0b4240b7746b2cae59bd1.jar" />
+    </item>
+    <item
+        jar="/Users/user1/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-core/4.48/e579bd2905d0399af5029aaaf9817d5fa0ca88a5/ormlite-core-4.48.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e579bd2905d0399af5029aaaf9817d5fa0ca88a5">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/ormlite-core-4.48_65502b36a3739cc0569d4eec2cfa4f0a8ace970e.jar" />
+    </item>
+    <item
+        jar="/Users/user1/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-core/4.48/e579bd2905d0399af5029aaaf9817d5fa0ca88a5/ormlite-core-4.48.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e579bd2905d0399af5029aaaf9817d5fa0ca88a5">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/debug/ormlite-core-4.48_65502b36a3739cc0569d4eec2cfa4f0a8ace970e.jar" />
+    </item>
+    <item
+        jar="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/user1/Documents/dev/thanku-android/app/build/intermediates/pre-dexed/release/com.android.support-design-23.4.0_23f44472bb88a56622f0b4240b7746b2cae59bd1.jar" />
     </item>
 
 </items>
