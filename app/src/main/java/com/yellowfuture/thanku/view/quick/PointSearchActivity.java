@@ -43,7 +43,7 @@ public class PointSearchActivity extends BaseActivity implements TextWatcher,Ada
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_point_search);
+        setContentView(R.layout.activity_address_search);
         init();
     }
 

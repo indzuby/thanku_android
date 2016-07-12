@@ -1,7 +1,18 @@
 <resources>
     <string name="app_name">땡큐</string>
     <string name="map_key">6350ddb7-1952-3756-9cd3-252fedf7c1f9</string>
-
+    <string name="company">YellowFuture</string>
 
     <string name="search_by_current"><![CDATA[<font color="#F62E5D">현재 위치</font>]]>를 출발지로 설정하기</string>
+
+    <string name="signUp">회원가입</string>
+    <string name="login">로그인</string>
+
+    <string name="profile">프로필</string>
+
+    <string name="save">저장</string>
+
+    <string name="addCart">장바구니 담기</string>
+
+    <string name="apply">적용</string>
 </resources>

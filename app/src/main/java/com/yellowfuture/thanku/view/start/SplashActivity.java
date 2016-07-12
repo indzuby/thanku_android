@@ -1,4 +1,4 @@
-package com.yellowfuture.thanku.view.splash;
+package com.yellowfuture.thanku.view.start;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;

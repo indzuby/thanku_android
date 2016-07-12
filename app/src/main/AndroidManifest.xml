@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.splash.SplashActivity"
+        <activity android:name=".view.start.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,10 +28,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.MainActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".view.quick.PointSearchActivity" />
         <activity android:name=".view.quick.QuickRequestActivity"
             android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".view.start.StartActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
     </application>
 
