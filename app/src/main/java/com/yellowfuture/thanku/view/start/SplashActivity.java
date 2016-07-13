@@ -9,8 +9,7 @@ import android.widget.Toast;
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.utils.ContextUtils;
-import com.yellowfuture.thanku.view.MainActivity;
-import com.yellowfuture.thanku.view.common.BaseActivity;
+import com.yellowfuture.thanku.view.basic.BaseActivity;
 
 /**
  * Created by zuby on 2016. 6. 16..
@@ -26,14 +25,18 @@ public class SplashActivity extends BaseActivity {
     }
 
     @Override
+    public void initView() {
+
+    }
+
+    @Override
     public void init() {
-        super.init();
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     Thread.sleep(1000);
-                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                    Intent intent = new Intent(SplashActivity.this, StartActivity.class);
                     startActivity(intent);
                     finish();
                 }catch (Exception e){

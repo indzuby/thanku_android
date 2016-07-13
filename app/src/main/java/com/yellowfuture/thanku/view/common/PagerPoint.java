@@ -2,7 +2,6 @@ package com.yellowfuture.thanku.view.common;
 
 import android.content.Context;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 

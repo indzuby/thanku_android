@@ -11,6 +11,7 @@
         android:orientation="vertical"
         android:layout_height="match_parent">
         <LinearLayout
+            android:id="@+id/serviceRestaurantLayout"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:clickable="true"
@@ -33,7 +34,7 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="맛집배달"
+                    android:text="@string/serviceRestaurant"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -45,6 +46,7 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/serviceBuyLayout"
             android:gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_weight="1"
@@ -66,7 +68,7 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="사다주기"
+                    android:text="@string/serviceBuy"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,6 +80,7 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/serviceErrandLayout"
             android:gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_weight="1"
@@ -99,7 +102,7 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="생활편의"
+                    android:text="@string/serviceErrand"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -111,6 +114,7 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/serviceQuickLayout"
             android:gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_weight="1"
@@ -132,7 +136,7 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="퀵서비스"
+                    android:text="@string/serviceQuick"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:layout_width="wrap_content"

@@ -11,11 +11,10 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.LinearLayout;
 
-import com.yellowfuture.thanku.R;
-import com.yellowfuture.thanku.view.MainActivity;
-import com.yellowfuture.thanku.view.common.BaseActivity;
+import com.yellowfuture.thanku.view.basic.BaseActivity;
+import com.yellowfuture.thanku.view.common.PagerPoint;
 
 /**
  * Created by user on 2016-01-11.
@@ -55,6 +54,18 @@ public class ContextUtils {
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION,android.Manifest.permission.ACCESS_COARSE_LOCATION},
                     CodeDefinition.REQUEST_PERMISSIONS_CODE);
         }
+    }
+
+    public static void setOvalContainer(Context context,LinearLayout layout, int size) {
+        layout.removeAllViews();
+        for(int i = 0 ; i<size;i++)
+            layout.addView(PagerPoint.getPoint(context));
+    }
+    public static void selectOval(Context context, LinearLayout layout, int position) {
+        for(int i = 0 ; i<layout.getChildCount();i++)
+            layout.getChildAt(i).setSelected(false);
+
+        layout.getChildAt(position).setSelected(true);
     }
 
 }

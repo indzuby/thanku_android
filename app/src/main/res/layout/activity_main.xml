@@ -2,6 +2,8 @@
 
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,15 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        tools:context=".view.MainActivity">
+        tools:context=".view.main.MainActivity">
 
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.AppBarOverlay">
-
-            <include layout="@layout/actionbar_main" />
-
+            android:theme="@style/AppTheme">
+            <include layout="@layout/actionbar_main"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -37,6 +37,7 @@
                     android:src="@mipmap/ic_location_on_black_24dp" />
 
                 <TextView
+                    android:id="@+id/nowAddressTextView"
                     android:layout_width="match_parent"
                     android:layout_height="24dp"
                     android:gravity="center_vertical"
@@ -57,6 +58,7 @@
         layout="@layout/element_navigation"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
         android:layout_gravity="start" />
 
 </android.support.v4.widget.DrawerLayout>

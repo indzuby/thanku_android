@@ -3,23 +3,23 @@
     package="com.yellowfuture.thanku">
 
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_OWNER_DATA"/>
-    <uses-permission android:name="android.permission.READ_OWNER_DATA"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
 
     <application
+        android:name=".common.MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_motorcycle_yellow_48dp"
-        android:name=".common.MainApplication"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.start.SplashActivity"
+        <activity
+            android:name=".view.start.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,15 +27,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.MainActivity"
-            android:windowSoftInputMode="stateHidden|adjustResize"
+        <activity
+            android:name=".view.main.MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".view.common.AddressSearchActivity" />
+        <activity
+            android:name=".view.start.StartActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".view.quick.PointSearchActivity" />
-        <activity android:name=".view.quick.QuickRequestActivity"
-            android:windowSoftInputMode="stateHidden"/>
-        <activity android:name=".view.start.StartActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
 
+        <activity
+            android:name=".view.main.LoginActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".view.main.SignUpActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".view.service.ErrandActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".view.service.QuickActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".view.service.BuyActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
     </application>
 
 </manifest>

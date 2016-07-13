@@ -28,6 +28,7 @@
                 android:textSize="13sp" />
 
             <EditText
+                android:id="@+id/idEditText"
                 android:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,6 +58,7 @@
                 android:textSize="13sp" />
 
             <EditText
+                android:id="@+id/passwordEditText"
                 android:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,6 +82,7 @@
             android:padding="16dp">
 
             <Button
+                android:id="@+id/loginButton"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="16sp"
@@ -94,6 +97,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/lostPasswordButton"
                     android:textColor="@color/black"
                     android:textSize="13sp"
                     android:layout_width="wrap_content"
@@ -101,6 +105,7 @@
                     android:text="비밀번호 분실" />
 
                 <TextView
+                    android:id="@+id/qnaButton"
                     android:textColor="@color/black"
                     android:textSize="13sp"
                     android:layout_width="wrap_content"
@@ -110,6 +115,8 @@
             </RelativeLayout>
 
             <ImageButton
+                android:elevation="2dp"
+                android:id="@+id/facebookLogin"
                 android:layout_marginTop="24dp"
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
@@ -118,6 +125,8 @@
                 android:src="@mipmap/btn_login_facebook" />
 
             <ImageButton
+                android:elevation="2dp"
+                android:id="@+id/kakaoLogin"
                 android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
@@ -126,6 +135,8 @@
                 android:src="@mipmap/btn_login_kakao" />
 
             <Button
+                android:elevation="2dp"
+                android:id="@+id/signUpButton"
                 android:layout_marginTop="8dp"
                 android:background="@color/black"
                 android:textColor="@color/white"

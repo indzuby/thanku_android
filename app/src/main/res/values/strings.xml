@@ -15,4 +15,10 @@
     <string name="addCart">장바구니 담기</string>
 
     <string name="apply">적용</string>
+
+
+    <string name="serviceRestaurant">맛집배달</string>
+    <string name="serviceBuy">사다주기</string>
+    <string name="serviceErrand">생활편의</string>
+    <string name="serviceQuick">퀵서비스</string>
 </resources>
