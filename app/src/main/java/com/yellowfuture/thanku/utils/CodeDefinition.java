@@ -7,8 +7,10 @@ public class CodeDefinition {
     final public static int REQUEST_PERMISSIONS_CODE = 7736;
 
 
-    final public static int REQUEST_SEARCH_POINT = 3346;
     final public static int REQUEST_QUICK_REQUEST = 3355;
+
+    final public static int REQUEST_SEARCH_START = 3346;
+    final public static int REQUEST_SEARCH_DESTINATION = 3347;
 
     final public static String SEARCH_POINT_PARAM_TYPE = "SEARCH_POINT_TYPE";
     final public static String PARAM_POI_NAME = "PARAM_POI_NAME";

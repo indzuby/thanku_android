@@ -2,9 +2,7 @@
     <string name="app_name">땡큐</string>
     <string name="map_key">6350ddb7-1952-3756-9cd3-252fedf7c1f9</string>
     <string name="company">YellowFuture</string>
-
-    <string name="search_by_current"><![CDATA[<font color="#F62E5D">현재 위치</font>]]>를 출발지로 설정하기</string>
-
+    <string name="findAddress">주소검색</string>
     <string name="signUp">회원가입</string>
     <string name="login">로그인</string>
 
@@ -15,10 +13,19 @@
     <string name="addCart">장바구니 담기</string>
 
     <string name="apply">적용</string>
-
+    <string name="find">찾기</string>
 
     <string name="serviceRestaurant">맛집배달</string>
     <string name="serviceBuy">사다주기</string>
     <string name="serviceErrand">생활편의</string>
     <string name="serviceQuick">퀵서비스</string>
+    
+    
+    <string name="addOrder">추가주문</string>
+    <string name="buyOrder">결제하기</string>
+    
+    
+    <string name="profileEdit">정보변경</string>
+    <string name="profileOrder">주문내역</string>
+    <string name="profileCart">장바구니</string>
 </resources>

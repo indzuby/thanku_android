@@ -7,7 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yellowfuture.thanku.R;
-import com.yellowfuture.thanku.utils.ContextUtils;
+import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.basic.BaseActivity;
 
 /**
@@ -23,7 +23,7 @@ public class SignUpActivity extends BaseActivity {
 
     }
     public void initActionBar(){
-        ContextUtils.getActionBar(this,getSupportActionBar(),R.layout.actionbar_default);
+        Utils.getActionBar(this,getSupportActionBar(),R.layout.actionbar_default);
         TextView title = (TextView)  findViewById(R.id.title);
         title.setText(getString(R.string.signUp));
         findViewById(R.id.back).setOnClickListener(this);

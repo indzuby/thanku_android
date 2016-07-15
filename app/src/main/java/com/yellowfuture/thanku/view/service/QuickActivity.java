@@ -9,8 +9,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yellowfuture.thanku.R;
-import com.yellowfuture.thanku.utils.ContextUtils;
+import com.yellowfuture.thanku.utils.CodeDefinition;
+import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.basic.BaseActivity;
+import com.yellowfuture.thanku.view.search.SearchActivity;
 
 /**
  * Created by zuby on 2016. 7. 13..
@@ -40,7 +42,7 @@ public class QuickActivity extends BaseActivity {
     }
 
     public void initActionBar() {
-        ContextUtils.getActionBar(this, getSupportActionBar(), R.layout.actionbar_default);
+        Utils.getActionBar(this, getSupportActionBar(), R.layout.actionbar_default);
         getSupportActionBar().setElevation(0);
         TextView title = (TextView) findViewById(R.id.title);
         title.setText(getString(R.string.serviceQuick));
@@ -52,8 +54,8 @@ public class QuickActivity extends BaseActivity {
         initView();
         initActionBar();
 
-        mStartAddressTextView.setOnClickListener(this);
-        mDestinationAddressTextView.setOnClickListener(this);
+        findViewById(R.id.startAddressLayout).setOnClickListener(this);
+        findViewById(R.id.destinationAddressLayout).setOnClickListener(this);
         mPhotoButton.setOnClickListener(this);
         findViewById(R.id.addCartButton).setOnClickListener(this);
 
@@ -70,8 +72,12 @@ public class QuickActivity extends BaseActivity {
     public void onClick(View v) {
         super.onClick(v);
         Intent intent = null;
-        if(v.getId() == R.id.startAddressTextView || v.getId() == R.id.destinationAddressTextView) {
-
+        if(v.getId() == R.id.startAddressLayout || v.getId() == R.id.destinationAddressLayout) {
+            intent = new Intent(QuickActivity.this, SearchActivity.class);
+            if(v.getId() == R.id.startAddressLayout)
+                startActivityForResult(intent, CodeDefinition.REQUEST_SEARCH_START);
+            else
+                startActivityForResult(intent, CodeDefinition.REQUEST_SEARCH_DESTINATION);
         }else if(v.getId() == R.id.photoButton) {
             Toast.makeText(this,"사진 첨부",Toast.LENGTH_SHORT).show();
 

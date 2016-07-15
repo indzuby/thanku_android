@@ -7,6 +7,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 
 import com.yellowfuture.thanku.R;
+import com.yellowfuture.thanku.view.profile.ProfileActivity;
 import com.yellowfuture.thanku.view.service.BuyActivity;
 import com.yellowfuture.thanku.view.basic.BaseActivity;
 import com.yellowfuture.thanku.view.service.ErrandActivity;
@@ -25,6 +26,15 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.menu).setOnClickListener(this);
 
     }
+    public void initNavigationLayout(){
+        findViewById(R.id.profileLayout).setOnClickListener(this);
+        findViewById(R.id.notificationLayout).setOnClickListener(this);
+        findViewById(R.id.cartLayout).setOnClickListener(this);
+        findViewById(R.id.orderlayout).setOnClickListener(this);
+        findViewById(R.id.announcementLayout).setOnClickListener(this);
+        findViewById(R.id.qnaLayout).setOnClickListener(this);
+        findViewById(R.id.advertisementLayout).setOnClickListener(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +47,7 @@ public class MainActivity extends BaseActivity {
     public void init(){
         initActionBar();
         initView();
-
+        initNavigationLayout();
         findViewById(R.id.serviceRestaurantLayout).setOnClickListener(this);
         findViewById(R.id.serviceBuyLayout).setOnClickListener(this);
         findViewById(R.id.serviceErrandLayout).setOnClickListener(this);
@@ -63,7 +73,10 @@ public class MainActivity extends BaseActivity {
         }else if(v.getId() == R.id.serviceQuickLayout) {
             intent = new Intent(MainActivity.this, QuickActivity.class);
             startActivity(intent);
-
+        }else if(v.getId() == R.id.profileLayout) {
+            intent = new Intent(MainActivity.this, ProfileActivity.class);
+            startActivity(intent);
+            mDrawerLayout.closeDrawers();
         }
     }
 

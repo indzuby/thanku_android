@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.yellowfuture.thanku.R;
-import com.yellowfuture.thanku.utils.ContextUtils;
+import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.basic.BaseActivity;
 
 /**
@@ -29,7 +29,7 @@ public class LoginActivity extends BaseActivity {
     }
 
     public void initActionBar() {
-        ContextUtils.getActionBar(this, getSupportActionBar(), R.layout.actionbar_default);
+        Utils.getActionBar(this, getSupportActionBar(), R.layout.actionbar_default);
         TextView title = (TextView) findViewById(R.id.title);
         title.setText(getString(R.string.login));
         findViewById(R.id.back).setOnClickListener(this);

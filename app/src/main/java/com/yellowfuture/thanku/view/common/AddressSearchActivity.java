@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.yellowfuture.thanku.R;
-import com.yellowfuture.thanku.utils.ContextUtils;
+import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.basic.BaseActivity;
 
 /**
@@ -21,7 +21,7 @@ public class AddressSearchActivity extends BaseActivity {
     }
 
     public void initActionbar() {
-        ContextUtils.getActionBar(this, getSupportActionBar(), R.layout.actionbar_default);
+        Utils.getActionBar(this, getSupportActionBar(), R.layout.actionbar_default);
         findViewById(R.id.back).setOnClickListener(this);
         ((TextView)findViewById(R.id.title)).setText("검색");
     }

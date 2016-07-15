@@ -60,6 +60,7 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/profileLayout"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@drawable/selector_navigation_item"
@@ -81,6 +82,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/notificationLayout"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@drawable/selector_navigation_item"
@@ -102,6 +104,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/cartLayout"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@drawable/selector_navigation_item"
@@ -123,6 +126,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/orderlayout"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@drawable/selector_navigation_item"
@@ -144,6 +148,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/announcementLayout"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@drawable/selector_navigation_item"
@@ -165,6 +170,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/qnaLayout"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@drawable/selector_navigation_item"
@@ -186,6 +192,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/advertisementLayout"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@drawable/selector_navigation_item"

@@ -2,27 +2,59 @@ package com.yellowfuture.thanku.view.profile;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.TextView;
 
+import com.yellowfuture.thanku.R;
+import com.yellowfuture.thanku.view.adapter.ProfilePagerAdapter;
 import com.yellowfuture.thanku.view.basic.BaseActivity;
 
 /**
  * Created by zuby on 2016. 7. 13..
  */
 public class ProfileActivity extends BaseActivity{
+
+    ViewPager mProfileViewPager;
+    ProfilePagerAdapter mAdapter;
+    TabLayout mTabs;
+
     @Override
     public void initView() {
+        mProfileViewPager = (ViewPager) findViewById(R.id.profileViewPager);
+        mTabs = (TabLayout) findViewById(R.id.tabs);
 
+    }
+    public void initActionBar(){
+        findViewById(R.id.back).setOnClickListener(this);
+        TextView title = (TextView) findViewById(R.id.title);
+        title.setText(getString(R.string.profile));
     }
 
     @Override
     public void init() {
+        initActionBar();
+        initView();
+
+
+        mAdapter = new ProfilePagerAdapter(getSupportFragmentManager(),this);
+
+        mProfileViewPager.setAdapter(mAdapter);
+        mTabs.setupWithViewPager(mProfileViewPager);
+        for(int i = 0; i<mTabs.getTabCount();i++) {
+            TabLayout.Tab tab = mTabs.getTabAt(i);
+            tab.setText(mAdapter.getTitle(i));
+        }
 
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_profile);
+        init();
     }
 
     @Override

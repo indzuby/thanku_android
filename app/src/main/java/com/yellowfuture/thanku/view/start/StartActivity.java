@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.yellowfuture.thanku.R;
-import com.yellowfuture.thanku.utils.ContextUtils;
+import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.adapter.StartPagerAdapter;
 import com.yellowfuture.thanku.view.basic.BaseActivity;
 import com.yellowfuture.thanku.view.main.LoginActivity;
@@ -32,8 +32,8 @@ public class StartActivity extends BaseActivity {
     public void init() {
         initView();
         mViewPager.setAdapter(new StartPagerAdapter(this));
-        ContextUtils.setOvalContainer(this, mOvalLayout, 4);
-        ContextUtils.selectOval(this, mOvalLayout, 0);
+        Utils.setOvalContainer(this, mOvalLayout, 4);
+        Utils.selectOval(mOvalLayout, 0);
 
         findViewById(R.id.closeButton).setOnClickListener(this);
         findViewById(R.id.signUpButton).setOnClickListener(this);
@@ -47,7 +47,7 @@ public class StartActivity extends BaseActivity {
 
             @Override
             public void onPageSelected(int position) {
-                ContextUtils.selectOval(StartActivity.this, mOvalLayout, position);
+                Utils.selectOval(mOvalLayout, position);
 
             }
 

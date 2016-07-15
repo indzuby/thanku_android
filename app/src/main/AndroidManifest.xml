@@ -51,6 +51,14 @@
         <activity
             android:name=".view.service.BuyActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".view.search.SearchActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".view.profile.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
     </application>
 
 </manifest>

@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.tsengvn.typekit.TypekitContextWrapper;
 import com.yellowfuture.thanku.R;
+import com.yellowfuture.thanku.utils.Utils;
 
 /**
  * Created by user on 2016-01-07.
@@ -31,6 +32,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onClick(View v) {
         if(v.getId()== R.id.back) {
+            Utils.hideKeyboard(this,findViewById(R.id.back));
             finish();
             return;
         }

@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.utils.CodeDefinition;
-import com.yellowfuture.thanku.utils.ContextUtils;
+import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.basic.BaseActivity;
 
 /**
@@ -20,7 +20,7 @@ public class SplashActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        ContextUtils.checkPermission(this);
+        Utils.checkPermission(this);
 
     }
 
