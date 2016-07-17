@@ -32,4 +32,16 @@
     <string name="qna">문의하기</string>
 
     <string name="findPassword">비밀번호 찾기</string>
+
+    <string name="all">전체</string>
+    <string name="koFood">한식/중식</string>
+    <string name="jpFood">일식/돈까스/회</string>
+    <string name="chicken">치킨/피자</string>
+    <string name="pigFood">족발/보쌈</string>
+    <string name="soupFood">찜/탕</string>
+    <string name="nightFood">야식</string>
+    <string name="lunchFood">웰빙/죽/도시락</string>
+    <string name="franchise">프렌차이즈</string>
+    <string name="cafe">카페</string>
+    <string name="convenience">편의점</string>
 </resources>

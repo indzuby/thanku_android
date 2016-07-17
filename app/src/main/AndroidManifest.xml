@@ -66,6 +66,11 @@
         <activity
             android:name=".view.main.QnaActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".view.restaurant.RestaurantActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
     </application>
 
 </manifest>

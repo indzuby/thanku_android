@@ -12,6 +12,7 @@ import com.yellowfuture.thanku.view.service.BuyActivity;
 import com.yellowfuture.thanku.view.basic.BaseActivity;
 import com.yellowfuture.thanku.view.service.ErrandActivity;
 import com.yellowfuture.thanku.view.service.QuickActivity;
+import com.yellowfuture.thanku.view.restaurant.RestaurantActivity;
 
 public class MainActivity extends BaseActivity {
 
@@ -62,7 +63,8 @@ public class MainActivity extends BaseActivity {
         if(v.getId() == R.id.menu) {
             mDrawerLayout.openDrawer(GravityCompat.START);
         }else if(v.getId() == R.id.serviceRestaurantLayout) {
-
+            intent = new Intent(MainActivity.this, RestaurantActivity.class);
+            startActivity(intent);
         }else if(v.getId() == R.id.serviceBuyLayout) {
             intent = new Intent(MainActivity.this, BuyActivity.class);
             startActivity(intent);
