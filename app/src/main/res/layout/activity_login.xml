@@ -97,12 +97,12 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/lostPasswordButton"
+                    android:id="@+id/findPasswordButton"
                     android:textColor="@color/black"
                     android:textSize="13sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="비밀번호 분실" />
+                    android:text="@string/findPassword" />
 
                 <TextView
                     android:id="@+id/qnaButton"
@@ -111,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="불편접수" />
+                    android:text="@string/qna" />
             </RelativeLayout>
 
             <ImageButton

@@ -77,6 +77,11 @@ public class MainActivity extends BaseActivity {
             intent = new Intent(MainActivity.this, ProfileActivity.class);
             startActivity(intent);
             mDrawerLayout.closeDrawers();
+        }else if(v.getId() == R.id.advertisementLayout || v.getId() == R.id.qnaLayout) {
+            intent = new Intent(MainActivity.this, QnaActivity.class);
+            startActivity(intent);
+            mDrawerLayout.closeDrawers();
+
         }
     }
 

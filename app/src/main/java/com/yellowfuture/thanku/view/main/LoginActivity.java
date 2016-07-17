@@ -19,6 +19,7 @@ public class LoginActivity extends BaseActivity {
     EditText mIdEditText, mPasswordEditText;
 
 
+
     @Override
     public void initView() {
 
@@ -43,6 +44,8 @@ public class LoginActivity extends BaseActivity {
 
         findViewById(R.id.loginButton).setOnClickListener(this);
         findViewById(R.id.signUpButton).setOnClickListener(this);
+        findViewById(R.id.findPasswordButton).setOnClickListener(this);
+        findViewById(R.id.qnaButton).setOnClickListener(this);
     }
 
     @Override
@@ -64,6 +67,14 @@ public class LoginActivity extends BaseActivity {
         }else if (v.getId() == R.id.signUpButton) {
             intent = new Intent(LoginActivity.this, SignUpActivity.class);
             startActivityForResult(intent,1000);
+        }else if(v.getId() == R.id.findPasswordButton){
+            intent = new Intent(LoginActivity.this, FindPasswordActivity.class);
+            startActivity(intent);
+
+        }else if(v.getId() == R.id.qnaButton) {
+            intent = new Intent(LoginActivity.this, QnaActivity.class);
+            startActivity(intent);
+
         }
 
     }
