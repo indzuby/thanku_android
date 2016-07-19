@@ -71,6 +71,7 @@ public class StartActivity extends BaseActivity {
 
         if (v.getId() == R.id.closeButton) {
             finish();
+            return ;
         } else if (v.getId() == R.id.signUpButton) {
             intent = new Intent(StartActivity.this, SignUpActivity.class);
         } else if (v.getId() == R.id.loginButton) {

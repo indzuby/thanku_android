@@ -39,13 +39,14 @@ public class RestaurantActivity extends BaseActivity{
         initActionBar();
 
         mAdapter = new RestaurantPagerAdapter(getSupportFragmentManager(),this);
-
         mRestaurantViewPager.setAdapter(mAdapter);
         mTabs.setupWithViewPager(mRestaurantViewPager);
         for(int i = 0; i<mTabs.getTabCount();i++) {
             TabLayout.Tab tab = mTabs.getTabAt(i);
             tab.setText(mAdapter.getTitle(i));
         }
+
+        findViewById(R.id.fabButton).setOnClickListener(this);
     }
 
     @Override
@@ -58,6 +59,10 @@ public class RestaurantActivity extends BaseActivity{
     @Override
     public void onClick(View v) {
         super.onClick(v);
+        if(v.getId() == R.id.fabButton) {
+            RestaurantFabPopup fabPopup = new RestaurantFabPopup(this);
+            fabPopup.show();
+        }
     }
 
     @Override

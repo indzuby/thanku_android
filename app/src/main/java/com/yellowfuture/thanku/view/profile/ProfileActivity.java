@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.yellowfuture.thanku.R;
+import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.view.adapter.ProfilePagerAdapter;
 import com.yellowfuture.thanku.view.basic.BaseActivity;
 
@@ -19,7 +20,7 @@ public class ProfileActivity extends BaseActivity{
     ViewPager mProfileViewPager;
     ProfilePagerAdapter mAdapter;
     TabLayout mTabs;
-
+    int startState;
     @Override
     public void initView() {
         mProfileViewPager = (ViewPager) findViewById(R.id.profileViewPager);
@@ -37,6 +38,7 @@ public class ProfileActivity extends BaseActivity{
         initActionBar();
         initView();
 
+        startState = getIntent().getIntExtra(CodeDefinition.PROFILE_START_PARAM,0);
 
         mAdapter = new ProfilePagerAdapter(getSupportFragmentManager(),this);
 
@@ -46,6 +48,7 @@ public class ProfileActivity extends BaseActivity{
             TabLayout.Tab tab = mTabs.getTabAt(i);
             tab.setText(mAdapter.getTitle(i));
         }
+        mProfileViewPager.setCurrentItem(startState);
 
     }
 

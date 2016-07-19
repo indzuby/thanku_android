@@ -4,10 +4,11 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical">
+
     <View
         android:layout_width="match_parent"
-        android:background="@color/darkGray"
-        android:layout_height="1px"/>
+        android:layout_height="1px"
+        android:background="@color/darkGray" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -27,26 +28,26 @@
             android:orientation="horizontal">
 
             <EditText
-                android:background="@color/transparent"
-                android:id="@+id/address"
+                android:id="@+id/addressEditText"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
                 android:layout_marginLeft="8dp"
                 android:layout_toLeftOf="@+id/removeAddress"
+                android:background="@color/transparent"
                 android:gravity="center_vertical"
                 android:hint="사당동 1011 (또는 동작대로 1길)"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
 
             <ImageView
-                android:visibility="gone"
                 android:id="@+id/removeAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:padding="3dp"
-                android:src="@mipmap/ic_close_black_18dp" />
+                android:src="@mipmap/ic_close_black_18dp"
+                android:visibility="gone" />
         </RelativeLayout>
 
         <ImageView
@@ -59,9 +60,9 @@
     </RelativeLayout>
 
     <ScrollView
-        android:fillViewport="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -81,12 +82,14 @@
                 android:textSize="12sp" />
 
             <LinearLayout
+                android:id="@+id/myLocationLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="16dp">
 
                 <TextView
+                    android:id="@+id/myAddressOld"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="[지번] 서울시 동작구 사당동 1038-11"
@@ -95,6 +98,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/myAddressNew"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -139,11 +143,11 @@
             </LinearLayout>
 
             <LinearLayout
-                android:visibility="gone"
                 android:id="@+id/resultLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -156,12 +160,23 @@
                     android:text="검색 결과"
                     android:textColor="@color/black"
                     android:textSize="12sp" />
-                <ListView
-                    android:layout_width="match_parent"
-                    android:id="@+id/resultListView"
-                    android:layout_height="wrap_content">
 
-                </ListView>
+                <LinearLayout
+                    android:id="@+id/resultListLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -188,7 +203,8 @@
                         android:textSize="13sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/addressBasicEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -218,6 +234,7 @@
                         android:textStyle="bold" />
 
                     <EditText
+                        android:id="@+id/addressDetailEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"

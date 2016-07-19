@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.yellowfuture.thanku.R;
+import com.yellowfuture.thanku.control.GpsControl;
 import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.basic.BaseActivity;
@@ -21,6 +22,7 @@ public class SplashActivity extends BaseActivity {
         setContentView(R.layout.activity_splash);
 
         Utils.checkPermission(this);
+        GpsControl.getInstance(this).startGpsTrace();
 
     }
 
@@ -63,8 +65,6 @@ public class SplashActivity extends BaseActivity {
                 } else {
                     Toast.makeText(this,"위치 권한이 필요합니다.",Toast.LENGTH_SHORT).show();
                     finish();
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
                 }
                 return;
             }

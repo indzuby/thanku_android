@@ -6,7 +6,7 @@
     <string name="signUp">회원가입</string>
     <string name="login">로그인</string>
 
-    <string name="profile">프로필</string>
+    <string name="profile">내 정보</string>
 
     <string name="save">저장</string>
 
@@ -44,4 +44,8 @@
     <string name="franchise">프렌차이즈</string>
     <string name="cafe">카페</string>
     <string name="convenience">편의점</string>
+
+    <string name="addressOld">[지번] %s</string>
+    <string name="addressNew">[도로명] %s</string>
+
 </resources>

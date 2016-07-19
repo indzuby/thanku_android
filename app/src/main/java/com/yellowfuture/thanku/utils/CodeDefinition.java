@@ -25,4 +25,7 @@ public class CodeDefinition {
     final public static String PARAM_END_NAME = "PARAM_END_NAME";
     final public static String PARAM_DISTANCE = "PARMA_DISTANCE";
 
+
+    final public static String PROFILE_START_PARAM = "PROFILE_START_PARAM";
+
 }
