@@ -22,8 +22,8 @@
     
     
     <string name="addOrder">추가주문</string>
-    <string name="buyOrder">결제하기</string>
-    
+    <string name="buyOrder">주문하기</string>
+    <string name="cancelOrder">주문취소</string>
     
     <string name="profileEdit">정보변경</string>
     <string name="profileOrder">주문내역</string>
@@ -45,7 +45,8 @@
     <string name="cafe">카페</string>
     <string name="convenience">편의점</string>
 
-    <string name="addressOld">[지번] %s</string>
-    <string name="addressNew">[도로명] %s</string>
+    <string name="addressName">[명칭] %s</string>
+    <string name="addressText">[주소] %s</string>
+    <string name="orderDetail">주문상세</string>
 
 </resources>

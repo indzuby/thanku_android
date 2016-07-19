@@ -53,7 +53,7 @@
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <activity
-            android:name=".view.search.SearchActivity"
+            android:name=".view.search.AddressSearchActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".view.profile.ProfileActivity"
@@ -70,6 +70,10 @@
         <activity
             android:name=".view.restaurant.RestaurantActivity"
             android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".view.profile.OrderDetailActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
     </application>
 

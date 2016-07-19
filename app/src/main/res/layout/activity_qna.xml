@@ -90,6 +90,7 @@
                 android:layout_height="1dp"
                 android:background="@color/gray" />
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -114,12 +115,8 @@
                     android:textColorHint="@color/darkGray" />
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/gray" />
-
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -144,11 +141,6 @@
                     android:textColorHint="@color/darkGray" />
 
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/gray" />
 
             <EditText
                 android:id="@+id/memoEditText"

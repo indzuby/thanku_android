@@ -1,9 +1,7 @@
 package com.yellowfuture.thanku.view.main;
 
-import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
@@ -16,8 +14,8 @@ import com.skp.Tmap.TMapPOIItem;
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.control.GpsControl;
 import com.yellowfuture.thanku.utils.CodeDefinition;
+import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.profile.ProfileActivity;
-import com.yellowfuture.thanku.view.search.SearchActivity;
 import com.yellowfuture.thanku.view.service.BuyActivity;
 import com.yellowfuture.thanku.view.basic.BaseActivity;
 import com.yellowfuture.thanku.view.service.ErrandActivity;
@@ -25,8 +23,6 @@ import com.yellowfuture.thanku.view.service.QuickActivity;
 import com.yellowfuture.thanku.view.restaurant.RestaurantActivity;
 
 import java.util.ArrayList;
-
-import lombok.core.Main;
 
 public class MainActivity extends BaseActivity {
 
@@ -56,25 +52,29 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.advertisementLayout).setOnClickListener(this);
     }
 
-    public void initMyLocationView(final Location location) {
+    public void initMyLocationView() {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                try {
-                    String address = mMapData.convertGpsToAddress(location.getLatitude(), location.getLongitude());
-                    ArrayList<TMapPOIItem> list = mMapData.findAddressPOI(address, 1);
-                    if (list.size() > 0) {
-                        final TMapPOIItem item = list.get(0);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                TextView nowAddressTextView = (TextView) findViewById(R.id.nowAddressTextView);
-                                nowAddressTextView.setText(item.getPOIName());
-                            }
-                        });
-                    }
-                }catch (Exception e){
+                while(active) {
+                    try {
+                        Location location = GpsControl.getInstance(MainActivity.this).getLocation();
+                        String address = mMapData.convertGpsToAddress(location.getLatitude(), location.getLongitude());
+                        ArrayList<TMapPOIItem> list = mMapData.findAllPOI(address, 1);
+                        if (list.size() > 0 && active) {
+                            final TMapPOIItem item = list.get(0);
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    TextView nowAddressTextView = (TextView) findViewById(R.id.nowAddressTextView);
+                                    nowAddressTextView.setText(Utils.parsePOIAddressOld(item));
+                                }
+                            });
+                        }
+                        Thread.sleep(10000);
+                    } catch (Exception e) {
 
+                    }
                 }
 
             }
@@ -94,10 +94,7 @@ public class MainActivity extends BaseActivity {
         initView();
         initNavigationLayout();
         mMapData = new TMapData();
-        mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
-        mLocationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-        initMyLocationView(GpsControl.getInstance(this).getLocation());
+        initMyLocationView();
         findViewById(R.id.serviceRestaurantLayout).setOnClickListener(this);
         findViewById(R.id.serviceBuyLayout).setOnClickListener(this);
         findViewById(R.id.serviceErrandLayout).setOnClickListener(this);
@@ -157,27 +154,5 @@ public class MainActivity extends BaseActivity {
         super.onDestroy();
         active = false;
     }
-
-    LocationListener locationListener = new LocationListener() {
-        @Override
-        public void onLocationChanged(Location location) {
-            initMyLocationView(location);
-        }
-
-        @Override
-        public void onStatusChanged(String provider, int status, Bundle extras) {
-
-        }
-
-        @Override
-        public void onProviderEnabled(String provider) {
-
-        }
-
-        @Override
-        public void onProviderDisabled(String provider) {
-
-        }
-    };
 
 }

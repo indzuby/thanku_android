@@ -12,7 +12,7 @@ import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.basic.BaseActivity;
-import com.yellowfuture.thanku.view.search.SearchActivity;
+import com.yellowfuture.thanku.view.search.AddressSearchActivity;
 
 /**
  * Created by zuby on 2016. 7. 13..
@@ -69,7 +69,7 @@ public class ErrandActivity extends BaseActivity {
         super.onClick(v);
         Intent intent = null;
         if(v.getId() == R.id.addressLayout) {
-            intent = new Intent(ErrandActivity.this, SearchActivity.class);
+            intent = new Intent(ErrandActivity.this, AddressSearchActivity.class);
             startActivityForResult(intent, CodeDefinition.REQUEST_SEARCH_START);
 
         }else if(v.getId() == R.id.photoButton) {

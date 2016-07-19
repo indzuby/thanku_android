@@ -89,7 +89,7 @@
                 android:padding="16dp">
 
                 <TextView
-                    android:id="@+id/myAddressOld"
+                    android:id="@+id/myAddressName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="[지번] 서울시 동작구 사당동 1038-11"
@@ -98,7 +98,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/myAddressNew"
+                    android:id="@+id/myAddressView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"

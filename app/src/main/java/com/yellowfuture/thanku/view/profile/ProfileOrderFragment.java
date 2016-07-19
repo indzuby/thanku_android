@@ -38,7 +38,7 @@ public class ProfileOrderFragment extends BaseFragment {
 
     public void init(){
         initView();
-        itemAdapter = new OrderItemAdapter();
+        itemAdapter = new OrderItemAdapter(getActivity());
         orderListView.setLayoutManager(new LinearLayoutManager(getContext()));
         orderListView.setAdapter(itemAdapter);
 

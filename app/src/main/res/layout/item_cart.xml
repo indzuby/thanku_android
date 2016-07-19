@@ -9,10 +9,11 @@
         android:background="@color/gray"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:textSize="15sp"
-        android:paddingLeft="8dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
+        android:textSize="12sp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
         android:text="네네치킨"
         android:layout_height="wrap_content" />
     <LinearLayout
@@ -23,17 +24,4 @@
         <include layout="@layout/item_cart_detail"/>
         <include layout="@layout/item_cart_detail"/>
     </LinearLayout>
-    <TextView
-        android:textSize="14sp"
-        android:layout_marginLeft="8dp"
-        android:padding="8dp"
-        android:layout_width="wrap_content"
-        android:lines="1"
-        android:text="치킨 안맵게 해주세요."
-        android:layout_height="wrap_content" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="@color/darkGray" />
 </LinearLayout>

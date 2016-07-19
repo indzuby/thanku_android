@@ -1,7 +1,9 @@
 package com.yellowfuture.thanku.view.start;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -22,6 +24,7 @@ public class SplashActivity extends BaseActivity {
         setContentView(R.layout.activity_splash);
 
         Utils.checkPermission(this);
+        GpsControl.getInstance(this).setMLocationManager((LocationManager) getSystemService(Context.LOCATION_SERVICE));
         GpsControl.getInstance(this).startGpsTrace();
 
     }

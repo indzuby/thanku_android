@@ -12,6 +12,8 @@ import com.skp.Tmap.TMapGpsManager;
 import com.skp.Tmap.TMapView;
 import com.yellowfuture.thanku.R;
 
+import java.util.TimerTask;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,7 +29,7 @@ public class GpsControl {
     TMapView mMapView;
     @Getter @Setter
     private Location location;
-
+    @Setter
     private LocationManager mLocationManager;
 
     public GpsControl(Context context) {
@@ -43,14 +45,21 @@ public class GpsControl {
         return instance;
     }
     public void startGpsTrace(){
-        mLocationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
-        location = getLastBestLocation();
-        mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,locationListener);
-        mLocationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,0,locationListener);
         if(mMapView == null) {
             mMapView = new TMapView(getContext());
             mMapView.setSKPMapApiKey(getContext().getString(R.string.map_key));
         }
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    location = getLastBestLocation();
+                    Thread.sleep(5000);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }).start();
 
 
     }
@@ -74,26 +83,4 @@ public class GpsControl {
             return locationNet;
         }
     }
-    LocationListener locationListener = new LocationListener() {
-        @Override
-        public void onLocationChanged(Location location) {
-            setLocation(location);
-        }
-
-        @Override
-        public void onStatusChanged(String provider, int status, Bundle extras) {
-
-        }
-
-        @Override
-        public void onProviderEnabled(String provider) {
-
-        }
-
-        @Override
-        public void onProviderDisabled(String provider) {
-
-        }
-    };
-
 }

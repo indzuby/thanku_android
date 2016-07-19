@@ -8,7 +8,9 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:orientation="horizontal"
+        android:background="@color/white"
         android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
         android:paddingTop="4dp">
 
         <ImageView
@@ -53,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:paddingRight="8dp"
+            android:paddingRight="16dp"
             android:src="@mipmap/ic_close_black_18dp" />
 
     </RelativeLayout>

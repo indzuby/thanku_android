@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 
+import com.skp.Tmap.TMapPOIItem;
 import com.yellowfuture.thanku.view.basic.BaseActivity;
 import com.yellowfuture.thanku.view.common.PagerPoint;
 
@@ -72,5 +73,15 @@ public class Utils {
     public static void hideKeyboard(Context context,View view){
         InputMethodManager imm = (InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
+    public static String parsePOIAddressOld(TMapPOIItem item){
+        String subAddress="";
+        if(item.firstNo!=null)
+            subAddress = item.firstNo ;
+        if(item.secondNo!=null && !item.secondNo.equals("0"))
+            subAddress+="-" + item.secondNo;
+        String address = item.getPOIAddress().replace("null","");
+
+        return address +" "+ subAddress;
     }
 }
