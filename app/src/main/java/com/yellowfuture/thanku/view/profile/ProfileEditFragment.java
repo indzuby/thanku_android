@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.yellowfuture.thanku.R;
-import com.yellowfuture.thanku.view.basic.BaseFragment;
+import com.yellowfuture.thanku.view.common.BaseFragment;
 
 /**
  * Created by zuby on 2016. 7. 14..

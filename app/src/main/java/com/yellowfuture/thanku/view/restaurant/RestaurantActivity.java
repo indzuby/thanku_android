@@ -8,9 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.yellowfuture.thanku.R;
-import com.yellowfuture.thanku.view.adapter.ProfilePagerAdapter;
 import com.yellowfuture.thanku.view.adapter.RestaurantPagerAdapter;
-import com.yellowfuture.thanku.view.basic.BaseActivity;
+import com.yellowfuture.thanku.view.common.BaseActivity;
 
 /**
  * Created by zuby on 2016-07-17.

@@ -15,13 +15,19 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 
 import com.skp.Tmap.TMapPOIItem;
-import com.yellowfuture.thanku.view.basic.BaseActivity;
+import com.yellowfuture.thanku.view.common.BaseActivity;
 import com.yellowfuture.thanku.view.common.PagerPoint;
+
+import java.util.regex.Pattern;
 
 /**
  * Created by user on 2016-01-11.
  */
 public class Utils {
+    public enum ValidType{
+        EMAIL,PHONE,NAME
+    }
+
     public static int pxFromDp(Context context, int dp) {
         return Math.round(dp * context.getResources().getDisplayMetrics().density);
     }
@@ -83,5 +89,26 @@ public class Utils {
         String address = item.getPOIAddress().replace("null","");
 
         return address +" "+ subAddress;
+    }
+
+    public static boolean validCheck(ValidType pattern, String str){
+        boolean okPattern = false;
+        String regex = null;
+
+        //이메일 체크
+        if(pattern == ValidType.EMAIL){
+            regex = "^[_a-z0-9-]+(.[_a-z0-9-]+)*@(?:\\w+\\.)+\\w+$";
+        }
+
+        //휴대폰번호 체크
+        else if(pattern == ValidType.PHONE){
+            regex = "^01(?:0|1[6-9])-(?:\\d{3}|\\d{4})-\\d{4}$";
+        }
+        else if(pattern == ValidType.NAME) {
+            regex = "^[가-힣]{2,6}$";
+        }
+
+        okPattern = Pattern.matches(regex, str);
+        return okPattern;
     }
 }

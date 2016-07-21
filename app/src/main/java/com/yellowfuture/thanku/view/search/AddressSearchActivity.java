@@ -18,7 +18,7 @@ import com.skp.Tmap.TMapPOIItem;
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.control.GpsControl;
 import com.yellowfuture.thanku.utils.Utils;
-import com.yellowfuture.thanku.view.basic.BaseActivity;
+import com.yellowfuture.thanku.view.common.BaseActivity;
 
 import java.util.ArrayList;
 

@@ -7,11 +7,19 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.yellowfuture.thanku.R;
+import com.yellowfuture.thanku.domain.Advertisement;
+import com.yellowfuture.thanku.network.controller.AdvertisementController;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.adapter.StartPagerAdapter;
-import com.yellowfuture.thanku.view.basic.BaseActivity;
-import com.yellowfuture.thanku.view.main.LoginActivity;
-import com.yellowfuture.thanku.view.main.SignUpActivity;
+import com.yellowfuture.thanku.view.common.BaseActivity;
+import com.yellowfuture.thanku.view.account.LoginActivity;
+import com.yellowfuture.thanku.view.account.SignUpActivity;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by zuby on 2016. 7. 12..
@@ -20,6 +28,8 @@ public class StartActivity extends BaseActivity {
 
     ViewPager mViewPager;
     LinearLayout mOvalLayout;
+
+    List<Advertisement> mAdvertisementList;
 
     @Override
     public void initView() {
@@ -31,8 +41,8 @@ public class StartActivity extends BaseActivity {
     @Override
     public void init() {
         initView();
-        mViewPager.setAdapter(new StartPagerAdapter(this));
-        Utils.setOvalContainer(this, mOvalLayout, 4);
+        mViewPager.setAdapter(new StartPagerAdapter(this,mAdvertisementList));
+        Utils.setOvalContainer(this, mOvalLayout, mAdvertisementList.size());
         Utils.selectOval(mOvalLayout, 0);
 
         findViewById(R.id.closeButton).setOnClickListener(this);
@@ -57,12 +67,28 @@ public class StartActivity extends BaseActivity {
             }
         });
     }
+    public void initData(){
+        AdvertisementController.getInstance(this).findByType(Advertisement.AdvertisementType.START, new Callback<List<Advertisement>>() {
+            @Override
+            public void onResponse(Call<List<Advertisement>> call, Response<List<Advertisement>> response) {
+                if(response.code() == 200){
+                    mAdvertisementList = response.body();
+                    init();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Advertisement>> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        init();
+        initData();
     }
 
     @Override

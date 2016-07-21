@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.utils.Utils;
-import com.yellowfuture.thanku.view.basic.BaseActivity;
+import com.yellowfuture.thanku.view.common.BaseActivity;
 import com.yellowfuture.thanku.view.search.AddressSearchActivity;
 
 /**

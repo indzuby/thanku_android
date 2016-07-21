@@ -31,16 +31,15 @@
             android:name=".view.main.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustPan" />
-        <activity android:name=".view.common.AddressSearchActivity" />
         <activity
             android:name=".view.start.StartActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name=".view.main.LoginActivity"
+            android:name=".view.account.LoginActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
-            android:name=".view.main.SignUpActivity"
+            android:name=".view.account.SignUpActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".view.service.ErrandActivity"
@@ -60,7 +59,7 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
-            android:name=".view.main.FindPasswordActivity"
+            android:name=".view.account.FindPasswordActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <activity

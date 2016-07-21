@@ -28,6 +28,7 @@
                 android:textSize="13sp" />
 
             <EditText
+                android:inputType="textEmailAddress"
                 android:id="@+id/idEditText"
                 android:textSize="15sp"
                 android:layout_width="match_parent"
