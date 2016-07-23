@@ -28,4 +28,6 @@ public class CodeDefinition {
 
     final public static String PROFILE_START_PARAM = "PROFILE_START_PARAM";
 
+    final public static String ACCESS_TOKEN = "ACCESS_TOKEN";
+
 }

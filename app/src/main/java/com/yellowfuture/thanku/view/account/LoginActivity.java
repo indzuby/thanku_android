@@ -11,6 +11,8 @@ import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.network.controller.UserController;
 import com.yellowfuture.thanku.network.form.LoginForm;
 import com.yellowfuture.thanku.network.form.LoginResponseForm;
+import com.yellowfuture.thanku.utils.CodeDefinition;
+import com.yellowfuture.thanku.utils.SessionUtils;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.common.BaseActivity;
 import com.yellowfuture.thanku.view.main.MainActivity;
@@ -48,6 +50,7 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     public void init() {
+        super.init();
         initView();
         initActionBar();
 
@@ -72,6 +75,7 @@ public class LoginActivity extends BaseActivity {
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                     setResult(RESULT_OK);
+                    SessionUtils.putString(LoginActivity.this,CodeDefinition.ACCESS_TOKEN,response.body().getAccessToken());
                     finish();
                 }else if(response.code() == 401){
                     Toast.makeText(LoginActivity.this,"없는 아이디입니다.",Toast.LENGTH_SHORT).show();

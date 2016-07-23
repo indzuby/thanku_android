@@ -35,19 +35,9 @@ public class StartActivity extends BaseActivity {
     public void initView() {
         mViewPager = (ViewPager) findViewById(R.id.startViewPager);
         mOvalLayout = (LinearLayout) findViewById(R.id.ovalLayout);
-
-    }
-
-    @Override
-    public void init() {
-        initView();
         mViewPager.setAdapter(new StartPagerAdapter(this,mAdvertisementList));
         Utils.setOvalContainer(this, mOvalLayout, mAdvertisementList.size());
         Utils.selectOval(mOvalLayout, 0);
-
-        findViewById(R.id.closeButton).setOnClickListener(this);
-        findViewById(R.id.signUpButton).setOnClickListener(this);
-        findViewById(R.id.loginButton).setOnClickListener(this);
 
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -66,6 +56,17 @@ public class StartActivity extends BaseActivity {
 
             }
         });
+
+    }
+
+    @Override
+    public void init() {
+        super.init();
+        initData();
+        findViewById(R.id.closeButton).setOnClickListener(this);
+        findViewById(R.id.signUpButton).setOnClickListener(this);
+        findViewById(R.id.loginButton).setOnClickListener(this);
+
     }
     public void initData(){
         AdvertisementController.getInstance(this).findByType(Advertisement.AdvertisementType.START, new Callback<List<Advertisement>>() {
@@ -73,7 +74,7 @@ public class StartActivity extends BaseActivity {
             public void onResponse(Call<List<Advertisement>> call, Response<List<Advertisement>> response) {
                 if(response.code() == 200){
                     mAdvertisementList = response.body();
-                    init();
+                    initView();
                 }
             }
 

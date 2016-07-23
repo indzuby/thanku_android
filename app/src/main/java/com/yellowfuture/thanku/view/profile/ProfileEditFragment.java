@@ -29,4 +29,15 @@ public class ProfileEditFragment extends BaseFragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
     }
+
+    @Override
+    public void init() {
+        super.init();
+
+    }
+
+    @Override
+    public void initView() {
+
+    }
 }

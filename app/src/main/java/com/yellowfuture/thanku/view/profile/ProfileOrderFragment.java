@@ -31,15 +31,18 @@ public class ProfileOrderFragment extends BaseFragment {
 
         return mView;
     }
+    @Override
     public void initView(){
         orderListView = (RecyclerView) mView.findViewById(R.id.orderListView);
-    }
-
-    public void init(){
-        initView();
         itemAdapter = new OrderItemAdapter(getActivity());
         orderListView.setLayoutManager(new LinearLayoutManager(getContext()));
         orderListView.setAdapter(itemAdapter);
+    }
+
+    @Override
+    public void init(){
+        super.init();
+        initView();
 
     }
     @Override

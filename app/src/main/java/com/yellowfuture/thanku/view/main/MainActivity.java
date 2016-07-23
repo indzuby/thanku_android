@@ -14,6 +14,7 @@ import com.skp.Tmap.TMapPOIItem;
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.control.GpsControl;
 import com.yellowfuture.thanku.utils.CodeDefinition;
+import com.yellowfuture.thanku.utils.SessionUtils;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.profile.ProfileActivity;
 import com.yellowfuture.thanku.view.service.BuyActivity;
@@ -30,7 +31,6 @@ public class MainActivity extends BaseActivity {
     boolean active = true;
     TMapData mMapData;
     LocationManager mLocationManager;
-
     @Override
     public void initView() {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -90,6 +90,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void init() {
+        super.init();
         initActionBar();
         initView();
         initNavigationLayout();

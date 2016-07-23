@@ -50,6 +50,23 @@ public class AddressSearchActivity extends BaseActivity {
         mMyAddressName = (TextView) findViewById(R.id.myAddressName);
         mAddressBasicEditText = (EditText) findViewById(R.id.addressBasicEditText);
         mAddressDetailEditText = (EditText) findViewById(R.id.addressDetailEditText);
+        initMyLocationView();
+        mAddressEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                initSearchResult(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
     }
 
@@ -139,27 +156,11 @@ public class AddressSearchActivity extends BaseActivity {
 
     @Override
     public void init() {
-        initActionBar();
-        initView();
+        super.init();
         mMapData = new TMapData();
         mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        initMyLocationView();
-        mAddressEditText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                initSearchResult(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
+        initActionBar();
+        initView();
     }
 
     @Override

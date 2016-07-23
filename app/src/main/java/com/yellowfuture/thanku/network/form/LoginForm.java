@@ -1,6 +1,5 @@
 package com.yellowfuture.thanku.network.form;
 
-import com.google.gson.annotations.SerializedName;
 import com.yellowfuture.thanku.network.RestApi;
 
 import lombok.Data;
@@ -16,7 +15,7 @@ public class LoginForm {
     private String client_id = RestApi.CLIENT_ID;
     private String username;
     private String password;
-    private String grant_type = "password";
+    private String grant_type = RestApi.GRANT_TYPE;
 
     public LoginForm(String username, String password) {
         this.username = username;

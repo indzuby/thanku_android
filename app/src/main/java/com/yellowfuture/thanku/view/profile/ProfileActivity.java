@@ -35,6 +35,7 @@ public class ProfileActivity extends BaseActivity{
 
     @Override
     public void init() {
+        super.init();
         initActionBar();
         initView();
 

@@ -11,8 +11,11 @@ import android.widget.Toast;
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.control.GpsControl;
 import com.yellowfuture.thanku.utils.CodeDefinition;
+import com.yellowfuture.thanku.utils.SessionUtils;
 import com.yellowfuture.thanku.utils.Utils;
+import com.yellowfuture.thanku.view.account.LoginActivity;
 import com.yellowfuture.thanku.view.common.BaseActivity;
+import com.yellowfuture.thanku.view.main.MainActivity;
 
 /**
  * Created by zuby on 2016. 6. 16..
@@ -36,15 +39,18 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     public void init() {
+        super.init();
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     Thread.sleep(1000);
                     Intent intent = new Intent(SplashActivity.this, StartActivity.class);
+                    if (mAccessToken != null & mAccessToken.length() > 0)
+                        intent = new Intent(SplashActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
-                }catch (Exception e){
+                } catch (Exception e) {
 
                 }
             }
@@ -66,7 +72,7 @@ public class SplashActivity extends BaseActivity {
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     init();
                 } else {
-                    Toast.makeText(this,"위치 권한이 필요합니다.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "위치 권한이 필요합니다.", Toast.LENGTH_SHORT).show();
                     finish();
                 }
                 return;

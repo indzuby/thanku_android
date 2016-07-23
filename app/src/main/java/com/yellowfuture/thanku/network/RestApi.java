@@ -19,11 +19,12 @@ public class RestApi {
 
     public static final String CLIENT_ID = "thanksClientId";
     public static final String CLIENT_SECRET = "thanksSecret";
-    public static final String PASSWORD = "password";
+    public static final String GRANT_TYPE = "password";
     public static final String REFRESH_TOKEN = "refresh_token";
+    public static final String BEARER = "Bearer ";
     private static final String RESOURCE_ID = "thanksRestId";
 
-    public final static String url = "http://192.168.0.13:8080";
+    public final static String url = "http://192.168.0.19:8080";
 
     @Getter
     private Context context;

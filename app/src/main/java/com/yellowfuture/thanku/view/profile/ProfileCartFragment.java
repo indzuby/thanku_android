@@ -30,15 +30,18 @@ public class ProfileCartFragment extends BaseFragment {
         init();
         return mView;
     }
+    @Override
     public void initView(){
         cartListView = (RecyclerView) mView.findViewById(R.id.cartListView);
-    }
-
-    public void init(){
-        initView();
         itemAdapter = new CartItemAdapter();
         cartListView.setLayoutManager(new LinearLayoutManager(getContext()));
         cartListView.setAdapter(itemAdapter);
+    }
+
+    @Override
+    public void init(){
+        super.init();
+        initView();
 
     }
 

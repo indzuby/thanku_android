@@ -50,6 +50,7 @@ public class BuyActivity extends BaseActivity {
 
     @Override
     public void init() {
+        super.init();
         initView();
         initActionBar();
 

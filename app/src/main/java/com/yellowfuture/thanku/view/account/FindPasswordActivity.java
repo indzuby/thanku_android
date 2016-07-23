@@ -26,6 +26,7 @@ public class FindPasswordActivity extends BaseActivity {
     }
     @Override
     public void init() {
+        super.init();
         initActionBar();
         initView();
     }

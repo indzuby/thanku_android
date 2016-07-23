@@ -28,6 +28,7 @@ public class QnaActivity extends BaseActivity {
 
     @Override
     public void init() {
+        super.init();
         initActionBar();
         initView();
     }

@@ -51,6 +51,7 @@ public class QuickActivity extends BaseActivity {
 
     @Override
     public void init() {
+        super.init();
         initView();
         initActionBar();
 

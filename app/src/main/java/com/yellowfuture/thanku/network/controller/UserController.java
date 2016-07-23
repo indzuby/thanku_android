@@ -1,12 +1,17 @@
 package com.yellowfuture.thanku.network.controller;
 
 import android.content.Context;
+import android.util.Base64;
 
 import com.yellowfuture.thanku.domain.User;
+import com.yellowfuture.thanku.network.RestApi;
 import com.yellowfuture.thanku.network.form.LoginForm;
 import com.yellowfuture.thanku.network.form.LoginResponseForm;
 import com.yellowfuture.thanku.network.form.SignUpForm;
 import com.yellowfuture.thanku.network.service.UserService;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -41,7 +46,17 @@ public class UserController extends BaseController {
         call.enqueue(callback);
     }
     public void login(LoginForm user, Callback<LoginResponseForm> callback) {
-        Call<LoginResponseForm> call = userService.login(user);
+        Map<String ,String > fieldMap = new HashMap<>();
+        fieldMap.put("scope",user.getScope());
+        fieldMap.put("client_id",user.getClient_id());
+        fieldMap.put("client_secret",user.getClient_secret());
+        fieldMap.put("grant_type",user.getGrant_type());
+        fieldMap.put("password",user.getPassword());
+        fieldMap.put("username",user.getUsername());
+
+        String authorization = "Basic "+ Base64.encodeToString((RestApi.CLIENT_ID+":"+RestApi.CLIENT_SECRET).getBytes(),Base64.NO_WRAP);
+
+        Call<LoginResponseForm> call = userService.login(authorization,fieldMap);
         call.enqueue(callback);
     }
 }

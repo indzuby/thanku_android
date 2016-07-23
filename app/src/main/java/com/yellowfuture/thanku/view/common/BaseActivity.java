@@ -8,6 +8,8 @@ import android.view.View;
 
 import com.tsengvn.typekit.TypekitContextWrapper;
 import com.yellowfuture.thanku.R;
+import com.yellowfuture.thanku.utils.CodeDefinition;
+import com.yellowfuture.thanku.utils.SessionUtils;
 import com.yellowfuture.thanku.utils.Utils;
 
 /**
@@ -15,8 +17,11 @@ import com.yellowfuture.thanku.utils.Utils;
  */
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
 
+    protected String mAccessToken;
     public abstract void initView();
-    public abstract void init();
+    public void init(){
+        mAccessToken = SessionUtils.getString(this, CodeDefinition.ACCESS_TOKEN,"");
+    }
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
