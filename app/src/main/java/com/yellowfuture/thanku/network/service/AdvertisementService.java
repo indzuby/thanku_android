@@ -1,6 +1,6 @@
 package com.yellowfuture.thanku.network.service;
 
-import com.yellowfuture.thanku.domain.Advertisement;
+import com.yellowfuture.thanku.model.Advertisement;
 
 import java.util.List;
 

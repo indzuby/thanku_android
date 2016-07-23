@@ -11,12 +11,11 @@ import lombok.Data;
 @Data
 public class LoginResponseForm {
     @SerializedName("access_token")
-    @Expose
     String accessToken;
+
     @SerializedName("token_type")
-    @Expose
     String tokenType;
+
     @SerializedName("refresh_token")
-    @Expose
     String refreshToken;
 }

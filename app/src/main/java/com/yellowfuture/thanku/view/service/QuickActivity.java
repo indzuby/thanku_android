@@ -32,6 +32,7 @@ public class QuickActivity extends BaseActivity {
 
     @Override
     public void initView() {
+        super.initView();
         mOrderTelEditText = (EditText) findViewById(R.id.orderTelEditText);
         mReceiveTelEditText = (EditText) findViewById(R.id.receiveTelEditText);
         mStartAddressTextView = (TextView) findViewById(R.id.startAddressTextView);

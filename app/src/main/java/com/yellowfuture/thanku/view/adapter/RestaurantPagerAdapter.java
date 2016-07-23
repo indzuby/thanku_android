@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.yellowfuture.thanku.domain.Category;
+import com.yellowfuture.thanku.model.Category;
 import com.yellowfuture.thanku.view.restaurant.RestaurantListFragment;
 
 import java.util.List;

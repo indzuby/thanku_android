@@ -34,12 +34,14 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     public void initView() {
+        super.initView();
 
     }
 
     @Override
     public void init() {
         super.init();
+        initView();
         new Thread(new Runnable() {
             @Override
             public void run() {

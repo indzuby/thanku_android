@@ -15,12 +15,25 @@ import com.yellowfuture.thanku.utils.Utils;
 /**
  * Created by user on 2016-01-07.
  */
-public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
+public class BaseActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private ProgressDialog progressDialog;
     protected String mAccessToken;
-    public abstract void initView();
+    public void initView(){
+        endProgress();
+    }
     public void init(){
         mAccessToken = SessionUtils.getString(this, CodeDefinition.ACCESS_TOKEN,"");
+        progressDialog = new ProgressDialog(this);
+        startProgress();
+
+    }
+    public void startProgress(){
+
+        if(progressDialog!=null) progressDialog.show();
+    }
+    public void endProgress(){
+        if(progressDialog !=null) progressDialog.dismiss();
     }
     @Override
     protected void attachBaseContext(Context newBase) {

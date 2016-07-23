@@ -15,6 +15,7 @@ import com.yellowfuture.thanku.view.common.BaseActivity;
 public class OrderDetailActivity extends BaseActivity{
     @Override
     public void initView() {
+        super.initView();
 
     }
     public void initActionBar(){

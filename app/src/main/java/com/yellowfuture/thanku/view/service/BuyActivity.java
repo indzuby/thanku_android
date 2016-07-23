@@ -32,6 +32,7 @@ public class BuyActivity extends BaseActivity {
 
     @Override
     public void initView() {
+        super.initView();
         mOrderTelEditText = (EditText) findViewById(R.id.orderTelEditText);
         mReceiveTelEditText = (EditText) findViewById(R.id.receiveTelEditText);
         mReceiveAddressTextView = (TextView) findViewById(R.id.addressTextView);

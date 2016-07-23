@@ -63,7 +63,7 @@
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <activity
-            android:name=".view.main.QnaActivity"
+            android:name=".view.main.InquireActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <activity

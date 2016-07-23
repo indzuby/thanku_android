@@ -17,6 +17,7 @@ import com.skp.Tmap.TMapData;
 import com.skp.Tmap.TMapPOIItem;
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.control.GpsControl;
+import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.common.BaseActivity;
 
@@ -41,6 +42,7 @@ public class AddressSearchActivity extends BaseActivity {
 
     @Override
     public void initView() {
+        super.initView();
         mAddressEditText = (EditText) findViewById(R.id.addressEditText);
         mHelpLayout = findViewById(R.id.helpLayout);
         mResultLayout = findViewById(R.id.resultLayout);
@@ -161,6 +163,7 @@ public class AddressSearchActivity extends BaseActivity {
         mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         initActionBar();
         initView();
+        findViewById(R.id.confirmButton).setOnClickListener(this);
     }
 
     @Override
@@ -172,7 +175,14 @@ public class AddressSearchActivity extends BaseActivity {
 
     @Override
     public void onClick(View v) {
+
         super.onClick(v);
+        if(v.getId() == R.id.confirmButton) {
+            Intent intent = new Intent();
+            intent.putExtra(CodeDefinition.RESPONSE_SEARCH_RESULT,mAddressBasicEditText.getText().toString()+" "+mAddressDetailEditText.getText().toString());
+            setResult(RESULT_OK,intent);
+            finish();
+        }
     }
 
     @Override

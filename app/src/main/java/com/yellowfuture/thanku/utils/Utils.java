@@ -11,6 +11,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 
@@ -37,6 +39,14 @@ public class Utils {
     }
     public static Drawable getDrawable(Context context, int id) {
         return Build.VERSION.SDK_INT >= 21?context.getResources().getDrawable(id, context.getTheme()):context.getResources().getDrawable(id);
+    }
+    public static void setStatusColor(Context context, Window window, int color) {
+
+        if (Build.VERSION.SDK_INT>=21) {
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(ContextCompat.getColor(context, color));
+        }
     }
     public static View getActionBar(Context context, ActionBar actionBar, int layout) {
         View v = LayoutInflater.from(context).inflate(layout,null);

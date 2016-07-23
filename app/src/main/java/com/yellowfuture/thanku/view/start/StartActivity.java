@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.yellowfuture.thanku.R;
-import com.yellowfuture.thanku.domain.Advertisement;
+import com.yellowfuture.thanku.model.Advertisement;
 import com.yellowfuture.thanku.network.controller.AdvertisementController;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.adapter.StartPagerAdapter;
@@ -33,6 +33,7 @@ public class StartActivity extends BaseActivity {
 
     @Override
     public void initView() {
+        super.initView();
         mViewPager = (ViewPager) findViewById(R.id.startViewPager);
         mOvalLayout = (LinearLayout) findViewById(R.id.ovalLayout);
         mViewPager.setAdapter(new StartPagerAdapter(this,mAdvertisementList));
@@ -89,7 +90,7 @@ public class StartActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        initData();
+        init();
     }
 
     @Override

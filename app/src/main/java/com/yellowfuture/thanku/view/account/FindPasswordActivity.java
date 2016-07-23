@@ -15,7 +15,7 @@ import com.yellowfuture.thanku.view.common.BaseActivity;
 public class FindPasswordActivity extends BaseActivity {
     @Override
     public void initView() {
-
+        super.initView();
     }
     public void initActionBar() {
         Utils.getActionBar(this, getSupportActionBar(), R.layout.actionbar_default);

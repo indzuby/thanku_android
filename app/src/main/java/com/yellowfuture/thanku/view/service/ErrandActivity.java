@@ -31,6 +31,7 @@ public class ErrandActivity extends BaseActivity {
 
     @Override
     public void initView() {
+        super.initView();
         mOrderTelEditText = (EditText) findViewById(R.id.orderTelEditText);
         mReceiveAddressTextView = (TextView) findViewById(R.id.addressTextView);
         mMemoEditText = (EditText) findViewById(R.id.memoEditText);

@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.yellowfuture.thanku.R;
-import com.yellowfuture.thanku.domain.Category;
+import com.yellowfuture.thanku.model.Category;
 import com.yellowfuture.thanku.network.controller.RestaurantController;
 import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.utils.SessionUtils;
@@ -32,6 +32,7 @@ public class RestaurantActivity extends BaseActivity{
     List<Category> mCategories;
     @Override
     public void initView() {
+        super.initView();
         mRestaurantViewPager = (ViewPager) findViewById(R.id.restaurantViewPager);
         mTabs = (TabLayout) findViewById(R.id.tabs);
         mAdapter = new RestaurantPagerAdapter(getSupportFragmentManager(), mCategories);

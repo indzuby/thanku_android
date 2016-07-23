@@ -1,6 +1,7 @@
 package com.yellowfuture.thanku.network.controller;
 
 import android.content.Context;
+import android.util.Base64;
 
 import com.yellowfuture.thanku.network.RestApi;
 import com.yellowfuture.thanku.network.service.AdvertisementService;
@@ -13,7 +14,6 @@ import retrofit2.Retrofit;
 public abstract class BaseController {
     protected Context context;
     protected Retrofit retrofit;
-
     public BaseController(Context context) {
         this.context = context;
         retrofit = RestApi.getInstance(context).getRetrofit();

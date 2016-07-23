@@ -47,32 +47,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b270420e-da13-4b48-8659-4ad7061a9a6d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Typekit_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_23_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_skp_Tmap_1_0_37.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/converter_gson_2_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/design_23_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/glide_3_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/joda_time_2_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lombok_1_12_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/okhttp_3_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/okio_1_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/ormlite_android_4_48.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/ormlite_core_4_48.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/retrofit_2_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_23_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/Category.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/Restaurant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/RestaurantController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/RestaurantService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantListFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/model/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/InquireController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/InquireForm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/InquireService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/ProgressDialog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/rotate.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/element_popup_loading.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/User.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/Advertisement.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/model/Advertisement.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/BaseModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/model/BaseModel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/Category.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/model/Category.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/Errand.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/model/Errand.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/Restaurant.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/model/Restaurant.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/QnaActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/InquireActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_qna.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_inquire.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
@@ -80,40 +69,49 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/RestApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/RestApi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/AdvertisementController.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/AdvertisementController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/BaseController.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/BaseController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/RestaurantController.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/RestaurantController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/UserController.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/LoginForm.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/LoginForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/LoginResponseForm.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/LoginResponseForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/SignUpForm.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/SignUpForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/AdvertisementService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/AdvertisementService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/RestaurantService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/RestaurantService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/UserService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/UserService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/CodeDefinition.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/CodeDefinition.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/ImproveDateTypeAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/ImproveDateTypeAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/Utils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/Utils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/FindPasswordActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/FindPasswordActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/LoginActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/SignUpActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/SignUpActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/RestaurantItemAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/RestaurantItemAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/RestaurantPagerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/RestaurantPagerAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/StartPagerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/StartPagerAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/profilePagerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/profilePagerAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/BaseActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/BaseActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/BaseFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/BaseFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/QnaActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/QnaActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/OrderDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/OrderDetailActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileCartFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileCartFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileEditFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileEditFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileOrderFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileOrderFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantListFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantListFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/search/AddressSearchActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/search/AddressSearchActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/BuyActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/BuyActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/ErrandActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/ErrandActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/QuickActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/QuickActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/start/SplashActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/start/SplashActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/start/StartActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/start/StartActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_restaurant.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_restaurant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_address_search.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_address_search.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/element_navigation.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/element_navigation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_edit.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_edit.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <ignored path="thanku-android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -141,31 +139,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StartActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/start/StartActivity.java">
+      <file leaf-file-name="InquireService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/InquireService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RestaurantListFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantListFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RestaurantController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/RestaurantController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.43589744">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -173,12 +151,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestaurantItemAdapter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/RestaurantItemAdapter.java">
+      <file leaf-file-name="InquireController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/InquireController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30914825">
-              <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="75" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,7 +179,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/BaseController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -195,31 +187,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestaurantActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantActivity.java">
+      <file leaf-file-name="RestaurantService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/RestaurantService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/BaseFragment.java">
+      <file leaf-file-name="InquireForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/InquireForm.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="92" selection-start-line="20" selection-start-column="92" selection-end-line="20" selection-end-column="92" />
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdvertisementService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/AdvertisementService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/BaseActivity.java">
+      <file leaf-file-name="RestApi.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/RestApi.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="84" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -229,19 +243,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/AdvertisementController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SplashActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/start/SplashActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -252,8 +254,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
         <option value="layoutResourceFile_vertical" />
+        <option value="resourceFile" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -1949,57 +1951,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_restaurant_detail.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/BaseModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/StartPagerAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/AddressSearchActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/DateTimeAdatper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/ImproveDateTypeAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/EmailSignUpForm.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_signup.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/AdvertisementController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/LoginResponseForm.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/Advertisement.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/User.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/SignUpForm.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/AdvertisementService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/Restaurant.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/Category.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/RestaurantPagerAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_restaurant.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/LoginForm.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/UserService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/CodeDefinition.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/RestaurantService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/RestApi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/BaseFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/QnaActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/RestaurantController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/RestaurantItemAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/FindPasswordActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/SignUpActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/QnaActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/OrderDetailActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/control/GpsControl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/start/SplashActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileCartFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileEditFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileOrderFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantListFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/search/AddressSearchActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/BuyActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/ErrandActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/QuickActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/start/StartActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/start/SplashActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/BaseActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/RestaurantController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/RestaurantItemAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/start/StartActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/element_popup_loading.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/Utils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/ProgressDialog.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/anim/rotate.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/BaseController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/element_navigation.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_address_search.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/search/AddressSearchActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/UserService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_edit.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/SignUpActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/ImproveDateTypeAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/ProfilePagerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/BaseFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/User.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/CodeDefinition.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileEditFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_inquire.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/Inquire.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/Inquire.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/InquireController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/InquireActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/InquireForm.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/SignUpForm.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/LoginResponseForm.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/model/User.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/model/BaseModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/InquireService.java" />
       </list>
     </option>
   </component>
@@ -2014,7 +2016,7 @@
     <option name="x" value="-1920" />
     <option name="y" value="-157" />
     <option name="width" value="1920" />
-    <option name="height" value="1057" />
+    <option name="height" value="1008" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -2094,6 +2096,24 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thanku-android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2107,6 +2127,28 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thanku" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thanku-android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thanku" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2360,6 +2402,28 @@
               <option name="myItemId" value="thanku" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thanku-android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thanku" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2479,7 +2543,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2793,31 +2857,32 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="-157" width="1920" height="1057" extended-state="6" />
+    <frame x="-1920" y="-157" width="1920" height="1008" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837406" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32735425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29649308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31278026" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28061768" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837406" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18423855" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847533" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39808917" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39798206" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2826,7 +2891,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2850,7 +2914,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/search/AddressSearchActivity.java</url>
-          <line>118</line>
+          <line>120</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
@@ -2860,8 +2924,38 @@
           <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileEditFragment.java</url>
+          <line>168</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileEditFragment.java</url>
+          <line>177</line>
+          <properties />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/search/AddressSearchActivity.java</url>
+          <line>180</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileActivity.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/UserController.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="30" />
+      <option name="time" value="44" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
@@ -2873,32 +2967,95 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/StartPagerAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/FindPasswordActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.210526">
-          <caret line="43" column="60" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="e#471#472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/OrderDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/ImproveDateTypeAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileCartFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/element_event.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileOrderFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.5">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/BuyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/start/SplashActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding>
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/start/StartActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="12" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/element_popup_loading.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8490566">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -2909,16 +3066,184 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="26" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_signup.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/ProgressDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.928572">
-          <caret line="177" column="55" selection-start-line="177" selection-start-column="55" selection-end-line="177" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
           <folding>
-            <element signature="e#9469#9485#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/rotate.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/element_navigation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.4716983">
+          <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/QuickActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/ErrandActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="45" selection-start-line="72" selection-start-column="45" selection-end-line="74" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_address_search.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6603775">
+          <caret line="252" column="50" selection-start-line="252" selection-start-column="50" selection-end-line="252" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/control/GpsControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="19" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_profile_edit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3396227">
+          <caret line="103" column="28" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/bbb63ca253b483da8ee53a50374593923e3de2e2/gson-2.7-sources.jar!/com/google/gson/annotations/Expose.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="2" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/ImproveDateTypeAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="68" selection-start-line="93" selection-start-column="68" selection-end-line="93" selection-end-column="68" />
+          <folding>
+            <element signature="e#846#876#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/search/AddressSearchActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/23.4.0/support-v4-23.4.0-sources.jar!/android/support/v4/app/Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="935" column="16" selection-start-line="935" selection-start-column="16" selection-end-line="935" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/ProfilePagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/BaseFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="62" selection-start-line="71" selection-start-column="62" selection-end-line="71" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="61" selection-start-line="64" selection-start-column="61" selection-end-line="66" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/CodeDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileEditFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="75" selection-start-line="90" selection-start-column="75" selection-end-line="90" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_inquire.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.226415">
+          <caret line="184" column="40" selection-start-line="184" selection-start-column="40" selection-end-line="184" selection-end-column="40" />
+          <folding>
+            <element signature="e#7685#7702#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2926,111 +3251,542 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/Advertisement.java">
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/com/yellowfuture/thanku/R.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="-7.4444447">
+          <caret line="2564" column="32" selection-start-line="2564" selection-start-column="32" selection-end-line="2564" selection-end-column="32" />
+          <folding>
+            <marker date="1469276629000" expanded="true" signature="274:1356" placeholder="{...}" />
+            <marker date="1469276629000" expanded="true" signature="1392:120941" placeholder="{...}" />
+            <marker date="1469276629000" expanded="true" signature="1402:1629" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="1699:1926" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="2003:2230" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="2303:3092" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="3159:3386" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="3459:3686" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="3754:3981" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="4055:4282" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="4353:4580" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="4655:4882" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="4950:5177" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="5251:5478" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="5549:5776" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="5849:6076" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="6142:6369" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="6447:6837" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="6910:7137" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="7211:7438" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="7518:7745" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="7822:8049" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="8125:8352" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="8427:8654" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="8730:8957" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="9034:9261" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="9341:9568" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="9649:9876" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="9953:10180" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="10259:10486" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="10555:10782" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="10863:11090" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="11169:11396" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="11473:11842" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="11915:12284" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="12353:12580" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="12658:12885" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="12966:13303" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="13381:13608" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="13678:13905" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="13975:14312" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="14379:14898" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="14967:15486" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="15556:15783" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="15862:16089" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="16153:16543" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="16612:17002" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="28174:28401" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="28483:28905" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="171391:171876" placeholder="{...}" />
+            <marker date="1469276629000" expanded="true" signature="171913:200312" placeholder="{...}" />
+            <marker date="1469276629000" expanded="true" signature="200353:530193" placeholder="{...}" />
+            <marker date="1469276629000" expanded="true" signature="200363:205071" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="205546:206013" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="206081:206721" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="206794:207438" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="207513:208282" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="208355:209126" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="209200:209973" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="210048:210821" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="210896:211387" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="211467:212394" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="212465:212926" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="212990:213747" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="213814:214565" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="214628:215223" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="215300:215781" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="215856:216323" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="216391:216846" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="216907:217406" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="217490:218251" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="218320:218775" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="218836:219482" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="219553:220020" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="220088:220863" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="220939:221418" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="221492:222097" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="222162:222643" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="222717:223316" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="223378:223853" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="223924:224394" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="224491:224716" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="224801:225262" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="225362:225578" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="225660:225726" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="225812:227086" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="227250:227718" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="227786:228427" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="228500:228978" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="229051:229803" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="229867:230349" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="230424:230900" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="230972:231724" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="231837:232366" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="232469:233108" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="233195:234533" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="234698:234903" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="234976:235467" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="235547:236024" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="236097:236566" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="236635:237126" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="237206:237699" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="237780:238540" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="238658:238872" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="238950:239710" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="239779:240355" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="240423:241166" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="241285:242133" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="242224:242737" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="242835:243450" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="243562:243768" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="243845:244319" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="244394:245043" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="245154:245381" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="245468:246023" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="246099:268247" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="269999:270483" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="270562:271060" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="271146:271636" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="271718:272758" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="272834:273324" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="273406:273886" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="273963:274455" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="274538:275024" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="275104:275598" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="275682:276162" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="276239:276731" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="276814:277300" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="277380:277870" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="277952:278452" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="278539:279192" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="279274:279766" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="279849:280353" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="280442:280940" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="281026:281522" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="281607:282101" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="282185:282681" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="282766:283264" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="283350:283854" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="283943:284449" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="284539:285037" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="285123:285625" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="285713:286195" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="286273:286779" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="286869:287371" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="287459:287957" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="288043:288543" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="288630:289136" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="289226:289836" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="289923:290407" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="290486:290970" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="291049:291285" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="291375:291603" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="291689:292191" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="292279:292773" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="292857:293349" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="293432:293940" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="294031:294537" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="294627:295135" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="295226:295706" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="295783:296257" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="296332:296816" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="296896:297374" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="297451:297943" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="298027:298696" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="298770:299451" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="299531:300220" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="300304:300993" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="301077:301760" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="301841:302512" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="302587:303266" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="303345:304036" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="304121:304607" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="304687:305475" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="305560:306034" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="306108:306594" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="306674:307156" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="307234:307728" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="307812:308618" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="308712:309200" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="309281:309922" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="309998:310476" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="310553:311039" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="311119:311603" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="311682:312192" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="312284:312780" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="312865:313357" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="313440:314230" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="314316:315116" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="315207:316007" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="316098:316898" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="316989:317791" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="317883:318365" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="318443:318931" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="319012:319792" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="319873:320353" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="320430:320914" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="320993:321477" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="321557:322037" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="322115:322613" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="322700:323190" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="323273:323755" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="323833:324309" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="324385:324885" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="324972:325492" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="325589:326089" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="326176:326652" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="326728:327202" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="327277:327785" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="327876:328372" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="328457:328963" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="329053:329573" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="329670:330184" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="330278:330786" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="330877:331548" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="331639:332290" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="332371:332879" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="332970:333446" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="333521:334113" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="334190:334796" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="334880:335488" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="335573:336614" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="336698:337739" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="337823:338862" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="338945:339984" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="340067:341102" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="341184:342219" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="342301:342889" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="342964:343691" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="343811:344419" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="344510:345304" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="345397:345864" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="345961:346550" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="346626:347446" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="347575:348251" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="348353:348985" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="349101:352309" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="352606:353762" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="353855:354372" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="354471:355151" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="355234:356388" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="356480:357271" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="357361:358164" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="358260:359057" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="359150:359951" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="360046:360843" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="360936:361451" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="361549:362233" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="362318:362931" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="363007:363602" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="363686:364165" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="364246:365029" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="365149:365357" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="365433:366100" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="366172:366942" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="367018:367673" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="367784:368255" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="368328:368821" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="368905:370270" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="370442:370682" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="370782:371276" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="371367:372791" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="372889:373529" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="373622:374205" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="374297:375125" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="375242:375735" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="375816:376297" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="376372:377044" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="377117:378795" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="378990:379767" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="379847:380626" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="380707:381472" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="381546:382206" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="382276:383047" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="383124:383899" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="383978:384559" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="384632:385397" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="385471:387251" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="387449:388130" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="388212:388996" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="389082:389854" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="389933:390701" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="390778:391359" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="391434:392222" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="392309:392984" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="393063:393663" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="393747:394646" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="394774:394998" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="395086:395324" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="395419:396035" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="396128:398070" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="398290:398520" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="398609:398859" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="398958:399172" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="399253:399475" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="399560:399778" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="399861:400331" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="400404:401180" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="401260:401872" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="401961:402691" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="402769:403851" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="403994:404229" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="404324:404557" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="404651:404884" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="404978:405209" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="405302:406004" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="406113:406358" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="406453:406694" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="406787:407997" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="408160:408385" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="408467:408672" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="408744:408939" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="409006:409221" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="409298:409519" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="409599:409804" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="409876:412775" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="413105:413575" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="413644:414270" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="414346:414964" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="415036:415262" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="415344:415552" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="415626:415830" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="415901:416105" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="416176:416374" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="416442:416636" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="416702:416916" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="416992:417212" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="417292:417496" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="417568:417788" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="417867:418067" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="418136:418354" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="418432:418636" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="418707:419499" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="419568:421249" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="421435:421657" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="421737:421961" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="422042:422260" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="422338:422570" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="422655:422881" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="422963:423183" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="423262:423492" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="423576:424170" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="424245:426227" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="426455:426671" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="426751:426981" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="427068:427280" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="427358:428120" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="428191:428667" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="428741:429221" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="429297:429968" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="430042:430530" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="430610:431283" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="431358:431818" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="431884:432512" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="432617:432840" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="432922:433507" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="433579:434094" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="434202:434812" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="434904:436017" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="436171:436387" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="436466:437084" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="437157:437743" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="437816:438371" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="438440:439024" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="439096:439590" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="439694:440347" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="440432:440956" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="441066:441862" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="441957:444965" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="445297:445507" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="445582:445794" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="445870:446080" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="446155:446363" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="446437:446903" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="446970:447438" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="447507:448129" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="448203:448663" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="448727:449321" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="449397:449857" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="449921:450399" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="450473:451081" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="451148:451624" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="451697:452165" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="452234:452714" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="452789:453275" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="453353:453819" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="453887:454691" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="454811:455023" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="455101:455863" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="455934:456718" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="456800:457837" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="457986:458201" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="458277:458480" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="458550:458769" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="458847:459048" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="459117:459582" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="459647:461548" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="461774:461982" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="462057:462263" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="462337:462541" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="462614:463190" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="463258:463838" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="463908:464678" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="464752:465520" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="465593:466083" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="466163:466937" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="467013:467473" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="467538:468224" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="468337:468534" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="468601:468802" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="468871:469068" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="469135:472059" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="472366:472839" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="472909:473678" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="473750:474326" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="474393:475069" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="475143:475918" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="475993:476754" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="476822:477583" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="477651:478226" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="478290:479049" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="479117:479888" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="479962:480727" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="480798:481567" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="481640:482405" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="482476:483158" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="483236:483717" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="483791:484457" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="484526:486275" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="486491:486709" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="486790:487002" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="487080:487292" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="487370:487590" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="487672:487886" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="487965:488177" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="488255:488469" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="488548:488760" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="488838:489390" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="489463:491782" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="492023:492228" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="492303:492526" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="492610:493201" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="493278:493850" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="493929:494440" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="494532:495027" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="495111:495698" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="495773:496264" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="496346:496949" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="497033:497618" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="497692:498181" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="498262:502635" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="503084:503287" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="503357:503564" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="503636:504275" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="504357:504826" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="504894:505661" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="505731:506500" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="506571:507342" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="507414:508185" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="508257:508710" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="508769:509386" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="509457:510224" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="510295:510938" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="511022:511495" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="511565:512030" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="512095:512698" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="512761:513250" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="513328:514002" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="514075:514672" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="514732:515503" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="515576:516341" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="516411:517180" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="517252:518017" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="518087:518848" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="518916:519399" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="519474:520142" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="520212:520628" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="520717:521689" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="521748:522722" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="522868:523072" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="523141:523337" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="523402:524156" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="524218:524976" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="525040:525492" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="525549:526410" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="526536:526758" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="526844:527525" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="527607:528391" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="528477:529224" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="529344:529544" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="529616:529832" placeholder="/**...*/" />
+            <marker date="1469276629000" expanded="true" signature="529912:530120" placeholder="/**...*/" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/User.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/SignUpActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="161" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/RestaurantController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/InquireActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1640#1667#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/SignUpForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/LoginResponseForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/Restaurant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/domain/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/recyclerview-v7/23.4.0/recyclerview-v7-23.4.0-sources.jar!/android/support/v7/widget/RecyclerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33286715">
-          <caret line="8958" column="15" selection-start-line="8958" selection-start-column="15" selection-end-line="8958" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_quick_request.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3018866">
-          <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_cart_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3018866">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_restaurant.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3962264">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/RestaurantPagerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#1515#1516#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
-            <element signature="e#1616#1617#0" expanded="true" />
-            <element signature="e#1658#1659#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3038,27 +3794,101 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/LoginForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/LoginResponseForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/model/Restaurant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/model/BaseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/form/InquireForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/RestApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/AdvertisementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/AdvertisementService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/RestaurantService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/InquireController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -3068,258 +3898,20 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <caret line="30" column="75" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/utils/CodeDefinition.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/InquireService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/RestApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-          <folding>
-            <marker date="1469260604000" expanded="true" signature="49:82" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/service/RestaurantService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="88" selection-start-line="21" selection-start-column="88" selection-end-line="21" selection-end-column="88" />
+        <state vertical-scroll-proportion="0.43589744">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="24" selection-start-line="91" selection-start-column="24" selection-end-line="92" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/main/QnaActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/FindPasswordActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/account/SignUpActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/OrderDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileCartFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileEditFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/profile/ProfileOrderFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantFabPopup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/search/AddressSearchActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
-          <folding>
-            <element signature="e#2614#2645#0" expanded="true" />
-            <element signature="e#3781#3831#0" expanded="true" />
-            <element signature="e#3897#3960#0" expanded="true" />
-            <element signature="e#4845#4895#0" expanded="true" />
-            <element signature="e#4938#5001#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/BuyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/ErrandActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="50" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/service/QuickActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/start/StartActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/start/SplashActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/BaseFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="92" selection-start-line="20" selection-start-column="92" selection-end-line="20" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/common/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="84" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/restaurant/RestaurantActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/AdvertisementController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/network/controller/RestaurantController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yellowfuture/thanku/view/adapter/RestaurantItemAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30914825">
-          <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>

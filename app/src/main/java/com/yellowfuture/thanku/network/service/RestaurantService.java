@@ -1,7 +1,7 @@
 package com.yellowfuture.thanku.network.service;
 
-import com.yellowfuture.thanku.domain.Category;
-import com.yellowfuture.thanku.domain.Restaurant;
+import com.yellowfuture.thanku.model.Category;
+import com.yellowfuture.thanku.model.Restaurant;
 
 import java.util.List;
 

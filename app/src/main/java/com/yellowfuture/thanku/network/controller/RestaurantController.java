@@ -2,11 +2,10 @@ package com.yellowfuture.thanku.network.controller;
 
 import android.content.Context;
 
-import com.yellowfuture.thanku.domain.Category;
-import com.yellowfuture.thanku.domain.Restaurant;
+import com.yellowfuture.thanku.model.Category;
+import com.yellowfuture.thanku.model.Restaurant;
 import com.yellowfuture.thanku.network.RestApi;
 import com.yellowfuture.thanku.network.service.RestaurantService;
-import com.yellowfuture.thanku.network.service.UserService;
 
 import java.util.List;
 

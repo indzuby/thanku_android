@@ -35,13 +35,14 @@ public final class ImproveDateTypeAdapter extends TypeAdapter<Date> {
     private final DateFormat enUsFormat;
     private final DateFormat localFormat;
     private final DateFormat iso8601Format;
-
+    private final DateFormat dateFormat;
     public ImproveDateTypeAdapter() {
         this.enUsFormat = DateFormat.getDateTimeInstance(2, 2, Locale.US);
 
         this.localFormat = DateFormat.getDateTimeInstance(2, 2);
 
         this.iso8601Format = buildIso8601Format();
+        this.dateFormat = dateFormat();
     }
 
     private static DateFormat buildIso8601Format() {
@@ -51,6 +52,12 @@ public final class ImproveDateTypeAdapter extends TypeAdapter<Date> {
         return iso8601Format;
     }
 
+    private static DateFormat dateFormat() {
+        DateFormat iso8601Format = new SimpleDateFormat(
+                "yyyy-MM-dd", Locale.US);
+        iso8601Format.setTimeZone(TimeZone.getTimeZone("UTC"));
+        return iso8601Format;
+    }
     public Date read(JsonReader in) throws IOException {
         if (in.peek() == JsonToken.NULL) {
             in.nextNull();
@@ -79,8 +86,13 @@ public final class ImproveDateTypeAdapter extends TypeAdapter<Date> {
 
                         return this.iso8601Format.parse(json);
                     } catch (ParseException e3) {
+                        try{
+                            return this.dateFormat.parse(json);
+                        } catch (ParseException e4) {
 
-                        throw new JsonSyntaxException(json, e2);
+                            throw new JsonSyntaxException(json, e4);
+                        }
+
                     }
                 }
             }

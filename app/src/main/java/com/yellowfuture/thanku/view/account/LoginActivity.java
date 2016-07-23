@@ -16,7 +16,7 @@ import com.yellowfuture.thanku.utils.SessionUtils;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.common.BaseActivity;
 import com.yellowfuture.thanku.view.main.MainActivity;
-import com.yellowfuture.thanku.view.main.QnaActivity;
+import com.yellowfuture.thanku.view.main.InquireActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -34,6 +34,7 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     public void initView() {
+        super.initView();
 
         mIdEditText = (EditText) findViewById(R.id.idEditText);
         mPasswordEditText = (EditText) findViewById(R.id.passwordEditText);
@@ -114,7 +115,7 @@ public class LoginActivity extends BaseActivity {
             startActivity(intent);
 
         }else if(v.getId() == R.id.qnaButton) {
-            intent = new Intent(LoginActivity.this, QnaActivity.class);
+            intent = new Intent(LoginActivity.this, InquireActivity.class);
             startActivity(intent);
 
         }

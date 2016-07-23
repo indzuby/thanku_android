@@ -250,6 +250,7 @@
                     android:background="@color/gray" />
 
                 <Button
+                    android:id="@+id/confirmButton"
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
                     android:layout_margin="16dp"

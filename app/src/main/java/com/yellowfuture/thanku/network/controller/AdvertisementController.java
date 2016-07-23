@@ -2,15 +2,13 @@ package com.yellowfuture.thanku.network.controller;
 
 import android.content.Context;
 
-import com.yellowfuture.thanku.domain.Advertisement;
-import com.yellowfuture.thanku.network.RestApi;
+import com.yellowfuture.thanku.model.Advertisement;
 import com.yellowfuture.thanku.network.service.AdvertisementService;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Retrofit;
 
 /**
  * Created by zuby on 2016-07-21.

@@ -3,7 +3,7 @@ package com.yellowfuture.thanku.network.controller;
 import android.content.Context;
 import android.util.Base64;
 
-import com.yellowfuture.thanku.domain.User;
+import com.yellowfuture.thanku.model.User;
 import com.yellowfuture.thanku.network.RestApi;
 import com.yellowfuture.thanku.network.form.LoginForm;
 import com.yellowfuture.thanku.network.form.LoginResponseForm;
@@ -57,6 +57,16 @@ public class UserController extends BaseController {
         String authorization = "Basic "+ Base64.encodeToString((RestApi.CLIENT_ID+":"+RestApi.CLIENT_SECRET).getBytes(),Base64.NO_WRAP);
 
         Call<LoginResponseForm> call = userService.login(authorization,fieldMap);
+        call.enqueue(callback);
+    }
+
+    public void myInfo(String accessToken,Callback<User> callback){
+        Call<User> call = userService.myInfo(RestApi.BEARER + accessToken);
+        call.enqueue(callback);
+    }
+
+    public void update(String accessToken,User user,Callback<User> callback){
+        Call<User> call = userService.update(RestApi.BEARER + accessToken,user);
         call.enqueue(callback);
     }
 }

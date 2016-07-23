@@ -23,6 +23,7 @@ public class ProfileActivity extends BaseActivity{
     int startState;
     @Override
     public void initView() {
+        super.initView();
         mProfileViewPager = (ViewPager) findViewById(R.id.profileViewPager);
         mTabs = (TabLayout) findViewById(R.id.tabs);
 

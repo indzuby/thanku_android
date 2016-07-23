@@ -1,5 +1,7 @@
 package com.yellowfuture.thanku.network.form;
 
+import com.google.gson.annotations.Expose;
+
 import lombok.Data;
 
 /**
@@ -7,7 +9,6 @@ import lombok.Data;
  */
 @Data
 public class SignUpForm {
-
     private String phone;
 
     private String password;

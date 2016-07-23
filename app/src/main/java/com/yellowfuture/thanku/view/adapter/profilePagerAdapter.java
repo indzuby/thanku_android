@@ -10,6 +10,9 @@ import com.yellowfuture.thanku.view.profile.ProfileCartFragment;
 import com.yellowfuture.thanku.view.profile.ProfileEditFragment;
 import com.yellowfuture.thanku.view.profile.ProfileOrderFragment;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Created by zuby on 2016. 7. 14..
  */
@@ -17,6 +20,7 @@ public class ProfilePagerAdapter extends FragmentStatePagerAdapter {
 
     Context mContext;
     int[] tabTitle = {R.string.profileEdit, R.string.profileOrder, R.string.profileCart};
+    @Getter
     Fragment[] fragments;
 
     public ProfilePagerAdapter(FragmentManager fm, Context mContext) {

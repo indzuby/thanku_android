@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.yellowfuture.thanku.R;
-import com.yellowfuture.thanku.domain.Restaurant;
+import com.yellowfuture.thanku.model.Restaurant;
 import com.yellowfuture.thanku.network.controller.RestaurantController;
 import com.yellowfuture.thanku.view.adapter.RestaurantItemAdapter;
 import com.yellowfuture.thanku.view.common.BaseFragment;
@@ -42,6 +42,7 @@ public class RestaurantListFragment extends BaseFragment {
     }
     @Override
     public void initView(){
+        super.initView();
         foodListView = (RecyclerView) mView.findViewById(R.id.foodListView);
         itemAdapter = new RestaurantItemAdapter(getActivity(),mRestaurants);
         foodListView.setLayoutManager(new LinearLayoutManager(getContext()));

@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yellowfuture.thanku.R;
-import com.yellowfuture.thanku.domain.User;
+import com.yellowfuture.thanku.model.User;
 import com.yellowfuture.thanku.network.controller.UserController;
 import com.yellowfuture.thanku.network.form.SignUpForm;
 import com.yellowfuture.thanku.utils.Utils;
@@ -33,6 +33,7 @@ public class SignUpActivity extends BaseActivity {
 
     @Override
     public void initView() {
+        super.initView();
         mPhoneEditText = (EditText) findViewById(R.id.phoneEditText);
         mNameEditText = (EditText) findViewById(R.id.nameEditText);
         mPasswordEditText = (EditText) findViewById(R.id.passwordEditText);

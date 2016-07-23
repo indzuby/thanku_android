@@ -24,6 +24,8 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:inputType="phone"
+                android:id="@+id/phoneEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -53,6 +55,8 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:inputType="textPersonName"
+                android:id="@+id/nameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -97,6 +101,7 @@
             </LinearLayout>
 
             <EditText
+                android:id="@+id/nicknameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -108,11 +113,13 @@
         </LinearLayout>
 
         <View
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/gray" />
 
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -127,6 +134,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -158,6 +166,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -190,12 +199,13 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/birthdayEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@color/transparent"
                 android:hint="생일 축하 이벤트에 이용됩니다.(19901225 형식)"
-                android:inputType="textEmailAddress"
+                android:inputType="date"
                 android:textColorHint="@color/darkGray"
                 android:textSize="15sp" />
 
@@ -241,17 +251,19 @@
 
                 <RadioGroup
                     android:orientation="horizontal"
-                    android:checkedButton="@+id/none"
+                    android:checkedButton="@+id/noneRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/maleRadioButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="남성"
                         android:textColor="@color/black" />
 
                     <RadioButton
+                        android:id="@+id/femaleRadioButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
@@ -259,7 +271,7 @@
                         android:textColor="@color/black" />
 
                     <RadioButton
-                        android:id="@+id/none"
+                        android:id="@+id/noneRadioButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
@@ -294,6 +306,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
+                    android:id="@+id/addressEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -303,6 +316,7 @@
                     android:textSize="15sp" />
 
                 <Button
+                    android:id="@+id/addressSearchButton"
                     android:layout_width="48dp"
                     android:layout_height="24dp"
                     android:layout_alignParentRight="true"
@@ -364,6 +378,7 @@
                         android:textSize="13sp" />
 
                     <Switch
+                        android:id="@+id/emailSwitch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -385,6 +400,7 @@
                         android:textSize="13sp" />
 
                     <Switch
+                        android:id="@+id/smsSwitch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -406,6 +422,7 @@
                         android:textSize="13sp" />
 
                     <Switch
+                        android:id="@+id/pushSwitch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -423,6 +440,7 @@
             android:background="@color/gray" />
 
         <Button
+            android:id="@+id/saveButton"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_margin="16dp"
@@ -440,6 +458,7 @@
             android:paddingRight="16dp">
 
             <TextView
+                android:id="@+id/logoutButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="로그아웃"
@@ -447,6 +466,7 @@
                 android:textSize="13sp" />
 
             <TextView
+                android:id="@+id/signOutButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"

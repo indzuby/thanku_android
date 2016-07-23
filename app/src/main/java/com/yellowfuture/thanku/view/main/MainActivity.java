@@ -7,12 +7,17 @@ import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.skp.Tmap.TMapData;
 import com.skp.Tmap.TMapPOIItem;
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.control.GpsControl;
+import com.yellowfuture.thanku.model.User;
+import com.yellowfuture.thanku.network.RestApi;
+import com.yellowfuture.thanku.network.controller.UserController;
 import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.utils.SessionUtils;
 import com.yellowfuture.thanku.utils.Utils;
@@ -25,6 +30,10 @@ import com.yellowfuture.thanku.view.restaurant.RestaurantActivity;
 
 import java.util.ArrayList;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class MainActivity extends BaseActivity {
 
     DrawerLayout mDrawerLayout;
@@ -33,6 +42,7 @@ public class MainActivity extends BaseActivity {
     LocationManager mLocationManager;
     @Override
     public void initView() {
+        super.initView();
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
 
     }
@@ -41,7 +51,29 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.menu).setOnClickListener(this);
 
     }
+    public void initData(){
+        UserController.getInstance(this).myInfo(mAccessToken, new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                if(response.code()==200) {
+                    User user = response.body();
+                    ImageView profileView = (ImageView) findViewById(R.id.profileImage);
+                    TextView nameView = (TextView) findViewById(R.id.nameTextView);
+                    TextView pointView = (TextView) findViewById(R.id.pointTextView);
+                    Glide.with(MainActivity.this).load(RestApi.url+user.getProfilePath()).into(profileView);
+                    nameView.setText(user.getName());
+                    pointView.setText(user.getPoint() + "p");
+                    SessionUtils.putString(getBaseContext(),CodeDefinition.USER_PHONE,user.getPhone());
+                    SessionUtils.putString(getBaseContext(),CodeDefinition.USER_EMAIL,user.getEmail());
+                }
+            }
 
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+
+            }
+        });
+    }
     public void initNavigationLayout() {
         findViewById(R.id.profileLayout).setOnClickListener(this);
         findViewById(R.id.notificationLayout).setOnClickListener(this);
@@ -50,6 +82,8 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.announcementLayout).setOnClickListener(this);
         findViewById(R.id.qnaLayout).setOnClickListener(this);
         findViewById(R.id.advertisementLayout).setOnClickListener(this);
+        findViewById(R.id.settingsButton).setOnClickListener(this);
+        initData();
     }
 
     public void initMyLocationView() {
@@ -122,23 +156,23 @@ public class MainActivity extends BaseActivity {
         } else if (v.getId() == R.id.serviceQuickLayout) {
             intent = new Intent(MainActivity.this, QuickActivity.class);
             startActivity(intent);
-        } else if (v.getId() == R.id.profileLayout) {
+        } else if (v.getId() == R.id.profileLayout || v.getId() == R.id.settingsButton) {
             intent = new Intent(MainActivity.this, ProfileActivity.class);
             intent.putExtra(CodeDefinition.PROFILE_START_PARAM, 0);
-            startActivity(intent);
+            startActivityForResult(intent,CodeDefinition.REQUEST_PROFILE_CODE);
             mDrawerLayout.closeDrawers();
         } else if (v.getId() == R.id.orderlayout) {
             intent = new Intent(MainActivity.this, ProfileActivity.class);
             intent.putExtra(CodeDefinition.PROFILE_START_PARAM, 1);
-            startActivity(intent);
+            startActivityForResult(intent,CodeDefinition.REQUEST_PROFILE_CODE);
             mDrawerLayout.closeDrawers();
         } else if (v.getId() == R.id.cartLayout) {
             intent = new Intent(MainActivity.this, ProfileActivity.class);
             intent.putExtra(CodeDefinition.PROFILE_START_PARAM, 2);
-            startActivity(intent);
+            startActivityForResult(intent,CodeDefinition.REQUEST_PROFILE_CODE);
             mDrawerLayout.closeDrawers();
         } else if (v.getId() == R.id.advertisementLayout || v.getId() == R.id.qnaLayout) {
-            intent = new Intent(MainActivity.this, QnaActivity.class);
+            intent = new Intent(MainActivity.this, InquireActivity.class);
             startActivity(intent);
             mDrawerLayout.closeDrawers();
 
@@ -148,6 +182,8 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == CodeDefinition.LOGOUT)
+            finish();
     }
 
     @Override

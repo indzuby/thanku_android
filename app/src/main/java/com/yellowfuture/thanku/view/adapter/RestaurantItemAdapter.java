@@ -10,13 +10,11 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.yellowfuture.thanku.R;
-import com.yellowfuture.thanku.domain.Restaurant;
+import com.yellowfuture.thanku.model.Restaurant;
 import com.yellowfuture.thanku.network.RestApi;
 import com.yellowfuture.thanku.view.common.BaseRecyclerAdapter;
 
 import java.util.List;
-
-import lombok.Getter;
 
 /**
  * Created by zuby on 2016. 7. 18..
