@@ -1,9 +1,13 @@
 package com.yellowfuture.thanku.network.service;
 
+import com.yellowfuture.thanku.model.OrderInfo;
+import com.yellowfuture.thanku.model.OrderObject;
 import com.yellowfuture.thanku.model.User;
 import com.yellowfuture.thanku.network.form.LoginResponseForm;
+import com.yellowfuture.thanku.network.form.OrderObjectForm;
 import com.yellowfuture.thanku.network.form.SignUpForm;
 
+import java.util.List;
 import java.util.Map;
 
 import retrofit2.Call;
@@ -33,4 +37,11 @@ public interface UserService {
     @FormUrlEncoded
     @POST("/oauth/token")
     Call<LoginResponseForm> login(@Header("Authorization")String authorization, @FieldMap Map<String,String> user) ;
+
+
+    @GET("/api/user/basket")
+    Call<List<List<OrderObjectForm>>> cartList(@Header("Authorization")String authorization);
+
+    @GET("/api/user/order")
+    Call<List<OrderInfo>> orderList(@Header("Authorization")String authorization);
 }

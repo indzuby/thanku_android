@@ -13,6 +13,7 @@ import lombok.Data;
 @Data
 public class BaseModel{
 
+
     protected Long id;
 
     protected Date createTime;

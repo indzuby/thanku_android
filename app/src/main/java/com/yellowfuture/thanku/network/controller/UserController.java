@@ -3,14 +3,18 @@ package com.yellowfuture.thanku.network.controller;
 import android.content.Context;
 import android.util.Base64;
 
+import com.yellowfuture.thanku.model.OrderInfo;
+import com.yellowfuture.thanku.model.OrderObject;
 import com.yellowfuture.thanku.model.User;
 import com.yellowfuture.thanku.network.RestApi;
 import com.yellowfuture.thanku.network.form.LoginForm;
 import com.yellowfuture.thanku.network.form.LoginResponseForm;
+import com.yellowfuture.thanku.network.form.OrderObjectForm;
 import com.yellowfuture.thanku.network.form.SignUpForm;
 import com.yellowfuture.thanku.network.service.UserService;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import retrofit2.Call;
@@ -67,6 +71,16 @@ public class UserController extends BaseController {
 
     public void update(String accessToken,User user,Callback<User> callback){
         Call<User> call = userService.update(RestApi.BEARER + accessToken,user);
+        call.enqueue(callback);
+    }
+
+    public void cartList(String accessToken, Callback<List<List<OrderObjectForm>>> callback) {
+        Call<List<List<OrderObjectForm>>> call = userService.cartList(RestApi.BEARER + accessToken);
+        call.enqueue(callback);
+    }
+
+    public void orderList(String accessToken, Callback<List<OrderInfo>> callback) {
+        Call<List<OrderInfo>> call = userService.orderList(RestApi.BEARER + accessToken);
         call.enqueue(callback);
     }
 }

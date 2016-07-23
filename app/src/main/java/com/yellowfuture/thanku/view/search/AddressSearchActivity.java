@@ -38,6 +38,7 @@ public class AddressSearchActivity extends BaseActivity {
     boolean active = true;
     LocationManager mLocationManager;
     EditText mAddressBasicEditText;
+    TMapPOIItem mPOIItem;
     EditText mAddressDetailEditText;
 
     @Override
@@ -180,6 +181,8 @@ public class AddressSearchActivity extends BaseActivity {
         if(v.getId() == R.id.confirmButton) {
             Intent intent = new Intent();
             intent.putExtra(CodeDefinition.RESPONSE_SEARCH_RESULT,mAddressBasicEditText.getText().toString()+" "+mAddressDetailEditText.getText().toString());
+            intent.putExtra(CodeDefinition.RESPONSE_SEARCH_LAT,Double.parseDouble(mPOIItem.noorLat));
+            intent.putExtra(CodeDefinition.RESPONSE_SEARCH_LON,Double.parseDouble(mPOIItem.noorLon));
             setResult(RESULT_OK,intent);
             finish();
         }
@@ -203,6 +206,7 @@ public class AddressSearchActivity extends BaseActivity {
             mResultLayout.setVisibility(View.GONE);
             mHelpLayout.setVisibility(View.GONE);
             TMapPOIItem item = (TMapPOIItem) v.getTag();
+            mPOIItem = item;
             mAddressBasicEditText.setText(item.getPOIName());
             Utils.hideKeyboard(getBaseContext(),mAddressBasicEditText);
         }

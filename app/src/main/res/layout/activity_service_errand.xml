@@ -39,6 +39,7 @@
                 android:padding="16dp">
 
                 <TextView
+                    android:inputType="phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="연락처"
@@ -94,7 +95,7 @@
                 android:background="@color/gray" />
 
             <EditText
-                android:id="@+id/memoEditText"
+                android:id="@+id/commentEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"

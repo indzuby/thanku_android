@@ -45,6 +45,7 @@ public class ProfileActivity extends BaseActivity{
         mAdapter = new ProfilePagerAdapter(getSupportFragmentManager(),this);
 
         mProfileViewPager.setAdapter(mAdapter);
+        mProfileViewPager.setOffscreenPageLimit(3);
         mTabs.setupWithViewPager(mProfileViewPager);
         for(int i = 0; i<mTabs.getTabCount();i++) {
             TabLayout.Tab tab = mTabs.getTabAt(i);

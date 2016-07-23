@@ -9,7 +9,12 @@ public class CodeDefinition {
     final public static int REQUEST_SEARCH_START = 3346;
     final public static int REQUEST_SEARCH_DESTINATION = 3347;
 
+    final public static int PROFILE_EDIT_CODE = 0 ;
+    final public static int PROFILE_ORDER_CODE = 1 ;
+    final public static int PROFILE_CART_CODE = 2 ;
     final public static String RESPONSE_SEARCH_RESULT = "SEARCH_RESULT";
+    final public static String RESPONSE_SEARCH_LAT = "RESPONSE_SEARCH_LAT";
+    final public static String RESPONSE_SEARCH_LON = "RESPONSE_SEARCH_LON";
 
     final public static String PROFILE_START_PARAM = "PROFILE_START_PARAM";
 
@@ -24,4 +29,5 @@ public class CodeDefinition {
     final public static String USER_EMAIL = "USER_EMAIL";
 
     final public static String USER_ADDRESS = "USER_ADDRESS";
+
 }

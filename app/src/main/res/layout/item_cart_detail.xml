@@ -31,6 +31,7 @@
 
 
             <TextView
+                android:id="@+id/nameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="통큰한마리 치킨"
@@ -39,6 +40,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/priceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"

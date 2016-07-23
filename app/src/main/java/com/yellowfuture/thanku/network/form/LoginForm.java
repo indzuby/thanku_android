@@ -8,7 +8,7 @@ import lombok.Data;
  * Created by zuby on 2016-07-21.
  */
 @Data
-public class LoginForm {
+public class LoginForm extends BaseForm{
 
     private String scope ="read write delete";
     private String client_secret = RestApi.CLIENT_SECRET;

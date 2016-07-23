@@ -37,4 +37,5 @@ dependencies {
     compile 'com.google.code.gson:gson:2.5'
     provided 'org.projectlombok:lombok:1.12.6'
     compile files('libs/com.skp.Tmap_1.0.37.jar')
+    compile group: 'org.modelmapper', name: 'modelmapper', version: '0.7.6'
 }

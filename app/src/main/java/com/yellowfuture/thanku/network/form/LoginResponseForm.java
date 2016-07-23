@@ -9,7 +9,7 @@ import lombok.Data;
  * Created by zuby on 2016-07-21.
  */
 @Data
-public class LoginResponseForm {
+public class LoginResponseForm extends BaseForm{
     @SerializedName("access_token")
     String accessToken;
 

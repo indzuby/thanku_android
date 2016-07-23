@@ -62,6 +62,8 @@ public class MainActivity extends BaseActivity {
                     TextView pointView = (TextView) findViewById(R.id.pointTextView);
                     Glide.with(MainActivity.this).load(RestApi.url+user.getProfilePath()).into(profileView);
                     nameView.setText(user.getName());
+                    if(user.getNickname()!=null && user.getNickname().length()>0)
+                        nameView.setText(user.getNickname());
                     pointView.setText(user.getPoint() + "p");
                     SessionUtils.putString(getBaseContext(),CodeDefinition.USER_PHONE,user.getPhone());
                     SessionUtils.putString(getBaseContext(),CodeDefinition.USER_EMAIL,user.getEmail());
@@ -161,17 +163,17 @@ public class MainActivity extends BaseActivity {
             startActivity(intent);
         } else if (v.getId() == R.id.profileLayout || v.getId() == R.id.settingsButton) {
             intent = new Intent(MainActivity.this, ProfileActivity.class);
-            intent.putExtra(CodeDefinition.PROFILE_START_PARAM, 0);
+            intent.putExtra(CodeDefinition.PROFILE_START_PARAM, CodeDefinition.PROFILE_EDIT_CODE);
             startActivityForResult(intent,CodeDefinition.REQUEST_PROFILE_CODE);
             mDrawerLayout.closeDrawers();
         } else if (v.getId() == R.id.orderlayout) {
             intent = new Intent(MainActivity.this, ProfileActivity.class);
-            intent.putExtra(CodeDefinition.PROFILE_START_PARAM, 1);
+            intent.putExtra(CodeDefinition.PROFILE_START_PARAM, CodeDefinition.PROFILE_ORDER_CODE);
             startActivityForResult(intent,CodeDefinition.REQUEST_PROFILE_CODE);
             mDrawerLayout.closeDrawers();
         } else if (v.getId() == R.id.cartLayout) {
             intent = new Intent(MainActivity.this, ProfileActivity.class);
-            intent.putExtra(CodeDefinition.PROFILE_START_PARAM, 2);
+            intent.putExtra(CodeDefinition.PROFILE_START_PARAM, CodeDefinition.PROFILE_CART_CODE);
             startActivityForResult(intent,CodeDefinition.REQUEST_PROFILE_CODE);
             mDrawerLayout.closeDrawers();
         } else if (v.getId() == R.id.advertisementLayout || v.getId() == R.id.qnaLayout) {
