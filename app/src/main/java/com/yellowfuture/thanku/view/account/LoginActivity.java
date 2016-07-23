@@ -54,6 +54,7 @@ public class LoginActivity extends BaseActivity {
         super.init();
         initView();
         initActionBar();
+        initBannerAdvertisement();
 
 
         findViewById(R.id.loginButton).setOnClickListener(this);

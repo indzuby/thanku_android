@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.utils.CodeDefinition;
+import com.yellowfuture.thanku.utils.SessionUtils;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.common.BaseActivity;
 import com.yellowfuture.thanku.view.search.AddressSearchActivity;
@@ -20,12 +21,13 @@ import com.yellowfuture.thanku.view.search.AddressSearchActivity;
 public class BuyActivity extends BaseActivity {
 
 
-    EditText mOrderTelEditText;
-    EditText mReceiveTelEditText;
+    EditText mOrderPhoneEditText;
+    EditText mReceivePhoneEditText;
     TextView mReceiveAddressTextView;
     EditText mMemoEditText;
     ImageView mPhotoImageView;
-
+    String mPhone;
+    String mAddress;
 
     View mPhotoButton;
 
@@ -33,12 +35,16 @@ public class BuyActivity extends BaseActivity {
     @Override
     public void initView() {
         super.initView();
-        mOrderTelEditText = (EditText) findViewById(R.id.orderTelEditText);
-        mReceiveTelEditText = (EditText) findViewById(R.id.receiveTelEditText);
+        mOrderPhoneEditText = (EditText) findViewById(R.id.orderPhoneEditText);
+        mReceivePhoneEditText = (EditText) findViewById(R.id.receivePhoneEditText);
         mReceiveAddressTextView = (TextView) findViewById(R.id.addressTextView);
         mMemoEditText = (EditText) findViewById(R.id.memoEditText);
         mPhotoImageView = (ImageView) findViewById(R.id.photoImageView);
         mPhotoButton = findViewById(R.id.photoButton);
+
+        mOrderPhoneEditText.setText(mPhone);
+        mReceivePhoneEditText.setText(mPhone);
+        mReceiveAddressTextView.setText(mAddress);
     }
 
     public void initActionBar() {
@@ -52,6 +58,9 @@ public class BuyActivity extends BaseActivity {
     @Override
     public void init() {
         super.init();
+        mPhone = SessionUtils.getString(this, CodeDefinition.USER_PHONE,"");
+        mAddress = SessionUtils.getString(this, CodeDefinition.USER_ADDRESS,"");
+
         initView();
         initActionBar();
 
@@ -87,8 +96,12 @@ public class BuyActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode == RESULT_OK)
-            finish();
+        if(resultCode != RESULT_OK)
+            return;
+        if(requestCode == CodeDefinition.REQUEST_SEARCH_START) {
+            String address = data.getStringExtra(CodeDefinition.RESPONSE_SEARCH_RESULT);
+            mReceiveAddressTextView.setText(address);
+        }
 
     }
 }

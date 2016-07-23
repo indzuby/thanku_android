@@ -59,6 +59,9 @@ public class ProfileEditFragment extends BaseFragment {
         }else if(v.getId() == R.id.logoutButton) {
             intent = new Intent(getContext(), StartActivity.class);
             SessionUtils.putString(getContext(),CodeDefinition.ACCESS_TOKEN,"");
+            SessionUtils.putString(getContext(),CodeDefinition.USER_ADDRESS,"");
+            SessionUtils.putString(getContext(),CodeDefinition.USER_EMAIL,"");
+            SessionUtils.putString(getContext(),CodeDefinition.USER_PHONE,"");
             Toast.makeText(getContext(),"로그아웃 되었습니다.",Toast.LENGTH_SHORT).show();
             startActivity(intent);
             getActivity().setResult(CodeDefinition.LOGOUT);
@@ -89,6 +92,7 @@ public class ProfileEditFragment extends BaseFragment {
         super.initView();
         SessionUtils.putString(getContext(),CodeDefinition.USER_PHONE,mUser.getPhone());
         SessionUtils.putString(getContext(),CodeDefinition.USER_EMAIL,mUser.getEmail());
+        SessionUtils.putString(getContext(),CodeDefinition.USER_ADDRESS,mUser.getAddress());
 
         mPhoneEditText = (EditText) mView.findViewById(R.id.phoneEditText);
         mNameEditText = (EditText) mView.findViewById(R.id.nameEditText);

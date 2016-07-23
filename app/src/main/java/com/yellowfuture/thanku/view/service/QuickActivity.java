@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.utils.CodeDefinition;
+import com.yellowfuture.thanku.utils.SessionUtils;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.common.BaseActivity;
 import com.yellowfuture.thanku.view.search.AddressSearchActivity;
@@ -20,12 +21,12 @@ import com.yellowfuture.thanku.view.search.AddressSearchActivity;
 public class QuickActivity extends BaseActivity {
 
 
-    EditText mOrderTelEditText;
-    EditText mReceiveTelEditText;
+    EditText mOrderPhoneEditText;
+    EditText mReceivePhoneEditText;
     TextView mStartAddressTextView,mDestinationAddressTextView;
     EditText mMemoEditText;
     ImageView mPhotoImageView;
-
+    String mPhone;
 
     View mPhotoButton;
 
@@ -33,13 +34,15 @@ public class QuickActivity extends BaseActivity {
     @Override
     public void initView() {
         super.initView();
-        mOrderTelEditText = (EditText) findViewById(R.id.orderTelEditText);
-        mReceiveTelEditText = (EditText) findViewById(R.id.receiveTelEditText);
+        mOrderPhoneEditText = (EditText) findViewById(R.id.orderPhoneEditText);
+        mReceivePhoneEditText = (EditText) findViewById(R.id.receivePhoneEditText);
         mStartAddressTextView = (TextView) findViewById(R.id.startAddressTextView);
         mDestinationAddressTextView = (TextView) findViewById(R.id.destinationAddressTextView);
         mMemoEditText = (EditText) findViewById(R.id.memoEditText);
         mPhotoImageView = (ImageView) findViewById(R.id.photoImageView);
         mPhotoButton = findViewById(R.id.photoButton);
+        mOrderPhoneEditText.setText(mPhone);
+
     }
 
     public void initActionBar() {
@@ -53,6 +56,7 @@ public class QuickActivity extends BaseActivity {
     @Override
     public void init() {
         super.init();
+        mPhone = SessionUtils.getString(this, CodeDefinition.USER_PHONE,"");
         initView();
         initActionBar();
 
@@ -92,8 +96,15 @@ public class QuickActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode == RESULT_OK)
-            finish();
+        if(resultCode != RESULT_OK)
+            return;
+        if(requestCode == CodeDefinition.REQUEST_SEARCH_START) {
+            String address = data.getStringExtra(CodeDefinition.RESPONSE_SEARCH_RESULT);
+            mStartAddressTextView.setText(address);
+        }else if(requestCode == CodeDefinition.REQUEST_SEARCH_DESTINATION) {
+            String address = data.getStringExtra(CodeDefinition.RESPONSE_SEARCH_RESULT);
+            mDestinationAddressTextView.setText(address);
+        }
 
     }
 }

@@ -55,6 +55,7 @@ public class SignUpActivity extends BaseActivity {
         super.init();
         initView();
         initActionBar();
+        initBannerAdvertisement();
 
         findViewById(R.id.signUpButton).setOnClickListener(this);
         findViewById(R.id.checkLayout).setOnClickListener(this);

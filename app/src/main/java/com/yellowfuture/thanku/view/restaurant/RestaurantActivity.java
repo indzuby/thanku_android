@@ -37,6 +37,7 @@ public class RestaurantActivity extends BaseActivity{
         mTabs = (TabLayout) findViewById(R.id.tabs);
         mAdapter = new RestaurantPagerAdapter(getSupportFragmentManager(), mCategories);
         mRestaurantViewPager.setAdapter(mAdapter);
+        mRestaurantViewPager.setOffscreenPageLimit(10);
         mTabs.setupWithViewPager(mRestaurantViewPager);
         for(int i = 0; i<mTabs.getTabCount();i++) {
             TabLayout.Tab tab = mTabs.getTabAt(i);

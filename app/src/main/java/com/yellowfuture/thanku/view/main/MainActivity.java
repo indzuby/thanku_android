@@ -65,6 +65,8 @@ public class MainActivity extends BaseActivity {
                     pointView.setText(user.getPoint() + "p");
                     SessionUtils.putString(getBaseContext(),CodeDefinition.USER_PHONE,user.getPhone());
                     SessionUtils.putString(getBaseContext(),CodeDefinition.USER_EMAIL,user.getEmail());
+                    SessionUtils.putString(getBaseContext(),CodeDefinition.USER_ADDRESS,user.getAddress());
+
                 }
             }
 
@@ -128,6 +130,7 @@ public class MainActivity extends BaseActivity {
         initActionBar();
         initView();
         initNavigationLayout();
+        initBannerAdvertisement();
         mMapData = new TMapData();
         initMyLocationView();
         findViewById(R.id.serviceRestaurantLayout).setOnClickListener(this);

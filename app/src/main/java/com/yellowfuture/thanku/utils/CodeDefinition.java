@@ -22,4 +22,6 @@ public class CodeDefinition {
     final public static String USER_PHONE = "USER_PHONE";
 
     final public static String USER_EMAIL = "USER_EMAIL";
+
+    final public static String USER_ADDRESS = "USER_ADDRESS";
 }
