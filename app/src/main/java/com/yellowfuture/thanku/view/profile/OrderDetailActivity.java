@@ -32,7 +32,7 @@ import retrofit2.Response;
  */
 public class OrderDetailActivity extends BaseActivity{
     long id;
-    OrderInfo orderInfo;
+    OrderInfo mOrderInfo;
     TextView mOrderDateTextView;
 
     TextView mPriceTextView;
@@ -45,11 +45,16 @@ public class OrderDetailActivity extends BaseActivity{
 
     TextView mOrderCommentTextView;
 
+    View mPendingView,mMatchView,mCompleteView;
 
 
     @Override
     public void initView() {
         super.initView();
+
+        mPendingView = findViewById(R.id.pendingOvalView);
+        mMatchView = findViewById(R.id.matchOvalView);
+        mCompleteView = findViewById(R.id.completeOvalView);
 
         mOrderDateTextView = (TextView) findViewById(R.id.orderDateTextView);
         mPriceTextView = (TextView) findViewById(R.id.priceTextView);
@@ -58,18 +63,30 @@ public class OrderDetailActivity extends BaseActivity{
         mOrderListLayout = (LinearLayout) findViewById(R.id.orderListLayout);
         mOrderCommentTextView = (TextView) findViewById(R.id.orderCommentTextView);
 
-        mOrderDateTextView.setText(new DateTime(orderInfo.getUpdatedTime()).toString("yyyy년 M월 d일 a h시 m분"));
-        mPriceTextView.setText(orderInfo.getPrice()+"원");
-        mDeliveryPriceTextView.setText("0원");
-        mTotalPriceTextView.setText(orderInfo.getPrice()+"원");
+        switch (mOrderInfo.getState()) {
+            case PENDING:
+                mPendingView.setSelected(true);
+                break;
+            case MATCH:
+                mMatchView.setSelected(true);
+                break;
+            case COMPLETE:
+                mCompleteView.setSelected(true);
+                break;
+        }
+
+        mOrderDateTextView.setText(new DateTime(mOrderInfo.getUpdatedTime()).toString("yyyy년 M월 d일 a h시 m분"));
+        mPriceTextView.setText(Utils.getPriceToString(mOrderInfo.getBasicPrice()));
+        mDeliveryPriceTextView.setText(Utils.getPriceToString(mOrderInfo.getDeliveryPrice()));
+        mTotalPriceTextView.setText(Utils.getPriceToString(mOrderInfo.getPrice()));
 
         mOrderListLayout.removeAllViews();
 
-        for(int i = 0; i<orderInfo.getGroupItems().size();i++) {
+        for(int i = 0; i< mOrderInfo.getGroupItems().size(); i++) {
             View v = LayoutInflater.from(this).inflate(R.layout.item_order_menu,null);
             TextView categoryNameView = (TextView) v.findViewById(R.id.categoryNameTextView);
             LinearLayout itemLayout = (LinearLayout) v.findViewById(R.id.itemLayout);
-            List<OrderObjectForm> orderObjectList = orderInfo.getGroupItems().get(i);
+            List<OrderObjectForm> orderObjectList = mOrderInfo.getGroupItems().get(i);
             OrderObject.OrderType type = null;
             if(i == 0) {
                 categoryNameView.setText(getString(R.string.serviceQuick));
@@ -97,32 +114,30 @@ public class OrderDetailActivity extends BaseActivity{
                 TextView nameView  = (TextView) view.findViewById(R.id.nameTextView);
                 TextView priceView = (TextView) view.findViewById(R.id.priceTextView);
                 orderObject.setType(type);
+                priceView.setText(Utils.getPriceToString(orderObject.getPrice()+orderObject.getAddPrice()));
                 switch (type) {
                     case BUY:
                     case ERRAND:
                         thumbnail.setVisibility(View.GONE);
-                        nameView.setText(orderObject.getAddress());
-                        priceView.setText(orderObject.getComment());
+                        nameView.setText(orderObject.getComment());
                         break;
                     case QUICK:
                         Quick quick = (Quick) orderObject.toOrderObject();
                         thumbnail.setVisibility(View.GONE);
                         nameView.setText(quick.getStartAddr()+" -> " +quick.getEndAddr());
-                        priceView.setText(quick.getComment());
                         break;
                     case RESTAURANT:
                         RestaurantOrder restaurantOrder = (RestaurantOrder) orderObject.toOrderObject();
                         thumbnail.setVisibility(View.VISIBLE);
                         Glide.with(this).load(restaurantOrder.getRestaurant().getUrl()).into(thumbnail);
                         nameView.setText(restaurantOrder.getRestaurant().getName());
-                        priceView.setText(restaurantOrder.getPrice()+"원");
                         break;
                 }
                 itemLayout.addView(view);
             }
             mOrderListLayout.addView(v);
         }
-        mOrderCommentTextView.setText(orderInfo.getComment());
+        mOrderCommentTextView.setText(mOrderInfo.getComment());
 
     }
     public void initActionBar(){
@@ -138,7 +153,7 @@ public class OrderDetailActivity extends BaseActivity{
             @Override
             public void onResponse(Call<OrderInfo> call, Response<OrderInfo> response) {
                 if(response.code() == 200 ){
-                    orderInfo = response.body();
+                    mOrderInfo = response.body();
                     initView();
                 }
             }

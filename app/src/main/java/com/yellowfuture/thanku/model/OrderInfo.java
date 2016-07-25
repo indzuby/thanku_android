@@ -11,7 +11,16 @@ import lombok.Data;
  */
 @Data
 public class OrderInfo extends BaseModel{
+
+    public enum OrderState {
+        PENDING,MATCH,COMPLETE;
+    }
+
+
     private long price;
+
+    private long deliveryPrice;
+
 
     private String comment;
 
@@ -21,6 +30,13 @@ public class OrderInfo extends BaseModel{
 
     private User order;
 
+    private OrderState state = OrderState.PENDING;
+
+
     private List<OrderObject> items;
     private List<List<OrderObjectForm>> groupItems;
+
+    public long getBasicPrice(){
+        return price - deliveryPrice;
+    }
 }

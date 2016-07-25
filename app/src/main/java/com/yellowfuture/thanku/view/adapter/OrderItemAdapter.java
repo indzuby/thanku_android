@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.model.OrderInfo;
+import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.common.BaseRecyclerAdapter;
 import com.yellowfuture.thanku.view.profile.OrderDetailActivity;
 
@@ -50,7 +51,7 @@ public class OrderItemAdapter extends BaseRecyclerAdapter {
         DateTime time = new DateTime(info.getUpdatedTime());
         h.nameView.setText(time.toString("M월 dd일 a h시 m분") + "에 " + info.getCount() + "건");
         h.commentView.setText(info.getComment());
-        h.priceView.setText(info.getPrice() + "원");
+        h.priceView.setText(Utils.getPriceToString(info.getPrice()));
         if (Days.daysBetween(time, new DateTime()).getDays() <= 0)
             if (Hours.hoursBetween(time, new DateTime()).getHours() <= 0)
                 h.dateBeforeView.setText(Minutes.minutesBetween(time, new DateTime()).getMinutes() + "분 전");

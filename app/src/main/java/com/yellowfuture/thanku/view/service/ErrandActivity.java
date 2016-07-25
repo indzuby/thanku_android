@@ -34,6 +34,7 @@ public class ErrandActivity extends BaseActivity {
     EditText mOrderPhoneEditText;
     TextView mReceiveAddressTextView;
     EditText mCommentEditText;
+    TextView mPriceTextView;
     ImageView mPhotoImageView;
     String mPhone;
 
@@ -47,6 +48,7 @@ public class ErrandActivity extends BaseActivity {
         super.initView();
         mOrderPhoneEditText = (EditText) findViewById(R.id.orderPhoneEditText);
         mReceiveAddressTextView = (TextView) findViewById(R.id.addressTextView);
+        mPriceTextView = (TextView) findViewById(R.id.priceTextView);
         mCommentEditText = (EditText) findViewById(R.id.commentEditText);
         mPhotoImageView = (ImageView) findViewById(R.id.photoImageView);
         mPhotoButton = findViewById(R.id.photoButton);
@@ -90,6 +92,7 @@ public class ErrandActivity extends BaseActivity {
         form.setComment(comment);
         form.setLat(lat);
         form.setLon(lon);
+        form.setAddPrice(Utils.getDistancePriceFromCompany(lat,lon));
         OrderController.getInstance(this).addOrder(mAccessToken, form, new Callback<OrderObject>() {
             @Override
             public void onResponse(Call<OrderObject> call, Response<OrderObject> response) {
@@ -159,6 +162,7 @@ public class ErrandActivity extends BaseActivity {
             lat = data.getDoubleExtra(CodeDefinition.RESPONSE_SEARCH_LAT,0);
             lon = data.getDoubleExtra(CodeDefinition.RESPONSE_SEARCH_LON,0);
             mReceiveAddressTextView.setText(address);
+            mPriceTextView.setText(Utils.getDistancePriceToString(Utils.getDistancePriceFromCompany(lat,lon)));
         }
 
     }

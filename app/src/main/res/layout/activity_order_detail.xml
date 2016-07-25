@@ -32,7 +32,80 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="주문 정보"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:id="@+id/pendingOvalView"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="40dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/selector_order_state"
+                        android:layout_height="40dp"/>
+                    <TextView
+                        android:layout_marginBottom="16dp"
+                        android:layout_width="wrap_content"
+                        android:text="준비"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:id="@+id/matchOvalView"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="40dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/selector_order_state"
+                        android:layout_height="40dp"/>
+                    <TextView
+                        android:layout_marginBottom="16dp"
+                        android:layout_width="wrap_content"
+                        android:text="진행"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:id="@+id/completeOvalView"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="40dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/selector_order_state"
+                        android:layout_height="40dp"/>
+                    <TextView
+                        android:layout_marginBottom="16dp"
+                        android:layout_width="wrap_content"
+                        android:text="완료"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

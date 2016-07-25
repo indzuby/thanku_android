@@ -18,7 +18,6 @@ import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.utils.SessionUtils;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.common.BaseActivity;
-import com.yellowfuture.thanku.view.main.MainActivity;
 import com.yellowfuture.thanku.view.profile.ProfileActivity;
 import com.yellowfuture.thanku.view.search.AddressSearchActivity;
 
@@ -35,6 +34,7 @@ public class BuyActivity extends BaseActivity {
     EditText mOrderPhoneEditText;
     EditText mReceivePhoneEditText;
     TextView mReceiveAddressTextView;
+    TextView mPriceTextView;
     EditText mCommentEditText;
     ImageView mPhotoImageView;
     String mPhone;
@@ -49,6 +49,7 @@ public class BuyActivity extends BaseActivity {
         mOrderPhoneEditText = (EditText) findViewById(R.id.orderPhoneEditText);
         mReceivePhoneEditText = (EditText) findViewById(R.id.receivePhoneEditText);
         mReceiveAddressTextView = (TextView) findViewById(R.id.addressTextView);
+        mPriceTextView = (TextView) findViewById(R.id.priceTextView);
         mCommentEditText = (EditText) findViewById(R.id.commentEditText);
         mPhotoImageView = (ImageView) findViewById(R.id.photoImageView);
         mPhotoButton = findViewById(R.id.photoButton);
@@ -102,6 +103,7 @@ public class BuyActivity extends BaseActivity {
         form.setComment(comment);
         form.setLat(lat);
         form.setLon(lon);
+        form.setAddPrice(Utils.getDistancePriceFromCompany(lat,lon));
         OrderController.getInstance(this).addOrder(mAccessToken, form, new Callback<OrderObject>() {
             @Override
             public void onResponse(Call<OrderObject> call, Response<OrderObject> response) {
@@ -164,6 +166,7 @@ public class BuyActivity extends BaseActivity {
             lat = data.getDoubleExtra(CodeDefinition.RESPONSE_SEARCH_LAT,0);
             lon = data.getDoubleExtra(CodeDefinition.RESPONSE_SEARCH_LON,0);
             mReceiveAddressTextView.setText(address);
+            mPriceTextView.setText(Utils.getDistancePriceToString(Utils.getDistancePriceFromCompany(lat,lon)));
         }
 
     }

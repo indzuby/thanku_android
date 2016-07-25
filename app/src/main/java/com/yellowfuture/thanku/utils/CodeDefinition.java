@@ -30,4 +30,7 @@ public class CodeDefinition {
 
     final public static String USER_ADDRESS = "USER_ADDRESS";
 
+    final public static double COMPANY_LAT = 37.4737112;
+    final public static double COMPANY_LON = 126.9625903;
+
 }

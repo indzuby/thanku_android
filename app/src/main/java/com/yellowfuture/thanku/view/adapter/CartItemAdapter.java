@@ -11,15 +11,12 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.yellowfuture.thanku.R;
-import com.yellowfuture.thanku.model.Buy;
 import com.yellowfuture.thanku.model.OrderObject;
 import com.yellowfuture.thanku.model.Quick;
-import com.yellowfuture.thanku.model.Restaurant;
 import com.yellowfuture.thanku.model.RestaurantOrder;
 import com.yellowfuture.thanku.network.form.OrderObjectForm;
+import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.common.BaseRecyclerAdapter;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -77,25 +74,23 @@ public class CartItemAdapter extends BaseRecyclerAdapter {
             TextView nameView  = (TextView) view.findViewById(R.id.nameTextView);
             TextView priceView = (TextView) view.findViewById(R.id.priceTextView);
             orderObject.setType(type);
+            priceView.setText(Utils.getPriceToString(orderObject.getPrice()+orderObject.getAddPrice()));
             switch (type) {
                 case BUY:
                 case ERRAND:
                     thumbnail.setVisibility(View.GONE);
-                    nameView.setText(orderObject.getAddress());
-                    priceView.setText(orderObject.getComment());
+                    nameView.setText(orderObject.getComment());
                     break;
                 case QUICK:
                     Quick quick = (Quick) orderObject.toOrderObject();
                     thumbnail.setVisibility(View.GONE);
                     nameView.setText(quick.getStartAddr()+" -> " +quick.getEndAddr());
-                    priceView.setText(quick.getComment());
                     break;
                 case RESTAURANT:
                     RestaurantOrder restaurantOrder = (RestaurantOrder) orderObject.toOrderObject();
                     thumbnail.setVisibility(View.VISIBLE);
                     Glide.with(mContext).load(restaurantOrder.getRestaurant().getUrl()).into(thumbnail);
                     nameView.setText(restaurantOrder.getRestaurant().getName());
-                    priceView.setText(restaurantOrder.getPrice()+"원");
                     break;
             }
             h.itemLayout.addView(view);

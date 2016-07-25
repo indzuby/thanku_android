@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
+import android.location.Location;
 import android.os.Build;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -120,5 +121,43 @@ public class Utils {
 
         okPattern = Pattern.matches(regex, str);
         return okPattern;
+    }
+
+    private static double getDistanceFromCompany(double lat, double lon) {
+        Location a = new Location("Company");
+        a.setLatitude(CodeDefinition.COMPANY_LAT);
+        a.setLongitude(CodeDefinition.COMPANY_LON);
+        Location b = new Location("Destination");
+        b.setLatitude(lat);
+        b.setLongitude(lon);
+        return a.distanceTo(b);
+    }
+
+    private static double getDistanceFromAToB(double alat, double alon, double blat, double blon) {
+        Location a = new Location("START");
+        a.setLatitude(alat);
+        a.setLongitude(alon);
+        Location b = new Location("Destination");
+        b.setLatitude(blat);
+        b.setLongitude(blon);
+        return a.distanceTo(b);
+    }
+    private static int getDistancePrice(double distance){
+        int price = 3000;
+        if(distance>2000)
+            price += 100 * Math.floor((distance-2000)/120);
+        return price;
+    }
+    public static int getDistancePriceFromCompany(double lat, double lon){
+        return getDistancePrice(getDistanceFromCompany(lat,lon));
+    }
+    public static int getDistancePriceFromAToB(double alat, double alon, double blat, double blon){
+        return getDistancePrice(getDistanceFromAToB(alat,alon,blat,blon));
+    }
+    public static String getDistancePriceToString(int distance){
+        return getPriceToString(distance);
+    }
+    public static String getPriceToString(long price){
+        return String.format("%,d원", price);
     }
 }
