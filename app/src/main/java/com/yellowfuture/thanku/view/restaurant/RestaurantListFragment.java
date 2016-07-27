@@ -1,5 +1,6 @@
 package com.yellowfuture.thanku.view.restaurant;
 
+import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.yellowfuture.thanku.R;
+import com.yellowfuture.thanku.control.GpsControl;
 import com.yellowfuture.thanku.model.Restaurant;
 import com.yellowfuture.thanku.network.controller.RestaurantController;
 import com.yellowfuture.thanku.view.adapter.RestaurantItemAdapter;
@@ -47,6 +49,7 @@ public class RestaurantListFragment extends BaseFragment {
         itemAdapter = new RestaurantItemAdapter(getActivity(),mRestaurants);
         foodListView.setLayoutManager(new LinearLayoutManager(getContext()));
         foodListView.setAdapter(itemAdapter);
+
     }
     @Override
     public void init(){
@@ -55,8 +58,13 @@ public class RestaurantListFragment extends BaseFragment {
     }
     public void initData(){
         id = getArguments().getLong("id",0L);
-
-        RestaurantController.getInstance(getContext()).findByCategory(mAccessToken,id, new Callback<List<Restaurant>>() {
+        Location location = GpsControl.getInstance(getContext()).getLastBestLocation();
+        double lat=0 ,lon=0;
+        if(location!=null) {
+            lat = location.getLatitude();
+            lon = location.getLongitude();
+        }
+        RestaurantController.getInstance(getContext()).findByCategory(mAccessToken,id,lat,lon, new Callback<List<Restaurant>>() {
             @Override
             public void onResponse(Call<List<Restaurant>> call, Response<List<Restaurant>> response) {
                 if(response.code() == 200) {

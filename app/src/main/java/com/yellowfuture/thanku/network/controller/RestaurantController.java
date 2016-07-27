@@ -43,8 +43,13 @@ public class RestaurantController extends BaseController {
         call.enqueue(callback);
     }
 
-    public void findByCategory(String accessToken, long id, Callback<List<Restaurant>> callback) {
-        Call<List<Restaurant>> call = restaurantService.findByCategory(RestApi.BEARER + accessToken, id);
+    public void findByCategory(String accessToken, long id,double lat, double lon, Callback<List<Restaurant>> callback) {
+        Call<List<Restaurant>> call = restaurantService.findByCategory(RestApi.BEARER + accessToken, id, lat, lon);
+        call.enqueue(callback);
+    }
+
+    public void find(String accessToken,long id, Callback<Restaurant> callback) {
+        Call<Restaurant> call = restaurantService.find(RestApi.BEARER + accessToken,id);
         call.enqueue(callback);
     }
 }

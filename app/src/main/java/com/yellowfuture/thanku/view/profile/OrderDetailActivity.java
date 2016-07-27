@@ -14,14 +14,14 @@ import com.yellowfuture.thanku.model.OrderInfo;
 import com.yellowfuture.thanku.model.OrderObject;
 import com.yellowfuture.thanku.model.Quick;
 import com.yellowfuture.thanku.model.RestaurantOrder;
+import com.yellowfuture.thanku.model.RestaurantOrderMenu;
+import com.yellowfuture.thanku.model.Review;
 import com.yellowfuture.thanku.network.controller.OrderController;
 import com.yellowfuture.thanku.network.form.OrderObjectForm;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.common.BaseActivity;
 
 import org.joda.time.DateTime;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -82,64 +82,72 @@ public class OrderDetailActivity extends BaseActivity{
 
         mOrderListLayout.removeAllViews();
 
-        for(int i = 0; i< mOrderInfo.getGroupItems().size(); i++) {
-            View v = LayoutInflater.from(this).inflate(R.layout.item_order_menu,null);
+        for(OrderObjectForm orderFrom : mOrderInfo.getItems()) {
+            View v = LayoutInflater.from(this).inflate(R.layout.item_order_menu, null);
             TextView categoryNameView = (TextView) v.findViewById(R.id.categoryNameTextView);
             LinearLayout itemLayout = (LinearLayout) v.findViewById(R.id.itemLayout);
-            List<OrderObjectForm> orderObjectList = mOrderInfo.getGroupItems().get(i);
-            OrderObject.OrderType type = null;
-            if(i == 0) {
+            OrderObjectForm orderObject = orderFrom;
+            OrderObject.OrderType type = OrderObject.OrderType.BUY;
+            if (orderObject.getObjectType().equals("Q")) {
                 categoryNameView.setText(getString(R.string.serviceQuick));
                 type = OrderObject.OrderType.QUICK;
-            }
-            else if(i == 1) {
+            } else if (orderObject.getObjectType().equals("E")) {
                 categoryNameView.setText(getString(R.string.serviceErrand));
                 type = OrderObject.OrderType.ERRAND;
-            }
-            else if(i == 2) {
-                categoryNameView.setText(getString(R.string.serviceRestaurant));
-                type = OrderObject.OrderType.RESTAURANT;
-            }
-            else if(i == 3) {
+            } else if (orderObject.getObjectType().equals("B")) {
                 categoryNameView.setText(getString(R.string.serviceBuy));
                 type = OrderObject.OrderType.BUY;
+            } else if (orderObject.getObjectType().equals("R")) {
+                RestaurantOrder order = (RestaurantOrder) orderObject.toOrderObject(RestaurantOrder.class);
+                categoryNameView.setText(order.getRestaurant().getName());
+                type = OrderObject.OrderType.RESTAURANT;
             }
-            itemLayout.removeAllViews();
-            if(orderObjectList==null || orderObjectList.size()<=0) {
-                v.setVisibility(View.GONE);
-            }
-            for(OrderObjectForm orderObject : orderObjectList) {
-                View view =  LayoutInflater.from(this).inflate(R.layout.item_order_menu_detail,null);
-                ImageView thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
-                TextView nameView  = (TextView) view.findViewById(R.id.nameTextView);
-                TextView priceView = (TextView) view.findViewById(R.id.priceTextView);
-                orderObject.setType(type);
-                priceView.setText(Utils.getPriceToString(orderObject.getPrice()+orderObject.getAddPrice()));
-                switch (type) {
-                    case BUY:
-                    case ERRAND:
-                        thumbnail.setVisibility(View.GONE);
-                        nameView.setText(orderObject.getComment());
-                        break;
-                    case QUICK:
-                        Quick quick = (Quick) orderObject.toOrderObject();
-                        thumbnail.setVisibility(View.GONE);
-                        nameView.setText(quick.getStartAddr()+" -> " +quick.getEndAddr());
-                        break;
-                    case RESTAURANT:
-                        RestaurantOrder restaurantOrder = (RestaurantOrder) orderObject.toOrderObject();
-                        thumbnail.setVisibility(View.VISIBLE);
-                        Glide.with(this).load(restaurantOrder.getRestaurant().getUrl()).into(thumbnail);
-                        nameView.setText(restaurantOrder.getRestaurant().getName());
-                        break;
-                }
-                itemLayout.addView(view);
-            }
+            View reviewButton = v.findViewById(R.id.reviewButton);
+
+            Review review = orderFrom.getReview();
+            if(review==null) review = new Review();
+            review.setOrderObjectId(orderObject.getId());
+            reviewButton.setOnClickListener(new ReviewClickListener(review,categoryNameView.getText().toString()));
+            setItemLayout(orderObject, itemLayout, type);
             mOrderListLayout.addView(v);
         }
         mOrderCommentTextView.setText(mOrderInfo.getComment());
-
     }
+
+    private void setItemLayout(OrderObjectForm orderObject, LinearLayout layout, OrderObject.OrderType type) {
+        layout.removeAllViews();
+        if (type != OrderObject.OrderType.RESTAURANT) {
+            View view = LayoutInflater.from(getBaseContext()).inflate(R.layout.item_order_menu_detail, null);
+            ImageView thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
+            TextView nameView = (TextView) view.findViewById(R.id.nameTextView);
+            TextView priceView = (TextView) view.findViewById(R.id.priceTextView);
+            orderObject.setType(type);
+            priceView.setText(Utils.getPriceToString(orderObject.getPrice() + orderObject.getAddPrice()));
+            nameView.setText(orderObject.getComment());
+            thumbnail.setVisibility(View.GONE);
+            if (type == OrderObject.OrderType.QUICK) {
+                Quick quick = (Quick) orderObject.toOrderObject(Quick.class);
+                nameView.setText(quick.getStartAddr() + " -> " + quick.getEndAddr());
+            }
+            layout.addView(view);
+        } else {
+            RestaurantOrder restaurantOrder = (RestaurantOrder) orderObject.toOrderObject(RestaurantOrder.class);
+            for (RestaurantOrderMenu orderMenu : restaurantOrder.getMenus()) {
+                View view = LayoutInflater.from(getBaseContext()).inflate(R.layout.item_order_menu_detail, null);
+                ImageView thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
+                TextView countView = (TextView) view.findViewById(R.id.menuCountView);
+                TextView nameView = (TextView) view.findViewById(R.id.nameTextView);
+                TextView priceView = (TextView) view.findViewById(R.id.priceTextView);
+                priceView.setText(Utils.getPriceToString(orderMenu.getPrice()));
+                nameView.setText(orderMenu.getMenu().getName());
+                countView.setVisibility(View.VISIBLE);
+                countView.setText(orderMenu.getCount()+"개");
+                Glide.with(getBaseContext()).load(orderMenu.getMenu().getUrl()).into(thumbnail);
+                layout.addView(view);
+            }
+        }
+    }
+
     public void initActionBar(){
         Utils.getActionBar(this, getSupportActionBar(), R.layout.actionbar_default);
         getSupportActionBar().setElevation(0);
@@ -163,6 +171,21 @@ public class OrderDetailActivity extends BaseActivity{
 
             }
         });
+    }
+    class ReviewClickListener implements View.OnClickListener{
+        Review review;
+        String name;
+
+        public ReviewClickListener(Review review, String name) {
+            this.review = review;
+            this.name = name;
+        }
+
+        @Override
+        public void onClick(View v) {
+            ReviewPopup reviewPopup = new ReviewPopup(OrderDetailActivity.this,review,name);
+            reviewPopup.show();
+        }
     }
     @Override
     public void init() {

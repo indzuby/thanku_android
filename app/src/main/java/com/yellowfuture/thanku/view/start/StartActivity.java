@@ -10,7 +10,7 @@ import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.model.Advertisement;
 import com.yellowfuture.thanku.network.controller.AdvertisementController;
 import com.yellowfuture.thanku.utils.Utils;
-import com.yellowfuture.thanku.view.adapter.StartPagerAdapter;
+import com.yellowfuture.thanku.view.adapter.ImagePagerAdapter;
 import com.yellowfuture.thanku.view.common.BaseActivity;
 import com.yellowfuture.thanku.view.account.LoginActivity;
 import com.yellowfuture.thanku.view.account.SignUpActivity;
@@ -36,27 +36,9 @@ public class StartActivity extends BaseActivity {
         super.initView();
         mViewPager = (ViewPager) findViewById(R.id.startViewPager);
         mOvalLayout = (LinearLayout) findViewById(R.id.ovalLayout);
-        mViewPager.setAdapter(new StartPagerAdapter(this,mAdvertisementList));
+        mViewPager.setAdapter(new ImagePagerAdapter(this, mAdvertisementList));
         Utils.setOvalContainer(this, mOvalLayout, mAdvertisementList.size());
-        Utils.selectOval(mOvalLayout, 0);
-
-        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                Utils.selectOval(mOvalLayout, position);
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
+        Utils.selectOval(mOvalLayout, mViewPager, 0);
 
     }
 

@@ -49,4 +49,11 @@
     <string name="addressText">[주소] %s</string>
     <string name="orderDetail">주문상세</string>
 
+
+    <string name="addRequest">추가요청</string>
+    <string name="registration">등록</string>
+
+    <string name="menu">메뉴</string>
+    <string name="information">정보</string>
+    <string name="review">리뷰(%1d)</string>
 </resources>

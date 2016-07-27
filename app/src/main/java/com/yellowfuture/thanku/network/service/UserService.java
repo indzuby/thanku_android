@@ -40,7 +40,7 @@ public interface UserService {
 
 
     @GET("/api/user/basket")
-    Call<List<List<OrderObjectForm>>> cartList(@Header("Authorization")String authorization);
+    Call<List<OrderObjectForm>> cartList(@Header("Authorization")String authorization);
 
     @GET("/api/user/order")
     Call<List<OrderInfo>> orderList(@Header("Authorization")String authorization);

@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.yellowfuture.thanku.model.OrderInfo;
 import com.yellowfuture.thanku.model.OrderObject;
+import com.yellowfuture.thanku.model.Review;
 import com.yellowfuture.thanku.network.RestApi;
 import com.yellowfuture.thanku.network.form.OrderObjectForm;
 import com.yellowfuture.thanku.network.service.OrderService;
@@ -39,24 +40,34 @@ public class OrderController extends BaseController{
 
     }
     public void addOrder(String accessToken, OrderObjectForm form, Callback<OrderObject> callback) {
-        Call<OrderObject> call = orderService.addOrder(RestApi.BEARER+accessToken,form);
+        Call<OrderObject> call = orderService.addOrder(RestApi.BEARER + accessToken, form);
         call.enqueue(callback);
 
     }
 
     public void ordering(String accessToken ,Callback<Void> callback) {
-        Call<Void> call = orderService.ordering(RestApi.BEARER+accessToken);
+        Call<Void> call = orderService.ordering(RestApi.BEARER + accessToken);
         call.enqueue(callback);
     }
 
     public void updateOrder(String accessToken, Long id, OrderObjectForm form, Callback<OrderObject> callback){
-        Call<OrderObject> call = orderService.updateOrder(RestApi.BEARER+accessToken,id,form);
+        Call<OrderObject> call = orderService.updateOrder(RestApi.BEARER + accessToken, id, form);
         call.enqueue(callback);
 
     }
     public void remove(String accessToken,Long id, Callback<Void> callback){
-        Call<Void> call = orderService.remove(RestApi.BEARER+accessToken,id);
+        Call<Void> call = orderService.remove(RestApi.BEARER + accessToken, id);
         call.enqueue(callback);
 
+    }
+
+    public void addReview(String accessToken, Review review, Callback<Review> callback) {
+        Call<Review> call = orderService.addReview(RestApi.BEARER + accessToken, review);
+        call.enqueue(callback);
+    }
+
+    public void editReview(String accessToken, Review review, Callback<Review> callback) {
+        Call<Review> call = orderService.editReview(RestApi.BEARER + accessToken, review);
+        call.enqueue(callback);
     }
 }

@@ -2,6 +2,7 @@ package com.yellowfuture.thanku.network.service;
 
 import com.yellowfuture.thanku.model.OrderInfo;
 import com.yellowfuture.thanku.model.OrderObject;
+import com.yellowfuture.thanku.model.Review;
 import com.yellowfuture.thanku.network.form.OrderObjectForm;
 
 import retrofit2.Call;
@@ -32,5 +33,11 @@ public interface OrderService {
 
     @PUT("/api/order/ordering")
     Call<Void> ordering(@Header("Authorization") String authorization);
+
+    @POST("/api/order/review")
+    Call<Review> addReview(@Header("Authorization") String authorization, @Body Review reviewForm);
+
+    @PUT("/api/order/review")
+    Call<Review> editReview(@Header("Authorization") String authorization, @Body Review reviewForm);
 
 }

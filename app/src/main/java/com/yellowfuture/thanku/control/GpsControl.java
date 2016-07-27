@@ -63,7 +63,7 @@ public class GpsControl {
 
 
     }
-    private Location getLastBestLocation() {
+    public Location getLastBestLocation() {
         Location locationGPS = mLocationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         Location locationNet = mLocationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
 

@@ -9,6 +9,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 /**
  * Created by zuby on 2016. 7. 23..
@@ -19,5 +20,9 @@ public interface RestaurantService {
     Call<List<Category>> findCategoryAll(@Header("Authorization") String authorization);
 
     @GET("/api/restaurant/category/{category}")
-    Call<List<Restaurant>> findByCategory(@Header("Authorization") String authorization,@Path("category") long id);
+    Call<List<Restaurant>> findByCategory(@Header("Authorization") String authorization,@Path("category") long id,@Query("lat") double lat, @Query("lon") double lon);
+
+    @GET("/api/restaurant/{id}")
+    Call<Restaurant> find(@Header("Authorization") String authorization,@Path("id") long id);
+
 }

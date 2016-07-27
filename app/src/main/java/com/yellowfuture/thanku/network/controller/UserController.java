@@ -74,8 +74,8 @@ public class UserController extends BaseController {
         call.enqueue(callback);
     }
 
-    public void cartList(String accessToken, Callback<List<List<OrderObjectForm>>> callback) {
-        Call<List<List<OrderObjectForm>>> call = userService.cartList(RestApi.BEARER + accessToken);
+    public void cartList(String accessToken, Callback<List<OrderObjectForm>> callback) {
+        Call<List<OrderObjectForm>> call = userService.cartList(RestApi.BEARER + accessToken);
         call.enqueue(callback);
     }
 

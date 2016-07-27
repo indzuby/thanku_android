@@ -15,7 +15,7 @@ import com.yellowfuture.thanku.network.controller.AdvertisementController;
 import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.utils.SessionUtils;
 import com.yellowfuture.thanku.utils.Utils;
-import com.yellowfuture.thanku.view.adapter.AdvertisementPagerAdapter;
+import com.yellowfuture.thanku.view.adapter.ImagePagerAdapter;
 
 import java.util.List;
 
@@ -79,28 +79,12 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onResponse(Call<List<Advertisement>> call, final Response<List<Advertisement>> response) {
                 if(response.code() == 200){
-                    AdvertisementPagerAdapter adapter = new AdvertisementPagerAdapter(getBaseContext(),response.body());
+                    ImagePagerAdapter adapter = new ImagePagerAdapter(getBaseContext(),response.body());
                     final ViewPager bannerViewPager = (ViewPager) findViewById(R.id.bannerViewPager);
                     final LinearLayout ovalLayout = (LinearLayout) findViewById(R.id.ovalLayout);
                     bannerViewPager.setAdapter(adapter);
-                    Utils.setOvalContainer(getBaseContext(),ovalLayout,response.body().size());
-                    Utils.selectOval(ovalLayout,0);
-                    bannerViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-                        @Override
-                        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-                        }
-
-                        @Override
-                        public void onPageSelected(int position) {
-                            Utils.selectOval(ovalLayout,position);
-                        }
-
-                        @Override
-                        public void onPageScrollStateChanged(int state) {
-
-                        }
-                    });
+                    Utils.setOvalContainer(getBaseContext(), ovalLayout, response.body().size());
+                    Utils.selectOval(ovalLayout, bannerViewPager, 0);
                     new Thread(new Runnable() {
                         @Override
                         public void run() {
@@ -111,7 +95,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
                                         @Override
                                         public void run() {
                                             bannerViewPager.setCurrentItem((bannerViewPager.getCurrentItem() + 1) % response.body().size(),true);
-                                            Utils.selectOval(ovalLayout,bannerViewPager.getCurrentItem());
+                                            Utils.selectOval(ovalLayout,bannerViewPager,bannerViewPager.getCurrentItem());
                                         }
                                     });
                                 }catch (Exception e){

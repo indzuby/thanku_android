@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <View
+        android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="@color/darkGray" />
 
     <RelativeLayout
+        android:layout_below="@+id/divider"
+        android:id="@+id/headerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/themeColor"
-        android:elevation="2dp"
+        android:elevation="3dp"
         android:paddingBottom="8dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
@@ -21,10 +26,11 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
 
             <TextView
+                android:id="@+id/callCountTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="주문수 2000+"
@@ -32,6 +38,7 @@
                 android:textSize="13sp" />
 
             <TextView
+                android:id="@+id/scoreTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -40,6 +47,7 @@
                 android:textSize="13sp" />
 
             <TextView
+                android:id="@+id/likeCountTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -48,21 +56,94 @@
                 android:textSize="13sp" />
 
         </LinearLayout>
+
         <ImageView
+            android:id="@+id/callButton"
             android:layout_width="wrap_content"
-            android:src="@mipmap/ic_phone_black_24dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_height="wrap_content" />
+            android:src="@mipmap/ic_phone_black_24dp" />
     </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_below="@+id/headerLayout">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <include layout="@layout/element_header_restaurant" />
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/darkGray"
+                android:layout_height="1px"/>
+
+            <android.support.design.widget.TabLayout
+                android:layout_width="match_parent"
+                android:id="@+id/tabs"
+                android:background="@color/themeColor"
+                app:tabGravity="fill"
+                app:tabIndicatorHeight="2dp"
+                app:tabIndicatorColor="@color/white"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextColor="@color/darkGray"
+                android:layout_height="36dp" />
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/darkGray"
+                android:layout_height="1px"/>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/restaurantViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v4.view.ViewPager>
         </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/themeColor"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/addRequestButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/themeColor"
+            android:gravity="center"
+            android:text="@string/addRequest"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/darkGray" />
+
+        <TextView
+            android:id="@+id/addCartButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/themeColor"
+            android:gravity="center"
+            android:text="@string/addCart"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>

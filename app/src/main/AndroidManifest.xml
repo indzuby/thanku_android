@@ -74,6 +74,7 @@
         <activity
             android:name=".view.profile.OrderDetailActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".view.restaurant.RestaurantDetailActivity"/>
     </application>
 
 </manifest>

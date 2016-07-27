@@ -1,5 +1,7 @@
 package com.yellowfuture.thanku.model;
 
+import java.util.List;
+
 import lombok.Data;
 
 /**
@@ -19,4 +21,16 @@ public class Restaurant extends BaseModel {
     int commentCount;
 
     int callCount;
+
+    List<RestaurantMenu> menuList;
+
+    List<RestaurantImage> imageList;
+
+    List<Review> reviewList;
+
+    double lat;
+
+    double lon;
+
+    double avgScore;
 }

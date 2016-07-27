@@ -22,4 +22,9 @@ public class Advertisement extends BaseModel {
     private Date endTime;
 
     private int priority;
+
+    @Override
+    public String toString() {
+        return url;
+    }
 }

@@ -33,7 +33,7 @@ import retrofit2.Response;
 public class ProfileCartFragment extends BaseFragment {
     RecyclerView cartListView;
     CartItemAdapter itemAdapter;
-    List<List<OrderObjectForm>> orderObjectList;
+    List<OrderObjectForm> orderObjectList;
     @Override
     public void onClick(View v) {
         super.onClick(v);
@@ -59,9 +59,9 @@ public class ProfileCartFragment extends BaseFragment {
         cartListView.setAdapter(itemAdapter);
     }
     public void initData(){
-        UserController.getInstance(getContext()).cartList(mAccessToken, new Callback<List<List<OrderObjectForm>>>() {
+        UserController.getInstance(getContext()).cartList(mAccessToken, new Callback<List<OrderObjectForm>>() {
             @Override
-            public void onResponse(Call<List<List<OrderObjectForm>>> call, Response<List<List<OrderObjectForm>>> response) {
+            public void onResponse(Call<List<OrderObjectForm>> call, Response<List<OrderObjectForm>> response) {
                 if(response.code() == 200) {
                     orderObjectList = response.body();
                     initView();
@@ -69,7 +69,7 @@ public class ProfileCartFragment extends BaseFragment {
             }
 
             @Override
-            public void onFailure(Call<List<List<OrderObjectForm>>> call, Throwable t) {
+            public void onFailure(Call<List<OrderObjectForm>> call, Throwable t) {
 
             }
         });

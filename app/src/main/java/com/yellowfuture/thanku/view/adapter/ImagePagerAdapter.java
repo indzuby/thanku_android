@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
-import com.yellowfuture.thanku.model.Advertisement;
 import com.yellowfuture.thanku.network.RestApi;
 
 import java.util.List;
@@ -16,18 +15,18 @@ import java.util.List;
 /**
  * Created by zuby on 2016. 7. 13..
  */
-public class StartPagerAdapter extends PagerAdapter {
+public class ImagePagerAdapter<T> extends PagerAdapter {
     Context mContext;
 
-//    int[] sampleRes ={R.mipmap.samplebg1,R.mipmap.samplebg2,R.mipmap.samplebg3,R.mipmap.samplebg4};
-    List<Advertisement> advertisementList;
-    public StartPagerAdapter(Context context,List<Advertisement> advertisementList) {
+
+    List<T> list;
+    public ImagePagerAdapter(Context context, List<T> list) {
         mContext = context;
-        this.advertisementList =advertisementList;
+        this.list = list;
     }
     @Override
     public int getCount() {
-        return advertisementList.size();
+        return list.size();
     }
 
     @Override
@@ -38,10 +37,10 @@ public class StartPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         ImageView imageView = new ImageView(mContext);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         imageView.setLayoutParams(params);
-        Glide.with(mContext).load(RestApi.url+advertisementList.get(position).getUrl()).into(imageView);
+        Glide.with(mContext).load(RestApi.url+ list.get(position)).into(imageView);
         container.addView(imageView);
         return imageView;
     }

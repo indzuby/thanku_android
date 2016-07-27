@@ -33,8 +33,7 @@ public class OrderInfo extends BaseModel{
     private OrderState state = OrderState.PENDING;
 
 
-    private List<OrderObject> items;
-    private List<List<OrderObjectForm>> groupItems;
+    private List<OrderObjectForm> items;
 
     public long getBasicPrice(){
         return price - deliveryPrice;

@@ -62,4 +62,8 @@ public class OrderObject extends BaseModel {
     private String objectType;
 
     private String comment;
+
+    private Long orderInfo;
+
+    private Review review;
 }
