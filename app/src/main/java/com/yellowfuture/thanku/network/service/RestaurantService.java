@@ -2,6 +2,9 @@ package com.yellowfuture.thanku.network.service;
 
 import com.yellowfuture.thanku.model.Category;
 import com.yellowfuture.thanku.model.Restaurant;
+import com.yellowfuture.thanku.model.RestaurantInfo;
+import com.yellowfuture.thanku.model.RestaurantMenu;
+import com.yellowfuture.thanku.model.Review;
 
 import java.util.List;
 
@@ -25,4 +28,12 @@ public interface RestaurantService {
     @GET("/api/restaurant/{id}")
     Call<Restaurant> find(@Header("Authorization") String authorization,@Path("id") long id);
 
+    @GET("/api/restaurant/{id}/menu")
+    Call<List<RestaurantMenu>> findMenu(@Header("Authorization") String authorization,@Path("id") long id);
+
+    @GET("/api/restaurant/{id}/review")
+    Call<List<Review>> findReview(@Header("Authorization") String authorization,@Path("id") long id);
+
+    @GET("/api/restaurant/{id}/info")
+    Call<RestaurantInfo> findinfo(@Header("Authorization") String authorization,@Path("id") long id);
 }

@@ -132,17 +132,17 @@ public class OrderDetailActivity extends BaseActivity{
             layout.addView(view);
         } else {
             RestaurantOrder restaurantOrder = (RestaurantOrder) orderObject.toOrderObject(RestaurantOrder.class);
-            for (RestaurantOrderMenu orderMenu : restaurantOrder.getMenus()) {
+            for (RestaurantOrderMenu orderMenu : restaurantOrder.getMenuList()) {
                 View view = LayoutInflater.from(getBaseContext()).inflate(R.layout.item_order_menu_detail, null);
                 ImageView thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
                 TextView countView = (TextView) view.findViewById(R.id.menuCountView);
                 TextView nameView = (TextView) view.findViewById(R.id.nameTextView);
                 TextView priceView = (TextView) view.findViewById(R.id.priceTextView);
                 priceView.setText(Utils.getPriceToString(orderMenu.getPrice()));
-                nameView.setText(orderMenu.getMenu().getName());
+                nameView.setText(orderMenu.getRestaurantMenu().getName());
                 countView.setVisibility(View.VISIBLE);
                 countView.setText(orderMenu.getCount()+"개");
-                Glide.with(getBaseContext()).load(orderMenu.getMenu().getUrl()).into(thumbnail);
+                Glide.with(getBaseContext()).load(orderMenu.getRestaurantMenu().getUrl()).into(thumbnail);
                 layout.addView(view);
             }
         }

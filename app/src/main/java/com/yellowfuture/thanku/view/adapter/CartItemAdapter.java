@@ -13,8 +13,6 @@ import com.bumptech.glide.Glide;
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.model.OrderObject;
 import com.yellowfuture.thanku.model.Quick;
-import com.yellowfuture.thanku.model.Restaurant;
-import com.yellowfuture.thanku.model.RestaurantMenu;
 import com.yellowfuture.thanku.model.RestaurantOrder;
 import com.yellowfuture.thanku.model.RestaurantOrderMenu;
 import com.yellowfuture.thanku.network.form.OrderObjectForm;
@@ -61,14 +59,14 @@ public class CartItemAdapter extends BaseRecyclerAdapter {
             layout.addView(view);
         } else {
             RestaurantOrder restaurantOrder = (RestaurantOrder) orderObject.toOrderObject(RestaurantOrder.class);
-            for (RestaurantOrderMenu orderMenu : restaurantOrder.getMenus()) {
+            for (RestaurantOrderMenu orderMenu : restaurantOrder.getMenuList()) {
                 View view = LayoutInflater.from(mContext).inflate(R.layout.item_cart_detail, null);
                 ImageView thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
                 TextView nameView = (TextView) view.findViewById(R.id.nameTextView);
                 TextView priceView = (TextView) view.findViewById(R.id.priceTextView);
                 priceView.setText(Utils.getPriceToString(orderMenu.getPrice()));
-                nameView.setText(orderMenu.getMenu().getName() +" "+orderMenu.getCount()+"개");
-                Glide.with(mContext).load(orderMenu.getMenu().getUrl()).into(thumbnail);
+                nameView.setText(orderMenu.getRestaurantMenu().getName() +" "+orderMenu.getCount()+"개");
+                Glide.with(mContext).load(orderMenu.getRestaurantMenu().getUrl()).into(thumbnail);
                 layout.addView(view);
             }
         }

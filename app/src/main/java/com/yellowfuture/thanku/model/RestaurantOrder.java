@@ -18,5 +18,5 @@ public class RestaurantOrder extends OrderObject {
 
     int price;
 
-    private List<RestaurantOrderMenu> menus = new ArrayList<>();
+    private List<RestaurantOrderMenu> menuList = new ArrayList<>();
 }

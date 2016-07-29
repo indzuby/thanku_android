@@ -55,12 +55,12 @@ public class ReviewPopup extends Dialog implements View.OnClickListener {
             findViewById(res).setOnClickListener(this);
         findViewById(R.id.addReviewButton).setOnClickListener(this);
 
-        if(!isNew) {
-            mCommentEditText.setFocusable(false);
-            ((TextView) findViewById(R.id.addReviewButton)).setText("닫기");
-            ((TextView) findViewById(R.id.titleView)).setText("리뷰확인");
-            findViewById(R.id.photoButton).setVisibility(View.GONE);
-        }
+//        if(!isNew) {
+//            mCommentEditText.setFocusable(false);
+//            ((TextView) findViewById(R.id.addReviewButton)).setText("닫기");
+//            ((TextView) findViewById(R.id.titleView)).setText("리뷰확인");
+//            findViewById(R.id.photoButton).setVisibility(View.GONE);
+//        }
     }
 
     private void setScore(int score) {
@@ -141,7 +141,7 @@ public class ReviewPopup extends Dialog implements View.OnClickListener {
                     return;
                 }
                 if(isNew) addReview();
-                else dismiss();
+                else editReview();
                 break;
         }
     }

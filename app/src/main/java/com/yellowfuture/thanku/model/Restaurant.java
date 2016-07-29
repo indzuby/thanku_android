@@ -33,4 +33,8 @@ public class Restaurant extends BaseModel {
     double lon;
 
     double avgScore;
+
+    int reviewCount;
+
+    RestaurantInfo information;
 }

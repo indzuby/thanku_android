@@ -1,15 +1,14 @@
 package com.yellowfuture.thanku.view.adapter;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.model.Restaurant;
-import com.yellowfuture.thanku.view.profile.ProfileCartFragment;
-import com.yellowfuture.thanku.view.profile.ProfileOrderFragment;
-import com.yellowfuture.thanku.view.restaurant.RestaurantInformationFragment;
+import com.yellowfuture.thanku.view.restaurant.RestaurantInfoFragment;
 import com.yellowfuture.thanku.view.restaurant.RestaurantMenuFragment;
 import com.yellowfuture.thanku.view.restaurant.RestaurantReviewFragment;
 
@@ -34,19 +33,22 @@ public class RestaurantDetailAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-
+        Bundle bundle = new Bundle();
+        bundle.putLong("id",mRestaurant.getId());
         if(fragments[position] == null) {
 
             if (position == 0) {
                 fragments[position] = new RestaurantMenuFragment();
             } else if (position == 1) {
-                fragments[position] = new RestaurantInformationFragment();
+                bundle.putLong("id",mRestaurant.getInformation().getId());
+                fragments[position] = new RestaurantInfoFragment();
 
             } else if (position == 2) {
                 fragments[position] = new RestaurantReviewFragment();
 
             }
         }
+        fragments[position].setArguments(bundle);
         return fragments[position];
     }
     public String getTitle(int position){
@@ -55,7 +57,7 @@ public class RestaurantDetailAdapter extends FragmentStatePagerAdapter {
         else if(position ==1 )
             return mContext.getString(R.string.information);
         else if(position ==2 )
-            return mContext.getString(R.string.review,mRestaurant.getReviewList().size());
+            return mContext.getString(R.string.review,mRestaurant.getReviewCount());
         return "";
     }
 

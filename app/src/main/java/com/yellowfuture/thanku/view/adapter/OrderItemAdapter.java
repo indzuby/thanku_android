@@ -52,13 +52,7 @@ public class OrderItemAdapter extends BaseRecyclerAdapter {
         h.nameView.setText(time.toString("M월 dd일 a h시 m분") + "에 " + info.getCount() + "건");
         h.commentView.setText(info.getComment());
         h.priceView.setText(Utils.getPriceToString(info.getPrice()));
-        if (Days.daysBetween(time, new DateTime()).getDays() <= 0)
-            if (Hours.hoursBetween(time, new DateTime()).getHours() <= 0)
-                h.dateBeforeView.setText(Minutes.minutesBetween(time, new DateTime()).getMinutes() + "분 전");
-            else
-                h.dateBeforeView.setText(Hours.hoursBetween(time, new DateTime()).getHours() + "시간 전");
-        else
-            h.dateBeforeView.setText(Days.daysBetween(time, new DateTime()).getDays() + "일 전");
+        h.dateBeforeView.setText(Utils.getDateBefore(info.getUpdatedTime()));
         h.itemView.setTag(info.getId());
         h.itemView.setOnClickListener(this);
     }

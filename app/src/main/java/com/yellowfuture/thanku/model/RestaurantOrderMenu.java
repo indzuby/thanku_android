@@ -8,8 +8,8 @@ import lombok.Data;
 @Data
 public class RestaurantOrderMenu extends BaseModel {
 
-    RestaurantOrder order;
-    RestaurantMenu menu;
+    Long restaurantOrder;
+    RestaurantMenu restaurantMenu;
 
     int count;
 

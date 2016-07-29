@@ -19,15 +19,37 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 
 import com.skp.Tmap.TMapPOIItem;
+import com.yellowfuture.thanku.model.Restaurant;
+import com.yellowfuture.thanku.model.RestaurantOrderMenu;
 import com.yellowfuture.thanku.view.common.BaseActivity;
 import com.yellowfuture.thanku.view.common.PagerPoint;
 
+import org.joda.time.DateTime;
+import org.joda.time.Days;
+import org.joda.time.Hours;
+import org.joda.time.Minutes;
+
+import java.util.Date;
+import java.util.List;
 import java.util.regex.Pattern;
+
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Created by user on 2016-01-11.
  */
 public class Utils {
+
+    @Getter
+    @Setter
+    public static Restaurant restaurant;
+
+    @Getter
+    @Setter
+    public static List<RestaurantOrderMenu> orderMenuList;
+
     public enum ValidType {
         EMAIL, PHONE, NAME
     }
@@ -200,5 +222,24 @@ public class Utils {
             return Math.round(distance / 100) / 10 + "km";
         else
             return Math.round(distance) + "m";
+    }
+
+    public static String getDateBefore(Date time) {
+        return getDateBefore(new DateTime(time));
+    }
+
+    public static String getDateBefore(DateTime time) {
+        String str = "";
+        if (Days.daysBetween(time, new DateTime()).getDays() <= 0)
+            if (Hours.hoursBetween(time, new DateTime()).getHours() <= 0)
+                if (Minutes.minutesBetween(time, new DateTime()).getMinutes() == 0)
+                    str = "방금 전";
+                else
+                    str = (Minutes.minutesBetween(time, new DateTime()).getMinutes() + "분 전");
+            else
+                str = (Hours.hoursBetween(time, new DateTime()).getHours() + "시간 전");
+        else
+            str = (Days.daysBetween(time, new DateTime()).getDays() + "일 전");
+        return str;
     }
 }

@@ -4,6 +4,9 @@ import android.content.Context;
 
 import com.yellowfuture.thanku.model.Category;
 import com.yellowfuture.thanku.model.Restaurant;
+import com.yellowfuture.thanku.model.RestaurantInfo;
+import com.yellowfuture.thanku.model.RestaurantMenu;
+import com.yellowfuture.thanku.model.Review;
 import com.yellowfuture.thanku.network.RestApi;
 import com.yellowfuture.thanku.network.service.RestaurantService;
 
@@ -49,7 +52,22 @@ public class RestaurantController extends BaseController {
     }
 
     public void find(String accessToken,long id, Callback<Restaurant> callback) {
-        Call<Restaurant> call = restaurantService.find(RestApi.BEARER + accessToken,id);
+        Call<Restaurant> call = restaurantService.find(RestApi.BEARER + accessToken, id);
+        call.enqueue(callback);
+    }
+
+    public void findMenu(String accessToken,long id, Callback<List<RestaurantMenu>> callback) {
+        Call<List<RestaurantMenu>> call = restaurantService.findMenu(RestApi.BEARER + accessToken, id);
+        call.enqueue(callback);
+    }
+
+    public void findReview(String accessToken,long id, Callback<List<Review>> callback) {
+        Call<List<Review>> call = restaurantService.findReview(RestApi.BEARER + accessToken, id);
+        call.enqueue(callback);
+    }
+
+    public void findInfo(String accessToken,long id, Callback<RestaurantInfo> callback) {
+        Call<RestaurantInfo> call = restaurantService.findinfo(RestApi.BEARER + accessToken, id);
         call.enqueue(callback);
     }
 }

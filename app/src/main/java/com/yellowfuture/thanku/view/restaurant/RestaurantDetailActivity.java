@@ -7,14 +7,21 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.model.Restaurant;
+import com.yellowfuture.thanku.model.RestaurantOrderMenu;
 import com.yellowfuture.thanku.network.controller.RestaurantController;
+import com.yellowfuture.thanku.network.form.OrderObjectForm;
+import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.adapter.ImagePagerAdapter;
 import com.yellowfuture.thanku.view.adapter.RestaurantDetailAdapter;
 import com.yellowfuture.thanku.view.common.BaseActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,12 +42,13 @@ public class RestaurantDetailActivity extends BaseActivity {
     LinearLayout mOverLayout;
     TabLayout mTabs;
     RestaurantDetailAdapter mRestaurantDetailAdapter;
+    int totalPrice = 0;
+
+    List<RestaurantOrderMenu> mOrderMenuList = new ArrayList<>();
 
     public void initActionBar() {
-        Utils.getActionBar(this, getSupportActionBar(), R.layout.actionbar_restaurant);
         TextView title = (TextView) findViewById(R.id.title);
         title.setText(mRestaurant.getName());
-        getSupportActionBar().setElevation(0);
         findViewById(R.id.back).setOnClickListener(this);
         findViewById(R.id.sortButton).setVisibility(View.GONE);
     }
@@ -76,6 +84,8 @@ public class RestaurantDetailActivity extends BaseActivity {
             tab.setText(mRestaurantDetailAdapter.getTitle(i));
         }
 
+        findViewById(R.id.addCartButton).setOnClickListener(this);
+
     }
 
     public void initData(){
@@ -93,6 +103,23 @@ public class RestaurantDetailActivity extends BaseActivity {
             }
         });
     }
+    public void addMenuInCart(RestaurantOrderMenu menu){
+        if(mOrderMenuList.indexOf(menu)!=-1) {
+            RestaurantOrderMenu menu2 = mOrderMenuList.get(mOrderMenuList.indexOf(menu));
+            menu2.setCount(menu.getCount()+menu2.getCount());
+            menu2.setPrice(menu2.getPrice()+menu.getPrice());
+        }else
+            mOrderMenuList.add(menu);
+
+        totalPrice += menu.getPrice();
+    }
+    public void deleteMenuCart(RestaurantOrderMenu menu){
+        mOrderMenuList.remove(menu);
+        totalPrice -= menu.getPrice();
+    }
+    public void addCart(OrderObjectForm form){
+
+    }
     @Override
     public void init() {
         super.init();
@@ -106,14 +133,32 @@ public class RestaurantDetailActivity extends BaseActivity {
         init();
     }
 
+    public void addCart(){
+        if(mOrderMenuList.size()<=0) {
+            Toast.makeText(this,"메뉴를 선택해주세요.",Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(this,RestaurantCartActivity.class);
+        Utils.setRestaurant(mRestaurant);
+        Utils.setOrderMenuList(mOrderMenuList);
+        intent.putExtra("price",totalPrice);
+        startActivityForResult(intent, CodeDefinition.REQUEST_RESTAURANT_CART);
+    }
+
     @Override
     public void onClick(View v) {
         super.onClick(v);
+        if (v.getId() == R.id.addCartButton) {
+            addCart();
+        }
+
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK && requestCode == CodeDefinition.REQUEST_RESTAURANT_CART)
+            finish();
     }
 
     @Override

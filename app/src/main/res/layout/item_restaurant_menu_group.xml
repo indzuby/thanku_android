@@ -10,7 +10,7 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:paddingTop="8dp"
-        android:id="@+id/menuCategory"
+        android:id="@+id/menuCategoryView"
         android:text="메뉴"
         android:textColor="@color/black"
         android:textSize="12sp" />

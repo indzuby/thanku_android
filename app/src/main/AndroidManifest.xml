@@ -74,7 +74,11 @@
         <activity
             android:name=".view.profile.OrderDetailActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
-        <activity android:name=".view.restaurant.RestaurantDetailActivity"/>
+        <activity android:name=".view.restaurant.RestaurantDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".view.restaurant.RestaurantCartActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
     </application>
 
 </manifest>

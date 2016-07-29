@@ -16,7 +16,14 @@ public class BaseModel{
 
     protected Long id;
 
-    protected Date createTime;
+    protected Long createTime;
 
-    protected Date updatedTime;
+    public Date getCreateTime(){
+        return new Date(createTime);
+    }
+
+    protected Long updatedTime;
+    public Date getUpdatedTime(){
+        return new Date(updatedTime);
+    }
 }

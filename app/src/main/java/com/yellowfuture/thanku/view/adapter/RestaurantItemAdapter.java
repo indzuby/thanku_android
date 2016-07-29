@@ -35,7 +35,9 @@ public class RestaurantItemAdapter extends BaseRecyclerAdapter {
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_restaurant,parent,false);
+        View itemView;
+        itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_restaurant, parent, false);
+        itemView.setOnClickListener(this);
         return new ListItemViewHolder(itemView);
     }
 
@@ -92,5 +94,4 @@ public class RestaurantItemAdapter extends BaseRecyclerAdapter {
             hoursView = (TextView) view.findViewById(R.id.businessHoursTextView);
         }
     }
-
 }

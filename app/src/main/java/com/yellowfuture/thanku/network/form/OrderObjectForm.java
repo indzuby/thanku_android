@@ -3,10 +3,13 @@ package com.yellowfuture.thanku.network.form;
 import com.yellowfuture.thanku.model.OrderObject;
 import com.yellowfuture.thanku.model.Restaurant;
 import com.yellowfuture.thanku.model.RestaurantOrder;
+import com.yellowfuture.thanku.model.RestaurantOrderMenu;
 import com.yellowfuture.thanku.model.Review;
 import com.yellowfuture.thanku.model.User;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import lombok.Data;
 
@@ -66,12 +69,10 @@ public class OrderObjectForm extends BaseForm{
     //Restaurant
     private Restaurant restaurant;
 
+    private Long restaurantId;
 
-    public OrderObject toOrderObject() {
-        OrderObject orderObject = modelMapper.map(this, type.type);
+    private List<RestaurantOrderMenu> menuList;
 
-        return orderObject;
-    }
     public OrderObject toOrderObject(Class<? extends OrderObject> type) {
         return modelMapper.map(this,type);
     }

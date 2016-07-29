@@ -24,6 +24,8 @@ public class CodeDefinition {
 
     final public static int REQUEST_PROFILE_CODE = 9093;
 
+    final public static int REQUEST_RESTAURANT_CART = 3847;
+
     final public static String USER_PHONE = "USER_PHONE";
 
     final public static String USER_EMAIL = "USER_EMAIL";

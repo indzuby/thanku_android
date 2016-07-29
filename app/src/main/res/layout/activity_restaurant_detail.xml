@@ -1,149 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <View
-        android:id="@+id/divider"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="@color/darkGray" />
+        android:layout_height="284dp"
+        android:minHeight="124dp"
+        android:theme="@style/AppTheme">
 
-    <RelativeLayout
-        android:layout_below="@+id/divider"
-        android:id="@+id/headerLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/themeColor"
-        android:elevation="3dp"
-        android:paddingBottom="8dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingTop="8dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true">
-
-            <TextView
-                android:id="@+id/callCountTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="주문수 2000+"
-                android:textColor="@color/black"
-                android:textSize="13sp" />
-
-            <TextView
-                android:id="@+id/scoreTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:text="평점 9점"
-                android:textColor="@color/black"
-                android:textSize="13sp" />
-
-            <TextView
-                android:id="@+id/likeCountTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:text="좋아요 100"
-                android:textColor="@color/black"
-                android:textSize="13sp" />
-
-        </LinearLayout>
-
-        <ImageView
-            android:id="@+id/callButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:src="@mipmap/ic_phone_black_24dp" />
-    </RelativeLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottomLayout"
-        android:layout_below="@+id/headerLayout">
-
-        <LinearLayout
+        <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:minHeight="124dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
-            <include layout="@layout/element_header_restaurant" />
-            <View
+
+            <include
+                layout="@layout/element_header_restaurant"
                 android:layout_width="match_parent"
-                android:background="@color/darkGray"
-                android:layout_height="1px"/>
+                android:layout_height="160dp"
+                android:layout_marginTop="88dp"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_collapseMode="pin">
+
+                <include layout="@layout/actionbar_restaurant" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/darkGray" />
+
+                <RelativeLayout
+                    android:id="@+id/headerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/divider"
+                    android:background="@color/themeColor"
+                    android:elevation="3dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"
+                    app:layout_collapseMode="pin">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/callCountTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주문수 2000+"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/scoreTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="평점 9점"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/likeCountTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="좋아요 100"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/callButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/ic_phone_black_24dp" />
+                </RelativeLayout>
+            </LinearLayout>
 
             <android.support.design.widget.TabLayout
-                android:layout_width="match_parent"
                 android:id="@+id/tabs"
-                android:background="@color/themeColor"
+
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/border_layout"
+                android:elevation="0dp"
                 app:tabGravity="fill"
-                app:tabIndicatorHeight="2dp"
-                app:tabIndicatorColor="@color/white"
+                app:tabIndicatorColor="@color/themeColor"
+                app:tabIndicatorHeight="3dp"
                 app:tabSelectedTextColor="@color/black"
-                app:tabTextColor="@color/darkGray"
-                android:layout_height="36dp" />
-            <View
-                android:layout_width="match_parent"
-                android:background="@color/darkGray"
-                android:layout_height="1px"/>
-            <android.support.v4.view.ViewPager
-                android:id="@+id/restaurantViewPager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                app:tabTextColor="@color/darkGray" />
+        </android.support.design.widget.CollapsingToolbarLayout>
 
-            </android.support.v4.view.ViewPager>
-        </LinearLayout>
-    </ScrollView>
+    </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
-        android:id="@+id/bottomLayout"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/themeColor"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
-            android:id="@+id/addRequestButton"
-            android:layout_width="0dp"
+        <android.support.v4.view.ViewPager
+            android:id="@+id/restaurantViewPager"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_above="@+id/bottomLayout">
+
+        </android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
             android:background="@color/themeColor"
-            android:gravity="center"
-            android:text="@string/addRequest"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal">
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/darkGray" />
+            <TextView
+                android:id="@+id/addRequestButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/themeColor"
+                android:gravity="center"
+                android:text="@string/addRequest"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/addCartButton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/themeColor"
-            android:gravity="center"
-            android:text="@string/addCart"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/darkGray" />
 
-
-</RelativeLayout>
+            <TextView
+                android:id="@+id/addCartButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/themeColor"
+                android:gravity="center"
+                android:text="@string/addCart"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
