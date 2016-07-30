@@ -42,6 +42,9 @@
             android:name=".view.account.SignUpActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
+            android:name=".view.account.SocialSignUpActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
             android:name=".view.service.ErrandActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
@@ -79,6 +82,7 @@
         <activity
             android:name=".view.restaurant.RestaurantCartActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="@string/kakao_app_key"/>
     </application>
 
 </manifest>

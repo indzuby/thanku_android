@@ -11,6 +11,8 @@ import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.kakao.usermgmt.UserManagement;
+import com.kakao.usermgmt.callback.LogoutResponseCallback;
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.model.User;
 import com.yellowfuture.thanku.network.controller.UserController;
@@ -70,7 +72,6 @@ public class ProfileEditFragment extends BaseFragment {
 
         }
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_profile_edit,container,false);

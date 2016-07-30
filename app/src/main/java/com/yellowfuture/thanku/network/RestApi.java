@@ -24,7 +24,7 @@ public class RestApi {
     public static final String BEARER = "Bearer ";
     private static final String RESOURCE_ID = "thanksRestId";
 
-    public final static String url = "http://192.168.0.17:8080";
+    public final static String url = "http://192.168.201.36:8080";
 //    public final static String url = "http://115.68.74.234:8080";
 
     @Getter

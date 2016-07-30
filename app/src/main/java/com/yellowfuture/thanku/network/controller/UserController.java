@@ -49,6 +49,10 @@ public class UserController extends BaseController {
         Call<User> call = userService.signUpByEmail(user);
         call.enqueue(callback);
     }
+    public void signUpBySocial(SignUpForm user, Callback<User> callback){
+        Call<User> call = userService.signUpBySocial(user);
+        call.enqueue(callback);
+    }
     public void login(LoginForm user, Callback<LoginResponseForm> callback) {
         Map<String ,String > fieldMap = new HashMap<>();
         fieldMap.put("scope",user.getScope());

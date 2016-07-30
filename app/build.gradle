@@ -38,4 +38,6 @@ dependencies {
     provided 'org.projectlombok:lombok:1.12.6'
     compile files('libs/com.skp.Tmap_1.0.37.jar')
     compile group: 'org.modelmapper', name: 'modelmapper', version: '0.7.6'
+//    compile group: project.KAKAO_SDK_GROUP, name: 'usermgmt', version: project.KAKAO_SDK_VERSION
+    compile group: project.KAKAO_SDK_GROUP, name: 'kakaotalk', version: project.KAKAO_SDK_VERSION
 }

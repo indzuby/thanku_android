@@ -9,6 +9,8 @@ public class CodeDefinition {
     final public static int REQUEST_SEARCH_START = 3346;
     final public static int REQUEST_SEARCH_DESTINATION = 3347;
 
+    final public static int REQUEST_SOCIAL_CODE = 3481;
+
     final public static int PROFILE_EDIT_CODE = 0 ;
     final public static int PROFILE_ORDER_CODE = 1 ;
     final public static int PROFILE_CART_CODE = 2 ;
@@ -34,5 +36,8 @@ public class CodeDefinition {
 
     final public static double COMPANY_LAT = 37.4737112;
     final public static double COMPANY_LON = 126.9625903;
+
+    final public static String SOCIAL_TOKEN = "SOCIAL_TOKEN";
+    final public static String IS_KAKAO = "IS_KAKAO";
 
 }

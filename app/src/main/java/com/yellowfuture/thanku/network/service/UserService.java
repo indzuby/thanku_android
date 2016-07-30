@@ -31,6 +31,9 @@ public interface UserService {
     @POST("/api/user")
     Call<User> signUpByEmail(@Body SignUpForm user);
 
+    @POST("/api/user/social")
+    Call<User> signUpBySocial(@Body SignUpForm user);
+
     @POST("/api/user/update")
     Call<User> update(@Header("Authorization")String authorization,@Body User user);
 
