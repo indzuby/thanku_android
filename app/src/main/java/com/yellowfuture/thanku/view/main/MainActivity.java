@@ -60,7 +60,7 @@ public class MainActivity extends BaseActivity {
                     ImageView profileView = (ImageView) findViewById(R.id.profileImage);
                     TextView nameView = (TextView) findViewById(R.id.nameTextView);
                     TextView pointView = (TextView) findViewById(R.id.pointTextView);
-                    Glide.with(MainActivity.this).load(RestApi.url+user.getProfilePath()).into(profileView);
+                    Glide.with(MainActivity.this).load(user.getProfilePath()).into(profileView);
                     nameView.setText(user.getName());
                     if(user.getNickname()!=null && user.getNickname().length()>0)
                         nameView.setText(user.getNickname());

@@ -51,7 +51,7 @@ public class ReviewAdapter extends BaseRecyclerAdapter {
         h.commentView.setText(review.getComment());
         h.dateBeforeView.setText(Utils.getDateBefore(review.getUpdatedTime()));
         h.scoreTextView.setText(review.getScore()+"");
-        Glide.with(mContext).load(RestApi.url+review.getWriter().getProfilePath()).into(h.profileImage);
+        Glide.with(mContext).load(review.getWriter().getProfilePath()).into(h.profileImage);
     }
 
     @Override
