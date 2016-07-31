@@ -22,6 +22,7 @@ import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.utils.SessionUtils;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.profile.ProfileActivity;
+import com.yellowfuture.thanku.view.search.AddressSearchActivity;
 import com.yellowfuture.thanku.view.service.BuyActivity;
 import com.yellowfuture.thanku.view.common.BaseActivity;
 import com.yellowfuture.thanku.view.service.ErrandActivity;
@@ -40,6 +41,7 @@ public class MainActivity extends BaseActivity {
     boolean active = true;
     TMapData mMapData;
     LocationManager mLocationManager;
+
     @Override
     public void initView() {
         super.initView();
@@ -51,23 +53,24 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.menu).setOnClickListener(this);
 
     }
-    public void initData(){
+
+    public void initData() {
         UserController.getInstance(this).myInfo(mAccessToken, new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-                if(response.code()==200) {
+                if (response.code() == 200) {
                     User user = response.body();
                     ImageView profileView = (ImageView) findViewById(R.id.profileImage);
                     TextView nameView = (TextView) findViewById(R.id.nameTextView);
                     TextView pointView = (TextView) findViewById(R.id.pointTextView);
                     Glide.with(MainActivity.this).load(user.getProfilePath()).into(profileView);
                     nameView.setText(user.getName());
-                    if(user.getNickname()!=null && user.getNickname().length()>0)
+                    if (user.getNickname() != null && user.getNickname().length() > 0)
                         nameView.setText(user.getNickname());
                     pointView.setText(user.getPoint() + "p");
-                    SessionUtils.putString(getBaseContext(),CodeDefinition.USER_PHONE,user.getPhone());
-                    SessionUtils.putString(getBaseContext(),CodeDefinition.USER_EMAIL,user.getEmail());
-                    SessionUtils.putString(getBaseContext(),CodeDefinition.USER_ADDRESS,user.getAddress());
+                    SessionUtils.putString(getBaseContext(), CodeDefinition.USER_PHONE, user.getPhone());
+                    SessionUtils.putString(getBaseContext(), CodeDefinition.USER_EMAIL, user.getEmail());
+                    SessionUtils.putString(getBaseContext(), CodeDefinition.USER_ADDRESS, user.getAddress());
 
                 }
             }
@@ -78,6 +81,7 @@ public class MainActivity extends BaseActivity {
             }
         });
     }
+
     public void initNavigationLayout() {
         findViewById(R.id.profileLayout).setOnClickListener(this);
         findViewById(R.id.notificationLayout).setOnClickListener(this);
@@ -94,27 +98,24 @@ public class MainActivity extends BaseActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                while(active) {
-                    try {
-                        Location location = GpsControl.getInstance(MainActivity.this).getLocation();
-                        String address = mMapData.convertGpsToAddress(location.getLatitude(), location.getLongitude());
-                        ArrayList<TMapPOIItem> list = mMapData.findAllPOI(address, 1);
-                        if (list.size() > 0 && active) {
-                            final TMapPOIItem item = list.get(0);
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    TextView nowAddressTextView = (TextView) findViewById(R.id.nowAddressTextView);
-                                    nowAddressTextView.setText(Utils.parsePOIAddressOld(item));
-                                }
-                            });
-                        }
-                        Thread.sleep(10000);
-                    } catch (Exception e) {
-
+                try {
+                    Location location = GpsControl.getInstance(MainActivity.this).getLocation();
+                    String address = mMapData.convertGpsToAddress(location.getLatitude(), location.getLongitude());
+                    ArrayList<TMapPOIItem> list = mMapData.findAllPOI(address, 1);
+                    if (list.size() > 0 && active) {
+                        final TMapPOIItem item = list.get(0);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                TextView nowAddressTextView = (TextView) findViewById(R.id.nowAddressTextView);
+                                nowAddressTextView.setText(Utils.parsePOIAddressOld(item));
+                            }
+                        });
                     }
-                }
+                    ;
+                } catch (Exception e) {
 
+                }
             }
         }).start();
     }
@@ -139,7 +140,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.serviceBuyLayout).setOnClickListener(this);
         findViewById(R.id.serviceErrandLayout).setOnClickListener(this);
         findViewById(R.id.serviceQuickLayout).setOnClickListener(this);
-
+        findViewById(R.id.addressLayout).setOnClickListener(this);
     }
 
     @Override
@@ -164,31 +165,43 @@ public class MainActivity extends BaseActivity {
         } else if (v.getId() == R.id.profileLayout || v.getId() == R.id.settingsButton) {
             intent = new Intent(MainActivity.this, ProfileActivity.class);
             intent.putExtra(CodeDefinition.PROFILE_START_PARAM, CodeDefinition.PROFILE_EDIT_CODE);
-            startActivityForResult(intent,CodeDefinition.REQUEST_PROFILE_CODE);
+            startActivityForResult(intent, CodeDefinition.REQUEST_PROFILE_CODE);
             mDrawerLayout.closeDrawers();
         } else if (v.getId() == R.id.orderlayout) {
             intent = new Intent(MainActivity.this, ProfileActivity.class);
             intent.putExtra(CodeDefinition.PROFILE_START_PARAM, CodeDefinition.PROFILE_ORDER_CODE);
-            startActivityForResult(intent,CodeDefinition.REQUEST_PROFILE_CODE);
+            startActivityForResult(intent, CodeDefinition.REQUEST_PROFILE_CODE);
             mDrawerLayout.closeDrawers();
         } else if (v.getId() == R.id.cartLayout) {
             intent = new Intent(MainActivity.this, ProfileActivity.class);
             intent.putExtra(CodeDefinition.PROFILE_START_PARAM, CodeDefinition.PROFILE_CART_CODE);
-            startActivityForResult(intent,CodeDefinition.REQUEST_PROFILE_CODE);
+            startActivityForResult(intent, CodeDefinition.REQUEST_PROFILE_CODE);
             mDrawerLayout.closeDrawers();
         } else if (v.getId() == R.id.advertisementLayout || v.getId() == R.id.qnaLayout) {
             intent = new Intent(MainActivity.this, InquireActivity.class);
             startActivity(intent);
             mDrawerLayout.closeDrawers();
 
+        } else if (v.getId() == R.id.addressLayout) {
+            intent = new Intent(MainActivity.this, AddressSearchActivity.class);
+            startActivityForResult(intent, CodeDefinition.REQUEST_SEARCH_START);
         }
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode == CodeDefinition.LOGOUT)
+        if (resultCode == CodeDefinition.LOGOUT)
             finish();
+        if (requestCode == CodeDefinition.REQUEST_SEARCH_START && resultCode == RESULT_OK) {
+            double lat = data.getDoubleExtra(CodeDefinition.RESPONSE_SEARCH_LAT,0);
+            double lon = data.getDoubleExtra(CodeDefinition.RESPONSE_SEARCH_LON,0);
+            Location location = new Location("location");
+            location.setLatitude(lat);
+            location.setLongitude(lon);
+            GpsControl.getInstance(this).setLocation(location);
+            initMyLocationView();
+        }
     }
 
     @Override

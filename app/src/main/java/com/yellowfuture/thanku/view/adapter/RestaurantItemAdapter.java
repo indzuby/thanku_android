@@ -53,7 +53,7 @@ public class RestaurantItemAdapter extends BaseRecyclerAdapter {
         view.callCountView.setText(restaurant.getCallCount() + "");
         view.commentCountView.setText(restaurant.getCommentCount() + "");
         view.likeCountView.setText(restaurant.getLikeCount()+"");
-        Location location = GpsControl.getInstance(mContext).getLastBestLocation();
+        Location location = GpsControl.getInstance(mContext).getLocation();
         double lat=0 ,lon=0;
         if(location!=null) {
             lat = location.getLatitude();

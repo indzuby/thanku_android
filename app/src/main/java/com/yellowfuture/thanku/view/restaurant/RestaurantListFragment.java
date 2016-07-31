@@ -58,7 +58,7 @@ public class RestaurantListFragment extends BaseFragment {
     }
     public void initData(){
         id = getArguments().getLong("id",0L);
-        Location location = GpsControl.getInstance(getContext()).getLastBestLocation();
+        Location location = GpsControl.getInstance(getContext()).getLocation();
         double lat=0 ,lon=0;
         if(location!=null) {
             lat = location.getLatitude();

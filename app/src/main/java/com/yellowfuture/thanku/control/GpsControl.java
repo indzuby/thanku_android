@@ -49,19 +49,7 @@ public class GpsControl {
             mMapView = new TMapView(getContext());
             mMapView.setSKPMapApiKey(getContext().getString(R.string.map_key));
         }
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    location = getLastBestLocation();
-                    Thread.sleep(5000);
-                }catch (Exception e){
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-
-
+        location = getLastBestLocation();
     }
     public Location getLastBestLocation() {
         Location locationGPS = mLocationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);

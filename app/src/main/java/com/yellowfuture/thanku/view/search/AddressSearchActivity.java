@@ -85,30 +85,28 @@ public class AddressSearchActivity extends BaseActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                while (active) {
-                    try {
-                        Location location = GpsControl.getInstance(AddressSearchActivity.this).getLocation();
-                        String address = mMapData.convertGpsToAddress(location.getLatitude(), location.getLongitude());
-                        ArrayList<TMapPOIItem> list = mMapData.findAllPOI(address, 1);
-                        if (list.size() > 0) {
-                            final TMapPOIItem item = list.get(0);
-                            findViewById(R.id.myLocationLayout).setTag(item);
-                            findViewById(R.id.myLocationLayout).setOnClickListener(resultItemListener);
-                            if (active)
-                                runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        mMyAddressName.setText(getString(R.string.addressName, item.getPOIName()));
-                                        mMyAddressView.setText(getString(R.string.addressText, Utils.parsePOIAddressOld(item)));
-                                    }
-                                });
-                        }
-                        Thread.sleep(10000);
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                try {
+                    Location location = GpsControl.getInstance(AddressSearchActivity.this).getLocation();
+                    String address = mMapData.convertGpsToAddress(location.getLatitude(), location.getLongitude());
+                    ArrayList<TMapPOIItem> list = mMapData.findAllPOI(address, 1);
+                    if (list.size() > 0) {
+                        final TMapPOIItem item = list.get(0);
+                        findViewById(R.id.myLocationLayout).setTag(item);
+                        findViewById(R.id.myLocationLayout).setOnClickListener(resultItemListener);
+                        if (active)
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    mMyAddressName.setText(getString(R.string.addressName, item.getPOIName()));
+                                    mMyAddressView.setText(getString(R.string.addressText, Utils.parsePOIAddressOld(item)));
+                                }
+                            });
                     }
-
+                    Thread.sleep(10000);
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
+
             }
         }).start();
     }
@@ -178,12 +176,12 @@ public class AddressSearchActivity extends BaseActivity {
     public void onClick(View v) {
 
         super.onClick(v);
-        if(v.getId() == R.id.confirmButton) {
+        if (v.getId() == R.id.confirmButton) {
             Intent intent = new Intent();
-            intent.putExtra(CodeDefinition.RESPONSE_SEARCH_RESULT,mAddressBasicEditText.getText().toString()+" "+mAddressDetailEditText.getText().toString());
-            intent.putExtra(CodeDefinition.RESPONSE_SEARCH_LAT,Double.parseDouble(mPOIItem.noorLat));
-            intent.putExtra(CodeDefinition.RESPONSE_SEARCH_LON,Double.parseDouble(mPOIItem.noorLon));
-            setResult(RESULT_OK,intent);
+            intent.putExtra(CodeDefinition.RESPONSE_SEARCH_RESULT, mAddressBasicEditText.getText().toString() + " " + mAddressDetailEditText.getText().toString());
+            intent.putExtra(CodeDefinition.RESPONSE_SEARCH_LAT, Double.parseDouble(mPOIItem.noorLat));
+            intent.putExtra(CodeDefinition.RESPONSE_SEARCH_LON, Double.parseDouble(mPOIItem.noorLon));
+            setResult(RESULT_OK, intent);
             finish();
         }
     }
@@ -208,7 +206,7 @@ public class AddressSearchActivity extends BaseActivity {
             TMapPOIItem item = (TMapPOIItem) v.getTag();
             mPOIItem = item;
             mAddressBasicEditText.setText(item.getPOIName());
-            Utils.hideKeyboard(getBaseContext(),mAddressBasicEditText);
+            Utils.hideKeyboard(getBaseContext(), mAddressBasicEditText);
         }
     };
 }
