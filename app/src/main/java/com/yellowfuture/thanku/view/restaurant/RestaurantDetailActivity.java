@@ -73,8 +73,10 @@ public class RestaurantDetailActivity extends BaseActivity {
         mLikeCountView.setText("좋아요 " + mRestaurant.getLikeCount());
 
         mImageViewPager.setAdapter(new ImagePagerAdapter<>(this, mRestaurant.getImageList()));
-        Utils.setOvalContainer(this, mOverLayout, mRestaurant.getImageList().size());
-        Utils.selectOval(mOverLayout, mImageViewPager, 0);
+        if(mRestaurant.getImageList()!=null && mRestaurant.getImageList().size()>0) {
+            Utils.setOvalContainer(this, mOverLayout, mRestaurant.getImageList().size());
+            Utils.selectOval(mOverLayout, mImageViewPager, 0);
+        }
 
         mRestaurantDetailAdapter = new RestaurantDetailAdapter(getSupportFragmentManager(),this,mRestaurant);
         mBodyViewPager.setAdapter(mRestaurantDetailAdapter);
