@@ -68,11 +68,15 @@ public class UserController extends BaseController {
         call.enqueue(callback);
     }
 
-    public void myInfo(String accessToken,Callback<User> callback){
-        Call<User> call = userService.myInfo(RestApi.BEARER + accessToken);
+    public void myInfo(String accessToken,String token,Callback<User> callback){
+        Call<User> call = userService.myInfo(RestApi.BEARER + accessToken,token);
         call.enqueue(callback);
     }
 
+    public void myInfo(String accessToken,Callback<User> callback){
+        Call<User> call = userService.myInfo(RestApi.BEARER + accessToken,"");
+        call.enqueue(callback);
+    }
     public void update(String accessToken,User user,Callback<User> callback){
         Call<User> call = userService.update(RestApi.BEARER + accessToken,user);
         call.enqueue(callback);
@@ -85,6 +89,11 @@ public class UserController extends BaseController {
 
     public void orderList(String accessToken, Callback<List<OrderInfo>> callback) {
         Call<List<OrderInfo>> call = userService.orderList(RestApi.BEARER + accessToken);
+        call.enqueue(callback);
+    }
+
+    public void logout(String accessToken,Callback<Void> callback) {
+        Call<Void> call = userService.logout(accessToken);
         call.enqueue(callback);
     }
 }

@@ -19,6 +19,7 @@ import com.yellowfuture.thanku.network.controller.UserController;
 import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.utils.SessionUtils;
 import com.yellowfuture.thanku.utils.Utils;
+import com.yellowfuture.thanku.view.account.LoginActivity;
 import com.yellowfuture.thanku.view.common.BaseFragment;
 import com.yellowfuture.thanku.view.search.AddressSearchActivity;
 import com.yellowfuture.thanku.view.start.StartActivity;
@@ -59,15 +60,7 @@ public class ProfileEditFragment extends BaseFragment {
         }else if(v.getId() == R.id.saveButton) {
             updateUser();
         }else if(v.getId() == R.id.logoutButton) {
-            intent = new Intent(getContext(), StartActivity.class);
-            SessionUtils.putString(getContext(),CodeDefinition.ACCESS_TOKEN,"");
-            SessionUtils.putString(getContext(),CodeDefinition.USER_ADDRESS,"");
-            SessionUtils.putString(getContext(),CodeDefinition.USER_EMAIL,"");
-            SessionUtils.putString(getContext(),CodeDefinition.USER_PHONE,"");
-            Toast.makeText(getContext(),"로그아웃 되었습니다.",Toast.LENGTH_SHORT).show();
-            startActivity(intent);
-            getActivity().setResult(CodeDefinition.LOGOUT);
-            getActivity().finish();
+            logout();
         }else if(v.getId() == R.id.signOutButton) {
 
         }
@@ -167,6 +160,31 @@ public class ProfileEditFragment extends BaseFragment {
         });
 
     }
+
+    public void logout(){
+        UserController.getInstance(getContext()).logout(mAccessToken, new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (response.code() == 200){
+                    Intent intent = new Intent(getContext(), LoginActivity.class);
+                    SessionUtils.putString(getContext(),CodeDefinition.ACCESS_TOKEN,"");
+                    SessionUtils.putString(getContext(),CodeDefinition.USER_ADDRESS,"");
+                    SessionUtils.putString(getContext(),CodeDefinition.USER_EMAIL,"");
+                    SessionUtils.putString(getContext(),CodeDefinition.USER_PHONE,"");
+                    Toast.makeText(getContext(),"로그아웃 되었습니다.",Toast.LENGTH_SHORT).show();
+                    startActivity(intent);
+                    getActivity().setResult(CodeDefinition.LOGOUT);
+                    getActivity().finish();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+
+            }
+        });
+    }
+
     public void initData(){
         UserController.getInstance(getActivity()).myInfo(mAccessToken, new Callback<User>() {
             @Override

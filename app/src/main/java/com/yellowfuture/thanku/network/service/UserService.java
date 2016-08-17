@@ -17,6 +17,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 /**
  * Created by zuby on 2016-07-21.
@@ -25,7 +26,7 @@ import retrofit2.http.POST;
 public interface UserService {
 
     @GET("/api/user")
-    Call<User> myInfo(@Header("Authorization")String authorization);
+    Call<User> myInfo(@Header("Authorization")String authorization, @Query("t") String token);
 
 
     @POST("/api/user")
@@ -47,4 +48,8 @@ public interface UserService {
 
     @GET("/api/user/order")
     Call<List<OrderInfo>> orderList(@Header("Authorization")String authorization);
+
+
+    @GET("/api/user/logout")
+    Call<Void> logout(@Header("Authorization") String authorization);
 }
