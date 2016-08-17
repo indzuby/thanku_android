@@ -2,6 +2,7 @@
     <string name="app_name">땡큐</string>
     <string name="map_key">6350ddb7-1952-3756-9cd3-252fedf7c1f9</string>
     <string name="kakao_app_key">86c4d0fa787affb49c1054b696e5949c</string>
+    <string name="gcm_defaultSenderId">342362925134</string>
     <string name="company">YellowFuture</string>
     <string name="findAddress">주소검색</string>
     <string name="signUp">회원가입</string>
@@ -25,6 +26,7 @@
     <string name="addOrder">추가주문</string>
     <string name="buyOrder">주문하기</string>
     <string name="cancelOrder">주문취소</string>
+    <string name="completeOrder">주문완료</string>
     
     <string name="profileEdit">정보변경</string>
     <string name="profileOrder">주문내역</string>

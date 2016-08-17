@@ -40,4 +40,7 @@ public interface OrderService {
     @PUT("/api/order/review")
     Call<Review> editReview(@Header("Authorization") String authorization, @Body Review reviewForm);
 
+    @GET("/api/order/complete/{order}")
+    Call<Void> orderComplete(@Header("Authorization") String authorization, @Path("order") Long id);
+
 }

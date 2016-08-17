@@ -41,7 +41,6 @@ public class MainActivity extends BaseActivity {
     boolean active = true;
     TMapData mMapData;
     LocationManager mLocationManager;
-    GcmRegister gcm;
 
     @Override
     public void initView() {
@@ -57,8 +56,9 @@ public class MainActivity extends BaseActivity {
 
     public void initData() {
 
-
-        UserController.getInstance(this).myInfo(mAccessToken, new Callback<User>() {
+        String token = SessionUtils.getString(this,CodeDefinition.REG_ID,"");
+        if(token.isEmpty()) return;
+        UserController.getInstance(this).myInfo(mAccessToken,token, new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 if (response.code() == 200) {

@@ -34,6 +34,7 @@ public class ProfileCartFragment extends BaseFragment {
     RecyclerView cartListView;
     CartItemAdapter itemAdapter;
     List<OrderObjectForm> orderObjectList;
+    boolean isLoading = false;
     @Override
     public void onClick(View v) {
         super.onClick(v);
@@ -75,9 +76,12 @@ public class ProfileCartFragment extends BaseFragment {
         });
     }
     public void buyOrder(){
+        if(isLoading) return;
+        isLoading = true;
         OrderController.getInstance(getContext()).ordering(mAccessToken, new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
+                isLoading = false;
                 Toast.makeText(getContext(),"주문이 완료되었습니다.",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), ProfileActivity.class);
                 intent.putExtra(CodeDefinition.PROFILE_START_PARAM, CodeDefinition.PROFILE_ORDER_CODE);

@@ -1,0 +1,60 @@
+{
+  "project_info": {
+    "project_number": "342362925134",
+    "project_id": "thanks-test"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342362925134:android:305d1ae09acc2623",
+        "android_client_info": {
+          "package_name": "com.yellowfuture.thankurider"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6xCsxzdoYAUjYWROVc37LmZOeICLLB7o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }, {
+      "client_info": {
+        "mobilesdk_app_id": "1:342362925134:android:8ab30741823ac897",
+        "android_client_info": {
+          "package_name": "com.yellowfuture.thanku"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6xCsxzdoYAUjYWROVc37LmZOeICLLB7o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

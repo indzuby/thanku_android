@@ -2,186 +2,235 @@
 <items version="2" >
 
     <item
-        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.kakao.sdk\network\1.1.20\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="ae0ecde23f76b107a518ec401ec6480265926e4b">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\com.kakao.sdk-network-1.1.20_aeff02ad65da627c94030505449560ba1bc3959b.jar" />
-    </item>
-    <item
         jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.kakao.sdk\friends\1.1.20\jars\classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
         sha1="d049d0e6ae11efd8edcb06f54bf04716d549684e">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\com.kakao.sdk-friends-1.1.20_4a5d5ffb68a2e5f1861910661288e2c43b74ac22.jar" />
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.kakao.sdk-friends-1.1.20_4a5d5ffb68a2e5f1861910661288e2c43b74ac22\classes.dex" />
     </item>
     <item
         jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.6.1\86b122e640af09b0723e1fa44083c354ba6d9089\glide-3.6.1.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
         sha1="86b122e640af09b0723e1fa44083c354ba6d9089">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\glide-3.6.1_e059f66d453e0c25b202ab3d29bf1c71fe5bb3f1.jar" />
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.6.1_e059f66d453e0c25b202ab3d29bf1c71fe5bb3f1\classes.dex" />
     </item>
     <item
         jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
         sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\gson-2.7_fbd5d9865badb71e1bfe83e5afdea9a4c47aea22.jar" />
-    </item>
-    <item
-        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.tsengvn\Typekit\1.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="bbf90181fea46399a9e3d0f4326883a505f71952">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\com.tsengvn-Typekit-1.0.0_3e1d80f39e624fc81f62e53fea23d6a490be869b.jar" />
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_fbd5d9865badb71e1bfe83e5afdea9a4c47aea22\classes.dex" />
     </item>
     <item
         jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\com.j256.ormlite\ormlite-core\4.48\e579bd2905d0399af5029aaaf9817d5fa0ca88a5\ormlite-core-4.48.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
         sha1="e579bd2905d0399af5029aaaf9817d5fa0ca88a5">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\ormlite-core-4.48_7550bcdd6e4e2a9d067de6bf000f1a43ce73d588.jar" />
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\ormlite-core-4.48_7550bcdd6e4e2a9d067de6bf000f1a43ce73d588\classes.dex" />
     </item>
     <item
-        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.4.0_3585cb0f457c650fb973db308262f2c968256a2e.jar" />
+        sha1="ece40b09e9d4d488bc270cf6af5a9af73bc1cfa3">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-9.4.0_9f5aca619d0903d4aa3a8bb6888185121770cac5\classes.dex" />
     </item>
     <item
-        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_4e560615bd361492166312ef2808eeb84ebece95.jar" />
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.4.0_3734accbdcaa19da6e094da17c049eddb8b52968\classes.dex" />
     </item>
     <item
-        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
-        jumboMode="false"
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.kakao.sdk\network\1.1.20\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.4.0_1435718aae5a537f65d5051afe31d981e57df688.jar" />
+        sha1="ae0ecde23f76b107a518ec401ec6480265926e4b">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.kakao.sdk-network-1.1.20_aeff02ad65da627c94030505449560ba1bc3959b\classes.dex" />
     </item>
     <item
-        jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
-        jumboMode="false"
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\converter-gson-2.1.0_f3d01526d264df921fba21cff2985a8663bbde7c.jar" />
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.4.0_6ccb180f166fcaba598be968d7af7ca3027349b0\classes.dex" />
     </item>
     <item
-        jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.9.1\c261495d1e01df849cdb3cbc941564018f0d3539\joda-time-2.9.1.jar"
-        jumboMode="false"
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="c261495d1e01df849cdb3cbc941564018f0d3539">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\joda-time-2.9.1_a1b8b2e73be4fce5e680dce15eb919db8e7d4442.jar" />
+        sha1="59a16a4a42d25b2c243dd1e8aea87d06895b4a06">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-iid-9.4.0_e0ed20e188bc6650bbc5a10639783c87bf6f8a16\classes.dex" />
     </item>
     <item
-        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.kakao.sdk\auth\1.1.20\jars\classes.jar"
-        jumboMode="false"
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.tsengvn\Typekit\1.0.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="12c4b3d1079f7217b55e40c1c9dd8fb99758091f">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\com.kakao.sdk-auth-1.1.20_193e5f2eaab533d2be697fdf167d26c704d4f7e4.jar" />
+        sha1="bbf90181fea46399a9e3d0f4326883a505f71952">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.tsengvn-Typekit-1.0.0_3e1d80f39e624fc81f62e53fea23d6a490be869b\classes.dex" />
     </item>
     <item
-        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.kakao.sdk\util\1.1.20\jars\classes.jar"
-        jumboMode="false"
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="ad4b9fdbfb4d8211d2d32b0544c529089e4d9ffa">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\com.kakao.sdk-util-1.1.20_d25b96046dc1bc46248cc4988312c23698a32af0.jar" />
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.4.0_25d69c6da23b5a6c4ee0665e5f178fe8c97bea85\classes.dex" />
     </item>
     <item
         jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\org.modelmapper\modelmapper\0.7.6\401382b5df8a6c5e4543436d295f045ff8251df9\modelmapper-0.7.6.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
         sha1="401382b5df8a6c5e4543436d295f045ff8251df9">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\modelmapper-0.7.6_030917cd5d71b85e4e08a171705a687a30fc4d8e.jar" />
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\modelmapper-0.7.6_030917cd5d71b85e4e08a171705a687a30fc4d8e\classes.dex" />
     </item>
     <item
-        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.kakao.sdk\util\1.1.20\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_46995fb40cf7d15cd38ee6ba4754a16699736738.jar" />
+        sha1="ad4b9fdbfb4d8211d2d32b0544c529089e4d9ffa">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.kakao.sdk-util-1.1.20_d25b96046dc1bc46248cc4988312c23698a32af0\classes.dex" />
     </item>
     <item
-        jar="D:\dev\thanku-android\app\libs\com.skp.Tmap_1.0.37.jar"
-        jumboMode="false"
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="6b85dea7e38323c2b23534d75222c7506528e2ad">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\com.skp.Tmap_1.0.37_9e1b8e0f9e188b47fa35a0c2f157bc1a8de549ff.jar" />
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_4e560615bd361492166312ef2808eeb84ebece95\classes.dex" />
+    </item>
+    <item
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_3585cb0f457c650fb973db308262f2c968256a2e\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.1.0_f3d01526d264df921fba21cff2985a8663bbde7c\classes.dex" />
+    </item>
+    <item
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_1435718aae5a537f65d5051afe31d981e57df688\classes.dex" />
     </item>
     <item
         jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
         sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_f6befeb196390e279d2e962dfd5fa263db9aac8d.jar" />
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_f6befeb196390e279d2e962dfd5fa263db9aac8d\classes.dex" />
+    </item>
+    <item
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_46995fb40cf7d15cd38ee6ba4754a16699736738\classes.dex" />
+    </item>
+    <item
+        jar="D:\dev\thanku-android\app\libs\com.skp.Tmap_1.0.37.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6b85dea7e38323c2b23534d75222c7506528e2ad">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\2\com.skp.Tmap_1.0.37_9e1b8e0f9e188b47fa35a0c2f157bc1a8de549ff\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.9.1\c261495d1e01df849cdb3cbc941564018f0d3539\joda-time-2.9.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c261495d1e01df849cdb3cbc941564018f0d3539">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\joda-time-2.9.1_a1b8b2e73be4fce5e680dce15eb919db8e7d4442\classes.dex" />
+    </item>
+    <item
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.kakao.sdk\auth\1.1.20\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="12c4b3d1079f7217b55e40c1c9dd8fb99758091f">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.kakao.sdk-auth-1.1.20_193e5f2eaab533d2be697fdf167d26c704d4f7e4\classes.dex" />
     </item>
     <item
         jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.8.0\5ea7af56cc7c567ed9856d99efb30740e9b17ff\okio-1.8.0.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
         sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\okio-1.8.0_bb76d65d0cf6b1596131322a91912ebde1e476f4.jar" />
-    </item>
-    <item
-        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_6917b2b992b4f958d5a4db6c454d7f0b4f660b5a.jar" />
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.8.0_bb76d65d0cf6b1596131322a91912ebde1e476f4\classes.dex" />
     </item>
     <item
         jar="C:\Users\rlawn\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
         sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_2925753fb90709bb6a561250b729dbfed60a1dc6.jar" />
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_2925753fb90709bb6a561250b729dbfed60a1dc6\classes.dex" />
     </item>
     <item
-        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.kakao.sdk\kakaotalk\1.1.20\jars\classes.jar"
-        jumboMode="false"
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="a9d9f386284532df011027b9aa9a80f4c457215f">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\com.kakao.sdk-kakaotalk-1.1.20_bf78dafcacac8063ee9ef7669d97a2b92686c700.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.3.0\2b802460eea20f8f2ad9c08c74e0f14718e88aa9\okhttp-3.3.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\okhttp-3.3.0_5a7b73aa89f3fb41778f1393d2b87c37f7d38675.jar" />
-    </item>
-    <item
-        jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\retrofit-2.1.0_0276316fce190c728fb5d5a4f5b950d58211675f.jar" />
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_6917b2b992b4f958d5a4db6c454d7f0b4f660b5a\classes.dex" />
     </item>
     <item
         jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
         sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_f4c837422c17b2e9b3a337b09090f4944df7f28f.jar" />
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_f4c837422c17b2e9b3a337b09090f4944df7f28f\classes.dex" />
     </item>
     <item
-        jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\com.j256.ormlite\ormlite-android\4.48\afa06f539a4026c10b247386312aa67404b80a16\ormlite-android-4.48.jar"
-        jumboMode="false"
+        jar="D:\dev\thanku-android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="afa06f539a4026c10b247386312aa67404b80a16">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\ormlite-android-4.48_4618884de6bed26b4be4954bc0d78a0497f0b71a.jar" />
+        sha1="7199dde4da3f4316fb006ef26135a1ca1a076a34">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_7d5b96bd7d6cbc385ffda4e51b48504bde8f767a\classes.dex" />
+    </item>
+    <item
+        jar="D:\dev\thanku-android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="be966949a78d8559d7b034a11123ccd651f375d3">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_03fb3c3883165c4dde32480f793910d655e41bbb\classes.dex" />
+    </item>
+    <item
+        jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.kakao.sdk\kakaotalk\1.1.20\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a9d9f386284532df011027b9aa9a80f4c457215f">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.kakao.sdk-kakaotalk-1.1.20_bf78dafcacac8063ee9ef7669d97a2b92686c700\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.3.0\2b802460eea20f8f2ad9c08c74e0f14718e88aa9\okhttp-3.3.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.3.0_5a7b73aa89f3fb41778f1393d2b87c37f7d38675\classes.dex" />
     </item>
     <item
         jar="D:\dev\thanku-android\app\build\intermediates\exploded-aar\com.kakao.sdk\usermgmt\1.1.20\jars\classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
         sha1="8a63b8cabf951bbd326414169bda3864810a6b79">
-        <dex dex="D:\dev\thanku-android\app\build\intermediates\pre-dexed\debug\com.kakao.sdk-usermgmt-1.1.20_bedc1a2660710edfcf44d2eeffa61be4b9a24ae4.jar" />
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.kakao.sdk-usermgmt-1.1.20_bedc1a2660710edfcf44d2eeffa61be4b9a24ae4\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.1.0_0276316fce190c728fb5d5a4f5b950d58211675f\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\rlawn\.gradle\caches\modules-2\files-2.1\com.j256.ormlite\ormlite-android\4.48\afa06f539a4026c10b247386312aa67404b80a16\ormlite-android-4.48.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="afa06f539a4026c10b247386312aa67404b80a16">
+        <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\ormlite-android-4.48_4618884de6bed26b4be4954bc0d78a0497f0b71a\classes.dex" />
     </item>
 
 </items>

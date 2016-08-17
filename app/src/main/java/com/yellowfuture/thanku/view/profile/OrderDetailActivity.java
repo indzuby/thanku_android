@@ -1,12 +1,15 @@
 package com.yellowfuture.thanku.view.profile;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.yellowfuture.thanku.R;
@@ -18,6 +21,8 @@ import com.yellowfuture.thanku.model.RestaurantOrderMenu;
 import com.yellowfuture.thanku.model.Review;
 import com.yellowfuture.thanku.network.controller.OrderController;
 import com.yellowfuture.thanku.network.form.OrderObjectForm;
+import com.yellowfuture.thanku.utils.CodeDefinition;
+import com.yellowfuture.thanku.utils.SessionUtils;
 import com.yellowfuture.thanku.utils.Utils;
 import com.yellowfuture.thanku.view.common.BaseActivity;
 
@@ -47,6 +52,7 @@ public class OrderDetailActivity extends BaseActivity{
 
     View mPendingView,mMatchView,mCompleteView;
 
+    int canComplete = 0;
 
     @Override
     public void initView() {
@@ -63,15 +69,22 @@ public class OrderDetailActivity extends BaseActivity{
         mOrderListLayout = (LinearLayout) findViewById(R.id.orderListLayout);
         mOrderCommentTextView = (TextView) findViewById(R.id.orderCommentTextView);
 
+        mPendingView.setSelected(false);
+        mMatchView.setSelected(false);
+        mCompleteView.setSelected(false);
+
         switch (mOrderInfo.getState()) {
             case PENDING:
                 mPendingView.setSelected(true);
+                canComplete = 0;
                 break;
             case MATCH:
                 mMatchView.setSelected(true);
+                canComplete = 1;
                 break;
             case COMPLETE:
                 mCompleteView.setSelected(true);
+                canComplete = 2;
                 break;
         }
 
@@ -112,6 +125,19 @@ public class OrderDetailActivity extends BaseActivity{
             mOrderListLayout.addView(v);
         }
         mOrderCommentTextView.setText(mOrderInfo.getComment());
+        if(canComplete==1){
+            findViewById(R.id.completeButton).setVisibility(View.VISIBLE);
+            findViewById(R.id.cancelButton).setVisibility(View.GONE);
+            findViewById(R.id.completeButton).setOnClickListener(this);
+        }else if(canComplete==0) {
+            findViewById(R.id.completeButton).setVisibility(View.GONE);
+            findViewById(R.id.cancelButton).setVisibility(View.VISIBLE);
+            findViewById(R.id.cancelButton).setOnClickListener(this);
+        }else {
+            findViewById(R.id.completeButton).setVisibility(View.GONE);
+            findViewById(R.id.cancelButton).setVisibility(View.GONE);
+
+        }
     }
 
     private void setItemLayout(OrderObjectForm orderObject, LinearLayout layout, OrderObject.OrderType type) {
@@ -193,7 +219,6 @@ public class OrderDetailActivity extends BaseActivity{
         id = getIntent().getLongExtra("id",0);
         initData();
         initActionBar();
-        findViewById(R.id.cancelButton).setOnClickListener(this);
     }
 
     @Override
@@ -202,10 +227,48 @@ public class OrderDetailActivity extends BaseActivity{
         setContentView(R.layout.activity_order_detail);
         init();
     }
+    public void setComplete(){
+        AlertDialog.Builder alertDlg = new AlertDialog.Builder(this);
+
+        alertDlg.setTitle("해당 주문을 완료하시겠습니까?");
+        alertDlg.setPositiveButton("예", new DialogInterface.OnClickListener() { // 확인 버튼
+            @Override
+            public void onClick(DialogInterface dialog, int whichButton) {
+
+                OrderController.getInstance(getBaseContext()).orderComplete(mAccessToken, mOrderInfo.getId(), new Callback<Void>() {
+                    @Override
+                    public void onResponse(Call<Void> call, Response<Void> response) {
+                        if(response.code() == 204) {
+                            Toast.makeText(getBaseContext(),"완료 되었습니다.",Toast.LENGTH_SHORT).show();
+                            initData();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Void> call, Throwable t) {
+                        t.printStackTrace();
+                    }
+                });
+
+            }
+        });
+        alertDlg.setNegativeButton("아니오", new DialogInterface.OnClickListener() { // 취소 버튼
+            @Override
+            public void onClick(DialogInterface dialog, int whichButton) {
+
+                dialog.cancel();
+            }
+        });
+        AlertDialog alert = alertDlg.create();
+        alert.show();
+    }
 
     @Override
     public void onClick(View v) {
         super.onClick(v);
+        if(v.getId() == R.id.completeButton) {
+            setComplete();
+        }
     }
 
     @Override

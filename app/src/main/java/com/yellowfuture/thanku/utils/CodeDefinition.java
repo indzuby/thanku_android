@@ -40,4 +40,9 @@ public class CodeDefinition {
     final public static String SOCIAL_TOKEN = "SOCIAL_TOKEN";
     final public static String IS_KAKAO = "IS_KAKAO";
 
+    final public static String REG_ID = "registration_id";
+    final public static String PROPERTY_APP_VERSION = "appVersion";
+
+    final public static String REGISTRATION_COMPLETE = "registrationComplete";
+
 }

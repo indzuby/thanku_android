@@ -1,15 +1,21 @@
 package com.yellowfuture.thanku.view.start;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.support.v4.content.LocalBroadcastManager;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.yellowfuture.thanku.R;
 import com.yellowfuture.thanku.control.GpsControl;
+import com.yellowfuture.thanku.service.RegistrationIntentService;
 import com.yellowfuture.thanku.utils.CodeDefinition;
 import com.yellowfuture.thanku.utils.SessionUtils;
 import com.yellowfuture.thanku.utils.Utils;
@@ -21,6 +27,8 @@ import com.yellowfuture.thanku.view.main.MainActivity;
  * Created by zuby on 2016. 6. 16..
  */
 public class SplashActivity extends BaseActivity {
+    private BroadcastReceiver mRegistrationBroadcastReceiver;
+    boolean isReg = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,15 +45,47 @@ public class SplashActivity extends BaseActivity {
         super.initView();
 
     }
+    public void initGcm(){
+        getInstanceIdToken();
+        registBroadcastReceiver();
+    }
+
+    public void getInstanceIdToken() {
+        if (checkPlayServices()) {
+            // Start IntentService to register this application with GCM.
+            Intent intent = new Intent(this, RegistrationIntentService.class);
+            startService(intent);
+        }
+    }
+
+
+    public void registBroadcastReceiver(){
+        mRegistrationBroadcastReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                String action = intent.getAction();
+                if(action.equals(CodeDefinition.REGISTRATION_COMPLETE)){
+                    // 액션이 COMPLETE일 경우
+                    String token = intent.getStringExtra("token");
+                    SessionUtils.putString(getBaseContext(),CodeDefinition.REG_ID,token);
+                    isReg = true;
+                }
+
+            }
+        };
+    }
 
     @Override
     public void init() {
         super.init();
         initView();
+        initGcm();
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
+                    while(!isReg);
+
                     Thread.sleep(1000);
                     Intent intent = new Intent(SplashActivity.this, StartActivity.class);
                     if (mAccessToken != null & mAccessToken.length() > 0)
@@ -80,5 +120,31 @@ public class SplashActivity extends BaseActivity {
                 return;
             }
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver,
+                new IntentFilter(CodeDefinition.REGISTRATION_COMPLETE));
+    }
+
+    @Override
+    protected void onPause() {
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mRegistrationBroadcastReceiver);
+        super.onPause();
+    }
+
+    private boolean checkPlayServices() {
+        GoogleApiAvailability apiAvailability = GoogleApiAvailability.getInstance();
+        int resultCode = apiAvailability.isGooglePlayServicesAvailable(this);
+        if(resultCode != ConnectionResult.SUCCESS) {
+            if(apiAvailability.isUserResolvableError(resultCode)) {
+                apiAvailability.getErrorDialog(this,resultCode,9000).show();
+            }else
+                finish();
+            return false;
+        }
+        return true;
     }
 }

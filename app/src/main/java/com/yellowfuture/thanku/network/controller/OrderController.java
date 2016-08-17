@@ -70,4 +70,9 @@ public class OrderController extends BaseController{
         Call<Review> call = orderService.editReview(RestApi.BEARER + accessToken, review);
         call.enqueue(callback);
     }
+
+    public void orderComplete(String accessToken, Long id , Callback<Void> callback) {
+        Call<Void> call = orderService.orderComplete(RestApi.BEARER + accessToken,id);
+        call.enqueue(callback);
+    }
 }
