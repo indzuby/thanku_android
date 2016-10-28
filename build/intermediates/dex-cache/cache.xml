@@ -187,14 +187,14 @@
         jar="D:\dev\thanku-android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.2"
-        sha1="7199dde4da3f4316fb006ef26135a1ca1a076a34">
+        sha1="b026758d6df6d63f565b8bd5244f5e985d4f3be3">
         <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_7d5b96bd7d6cbc385ffda4e51b48504bde8f767a\classes.dex" />
     </item>
     <item
         jar="D:\dev\thanku-android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.2"
-        sha1="be966949a78d8559d7b034a11123ccd651f375d3">
+        sha1="675a9b944675e3730c363f625b2c1651bf361626">
         <dex dex="D:\dev\thanku-android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_03fb3c3883165c4dde32480f793910d655e41bbb\classes.dex" />
     </item>
     <item

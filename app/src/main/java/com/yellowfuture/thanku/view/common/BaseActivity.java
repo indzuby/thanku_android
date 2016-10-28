@@ -52,7 +52,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 
-    @Override
+@Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
